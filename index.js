@@ -4,6 +4,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
+const schema = mongoose.Schema
+
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -11,8 +13,12 @@ app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 
 app.get( '/' , (req , res) => {
-	listado = conn.collection("usuarios").find()
-	res.send( listado )
+	
+	let listaUsu = new Lista()
+	listaUsu.find((err , list) => {
+	res.send({Listado: list})
+	})
+//	res.send( listado )
 	console.log(  )
 })
 
@@ -45,6 +51,12 @@ app.delete( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 
+var listaSchema = Schema([{
+   user: {type: String, required: true},
+   password: {type: String, required: true}
+}]);
+
+mongoose.model('Lista', listaSchema );
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
