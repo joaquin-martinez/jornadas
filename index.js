@@ -48,12 +48,13 @@ app.delete( '/api/product/:productId' , (req , res) => {
 mongoose.connection( 'mongodb://http://jornadas-mongo:27017/users' , ( err , res) => {
 	if (err) {
 	return console.log( ` Error al conectar con la base de datos: ${err}` )
-}
-	console.log( ` Conexión a la base de datos establecida ….}` )
+		}
+	console.log( ` Conexión a la base de datos establecida ….` )
 
 
 app.listen( port , () => { 
-console.log( ` Aplicación corriendo en localhost, puerto ${port}` ) )
+console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
+			}
 } )
 
 
