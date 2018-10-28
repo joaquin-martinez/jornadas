@@ -15,7 +15,7 @@ app.use( bodyParser.json() )
 app.get( '/' , (req , res) => {
 	
 //	let listaUsu = new Lista()
-	listaUsu.find( {} , "usuarios" , (err , list) => {
+	listaUsu.find( {} , (err , list) => {
 	res.send({Listado: list})
 	})
 //	res.send( listado )
@@ -56,7 +56,7 @@ var listaSchema = Schema({
    password: {type: String, required: true}
 });
 
-let listaUsu = mongoose.model('Lista', listaSchema );
+let listaUsu = mongoose.model('usuarios', listaSchema );
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
