@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 
 app.get( '/' , (req , res) => {
-	listado = conn.collection(usuarios).find()
+	listado = conn.collection("usuarios").find()
 	res.send( listado )
 	console.log(  )
 })
