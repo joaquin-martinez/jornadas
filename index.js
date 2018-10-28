@@ -44,21 +44,21 @@ app.delete( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 
-/*
-mongoose.connect( 'mongodb://jornadas-mongo:27017/users' , ( err , res) => {
+
+mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
 	return console.log( ` Error al conectar con la base de datos: ${err}` )
 		}
 	console.log( ` Conexión a la base de datos establecida ….` )
-*/
+
 
 app.listen( port , () => { 
 console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
 			})
 
-/*
+
 } )
-*/
+
 
 
 
