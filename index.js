@@ -10,13 +10,17 @@ const port = process.env.PORT || 3000
 app.use(bodyParser.urlecoded( { extended : false } ))
 app.use( bodyParser.Json() )
 
+app.get( ‘/’ , (req , res) => {
+	res.send( " Al fin jornadas." )
+	console.log(  )
+})
 
-/*
+
 app.get( ‘/saludo/:nombre’ , (req , res) => {
 	res.send( { “mensaje” : ` hola ${nombre}. ` } )
 	console.log(  )
 })
-*/
+
 
 app.get( ‘/api/product/:productId’ , (req , res) => {
 	res.send( )
@@ -61,11 +65,11 @@ console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
 
 
 
-
+/*
 node index.js // para arrancar la aplicación.
 
 para REST  get, post, put y delete
-
+*/
 
 
 
