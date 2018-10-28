@@ -17,7 +17,7 @@ app.get( '/' , (req , res) => {
 
 
 app.get( '/saludo/:nombre' , (req , res) => {
-	res.send( { “mensaje” : ` hola ${nombre}. ` } )
+	res.send( { "mensaje" : ` hola ${nombre}. ` } )
 	console.log(  )
 })
 
@@ -27,12 +27,12 @@ app.get( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 app.get( '/api/product/' , (req , res) => {
-	res.send( 200, { “products” : [] } )
+	res.send( 200, { "products" : [] } )
 	console.log(  )
 })
 
 app.post( '/api/product' , (req , res) => {
-	res.status(200).send(  { “mensaje” : “Se ha recibido el mensaje” }  )
+	res.status(200).send(  { "mensaje" : “Se ha recibido el mensaje” }  )
 	console.log( req.body )
 })
 app.put( '/api/product/:productId' , (req , res) => {
@@ -40,7 +40,7 @@ app.put( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 app.delete( '/api/product/:productId' , (req , res) => {
-	res.send( { “mensaje” : `borrado ${productId}. ` } )
+	res.send( { "mensaje" : `borrado ${productId}. ` } )
 	console.log(  )
 })
 
