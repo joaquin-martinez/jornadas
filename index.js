@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(bodyParser.urlecoded( { extended : false } ))
+app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.Json() )
 
 app.get( '/' , (req , res) => {
