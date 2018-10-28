@@ -51,10 +51,10 @@ app.delete( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 
-var listaSchema = Schema([{
+var listaSchema = Schema({
    user: {type: String, required: true},
    password: {type: String, required: true}
-}]);
+});
 
 let listaUsu = mongoose.model('Lista', listaSchema );
 
