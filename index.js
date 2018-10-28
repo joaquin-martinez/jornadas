@@ -15,7 +15,7 @@ app.use( bodyParser.json() )
 app.get( '/' , (req , res) => {
 	
 //	let listaUsu = new Lista()
-	listaUsu.collection("usuarios").find( { user : "joa" } , (err , list) => {
+	listaUsu.find( { } , (err , list) => {
 	res.send({Listado: list})
 	})
 //	res.send( listado )
