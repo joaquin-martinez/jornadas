@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 
 app.get( '/' , (req , res) => {
-	res.send( " Al fin jornadas." )
+	listado = conn.collection(usuarios).find()
+	res.send( listado )
 	console.log(  )
 })
 
@@ -45,7 +46,7 @@ app.delete( '/api/product/:productId' , (req , res) => {
 })
 
 
-mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
+const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
 	return console.log( ` Error al conectar con la base de datos: ${err}` )
 		}
