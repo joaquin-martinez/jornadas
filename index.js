@@ -53,7 +53,7 @@ mongoose.connection( 'mongodb://http://jornadas-mongo:27017/users' , ( err , res
 
 
 app.listen( port , () => { 
-console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
+console.log( ` Aplicación corriendo en localhost, puerto ${port}` ) )
 } )
 
 
