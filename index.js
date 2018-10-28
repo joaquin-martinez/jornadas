@@ -32,7 +32,7 @@ app.get( '/api/product/' , (req , res) => {
 })
 
 app.post( '/api/product' , (req , res) => {
-	res.status(200).send(  { "mensaje" : “Se ha recibido el mensaje” }  )
+	res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
 	console.log( req.body )
 })
 app.put( '/api/product/:productId' , (req , res) => {
