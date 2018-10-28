@@ -45,7 +45,7 @@ app.delete( '/api/product/:productId' , (req , res) => {
 })
 
 
-mongoose.conection( 'mongodb://http://jornadas-mongo:27017/users' , ( err , res) => {
+mongoose.connect( 'mongodb://jornadas-mongo:27017/users' , ( err , res) => {
 	if (err) {
 	return console.log( ` Error al conectar con la base de datos: ${err}` )
 		}
