@@ -22,7 +22,7 @@ app.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.render(./views/index.html)
+	res.render('./views/index.html')
 
 
 
