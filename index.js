@@ -27,7 +27,7 @@ app.get( '/' , (req , res) => {
 
 
 
-	})
+//	})
 //	res.send( listado )
 	console.log(  )
 })
