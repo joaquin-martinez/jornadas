@@ -11,9 +11,29 @@ const port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
+// app.use()
+
+
+
 
 app.get( '/' , (req , res) => {
-	
+
+//	let listaUsu = new Lista()
+//	listaUsu.find( {} , (err , list) => {
+//	res.send({Listado: list})
+
+	res.render(./views/index.html)
+
+
+
+
+	})
+//	res.send( listado )
+	console.log(  )
+})
+
+app.get( '/usuarios' , (req , res) => {
+
 //	let listaUsu = new Lista()
 	listaUsu.find( {} , (err , list) => {
 	res.send({Listado: list})
@@ -65,7 +85,7 @@ const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res)
 	console.log( ` Conexión a la base de datos establecida ….` )
 
 
-app.listen( port , () => { 
+app.listen( port , () => {
 console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
 			})
 
@@ -86,6 +106,3 @@ node index.js // para arrancar la aplicación.
 
 para REST  get, post, put y delete
 */
-
-
-
