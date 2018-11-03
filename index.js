@@ -11,8 +11,8 @@ const port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
-app.use( app.static('public') )
-app.use( app.static('views') )
+app.use( express.static('public') )
+app.use( express.static('views') )
 
 
 
