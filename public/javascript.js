@@ -1,6 +1,8 @@
 $(()=>{
 
-alert("Jornadas");
-
+// alert("Jornadas");
+$.get('./usuarios', (data)=>{
+  alert(data);
+})
 
 });
