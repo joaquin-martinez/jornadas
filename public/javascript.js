@@ -2,7 +2,7 @@ $(()=>{
 
 // alert("Jornadas");
 $.get('./usuarios', (data)=>{
-  alert(data);
+  alert(data.listado);
 })
 
 });
