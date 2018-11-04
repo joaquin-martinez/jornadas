@@ -44,8 +44,10 @@ app.get( '/usuarios' , (req , res) => {
 
 
 app.get( '/saludo/:nombre' , (req , res) => {
+	nombre = req.params.nombre
+	console.log( nombre )
 	res.send( { "mensaje" : ` hola ${nombre}. ` } )
-	console.log(  )
+	console.log( nombre )
 })
 
 
