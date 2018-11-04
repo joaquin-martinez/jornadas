@@ -44,10 +44,10 @@ app.get( '/usuarios' , (req , res) => {
 
 
 app.get( '/saludo/:nombre' , (req , res) => {
-	nombre = req.params.nombre
-	console.log( nombre )
-	res.send( { "mensaje" : ` hola ${nombre}. ` } )
-	console.log( nombre )
+	var name = req.params.nombre
+	console.log( name )
+	res.send( { "mensaje" : ` hola ${name}. ` } )
+	console.log( name )
 })
 
 
