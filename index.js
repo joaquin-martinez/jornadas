@@ -28,7 +28,7 @@ app.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.sendFile('./views/index.html')
+	res.send('./views/index.html')
 
 
 
@@ -37,8 +37,8 @@ app.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
-rutas.get( '/' , (req , res) => {
-
+// rutas.get( '/' , (req , res) => {
+app.get( '/app' , (req , res) => {
 //	let listaUsu = new Lista()
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
