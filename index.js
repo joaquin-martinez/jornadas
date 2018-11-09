@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 app.use( express.static('public') )
 app.use( express.static('views') )
-app.use('/app' , rutas)
+//  app.use('/app' , rutas)
 
 app.set('views' , path.join('app'))
 
@@ -43,7 +43,7 @@ app.get( '/app' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.sendFile('saludo.html')
+	res.sendFile('./app/saludo.html')
 
 
 
