@@ -31,6 +31,27 @@ app.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
+app.get( '/app' , (req , res) => {
+
+//	let listaUsu = new Lista()
+//	listaUsu.find( {} , (err , list) => {
+//	res.send({Listado: list})
+
+	res.send('./app/saludo.html')
+
+
+
+
+//	})
+//	res.send( listado )
+	console.log(  )
+})
+
+
+
+
+
+
 
 app.get( '/usuarios' , (req , res) => {
 
