@@ -19,6 +19,7 @@ app.use( express.static('public') )
 app.use( express.static('views') )
 app.use('/app' , rutas)
 
+app.set('views' , 'app')
 
 app.get( '/' , (req , res) => {
 
@@ -41,7 +42,7 @@ rutas.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.redirect('saludo.html')
+	res.redirect('./app/saludo.html')
 
 
 
