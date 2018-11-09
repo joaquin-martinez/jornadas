@@ -43,7 +43,7 @@ app.get( '/app' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.sendFile('/saludo.html')
+	res.sendFile('saludo.html')
 
 
 
