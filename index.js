@@ -28,7 +28,7 @@ app.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.send('./views/index.html')
+	res.sendFile('./views/index.html')
 
 
 
