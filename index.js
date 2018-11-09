@@ -3,18 +3,21 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const html = require('http')
+// const html = require('http')
+
 
 const Schema = mongoose.Schema
 
 const app = express()
 const port = process.env.PORT || 3000
+const rutas = express.Router()
+
 
 app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 app.use( express.static('public') )
 app.use( express.static('views') )
-
+app.use('/app' , rutas)
 
 
 app.get( '/' , (req , res) => {
@@ -32,13 +35,13 @@ app.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
-app.get( '/app' , (req , res) => {
+rutas.get( '/app' , (req , res) => {
 
 //	let listaUsu = new Lista()
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.render('./app/saludo.html')
+	res.send('./app/saludo.html')
 
 
 
