@@ -35,7 +35,7 @@ app.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
-rutas.get( '/app' , (req , res) => {
+rutas.get( '/' , (req , res) => {
 
 //	let listaUsu = new Lista()
 //	listaUsu.find( {} , (err , list) => {
@@ -48,7 +48,7 @@ rutas.get( '/app' , (req , res) => {
 
 //	})
 //	res.send( listado )
-	console.log(  )
+	console.log( 'ha llegado' )
 })
 
 
