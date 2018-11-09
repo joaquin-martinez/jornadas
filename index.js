@@ -41,7 +41,7 @@ rutas.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.redirect('./app/saludo.html')
+	res.redirect('./saludo.html')
 
 
 
