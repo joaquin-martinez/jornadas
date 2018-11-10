@@ -4,6 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path =require('path')
+
 // const html = require('http')
 
 
@@ -21,7 +22,7 @@ app.use( express.static('views') )
 //  app.use('/app' , rutas)
 
 app.set('views' , path.join('app'))
-
+app.set('views engine' , 'ejs')
 app.get( '/' , (req , res) => {
 
 //	let listaUsu = new Lista()
@@ -43,8 +44,8 @@ app.get( '/app' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.sendFile('/home/node/jornadas/app/saludo.html')
-
+	// res.sendFile('/home/node/jornadas/app/saludo.html')
+	res.render('login')
 
 
 
