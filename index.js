@@ -21,8 +21,8 @@ app.use( express.static('public') )
 app.use( express.static('views') )
 //  app.use('/app' , rutas)
 
-app.set('views' , './app'))
-app.set('views engine' , 'ejs')
+app.set('views' , path.join('app'))
+app.set('view engine' , 'ejs')
 app.get( '/' , (req , res) => {
 
 //	let listaUsu = new Lista()
