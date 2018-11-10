@@ -57,7 +57,8 @@ app.get( '/app' , (req , res) => {
 })
 
 app.post('/app' , (req , res)=>{
-console.log(req.body.usuario);
+	console.log('LLega usuario');
+	console.log(req.body.usuario);
 
 })
 
