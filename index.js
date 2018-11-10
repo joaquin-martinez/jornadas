@@ -23,6 +23,8 @@ app.use( express.static('views') )
 
 app.set('views' , path.join('app'))
 app.set('view engine' , 'ejs')
+
+
 app.get( '/' , (req , res) => {
 
 //	let listaUsu = new Lista()
@@ -54,11 +56,10 @@ app.get( '/app' , (req , res) => {
 	console.log( 'ha llegado' )
 })
 
+app.post('/app' , (req , res)=>{
+console.log(req.body.usuario);
 
-
-
-
-
+})
 
 app.get( '/usuarios' , (req , res) => {
 
