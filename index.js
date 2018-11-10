@@ -103,12 +103,13 @@ app.delete( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 
-var listaSchema = Schema({
-   user: {type: String, required: true},
-   password: {type: String, required: true}
+var UsuarioSchema = Schema({
+   user : {type : String, required : true },
+   password : {type : String, required : true },
+	 tipo : {type : String , required : true }
 });
 
-let listaUsu = mongoose.model('usuarios', listaSchema );
+let listaUsu = mongoose.model('usuarios', UsuarioSchema );
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
