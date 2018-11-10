@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path =require('path')
-// const ejs = require('ejs')
+const session = require('express-session')
 // const html = require('http')
 
 
@@ -21,7 +21,7 @@ app.use( express.static('public') )
 app.use( express.static('views') )
 //  app.use('/app' , rutas)
 
-app.set('views' , path.join('app'))
+app.set('views' , './app'))
 app.set('views engine' , 'ejs')
 app.get( '/' , (req , res) => {
 
