@@ -47,6 +47,7 @@ app.get( '/app' , (req , res) => {
 //	res.send({Listado: list})
 
 	// res.sendFile('/home/node/jornadas/app/saludo.html')
+	/*
 	res.render('login' , { empresa : "Simpempa.sl" ,
 												 tipo : "administrador",
 												 cabecera : "Edicion de usuaros",
@@ -54,7 +55,8 @@ app.get( '/app' , (req , res) => {
 												 destinobaja : "bajausuario",
 												 destinomodificar : "modificausuario"
 												})
-
+*/
+res.render('entrada')
 
 
 //	})
