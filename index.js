@@ -67,6 +67,14 @@ res.render('entrada' , {tipo : "administrador"})
 app.post('/app' , (req , res)=>{
 	console.log('LLega usuario');
 	console.log(req.body);
+	var candidato = JSON.parser(req.body)
+	console.log(candidato.nombre)
+	listaUsu.find( { user : candidato.nombre } , (err , list) => {
+	// res.send({Listado: list})
+	var trabajador = JSON.parser(list)
+	if(err)console.log('error en la busqueda');
+	if (candidato.nombre == trabajador.user )console.log( list);
+	})
 
 })
 
