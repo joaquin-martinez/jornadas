@@ -74,7 +74,13 @@ app.post('/app' , (req , res)=>{
 	var trabajador = list
 	console.log(trabajador[0])
 	if(err)console.log('error en la busqueda');
-	if (candidato.nombre == trabajador.user )console.log( list);
+	else if (candidato.nombre == trabajador.user ){
+		console.log( list);
+		res.render('entrada' , {tipo : "administrador"})
+								}
+	else{
+		res.send('index.html')
+	}
 	})
 
 })
