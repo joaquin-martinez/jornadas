@@ -68,10 +68,11 @@ app.post('/app' , (req , res)=>{
 	console.log('LLega usuario');
 	console.log(req.body);
 	var candidato = req.body
-	console.log(candidato.user)
+	console.log(candidato)
 	listaUsu.find( { user : candidato.nombre } , (err , list) => {
 	// res.send({Listado: list})
-	var trabajador = list.toString()
+	var trabajador = list
+	console.log(trabajador)
 	if(err)console.log('error en la busqueda');
 	if (candidato.nombre == trabajador.user )console.log( list);
 	})
