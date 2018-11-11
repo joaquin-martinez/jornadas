@@ -67,11 +67,11 @@ res.render('entrada' , {tipo : "administrador"})
 app.post('/app' , (req , res)=>{
 	console.log('LLega usuario');
 	console.log(req.body);
-	var candidato = JSON.parser(req.body)
+	var candidato = JSON.parse(req.body)
 	console.log(candidato.nombre)
 	listaUsu.find( { user : candidato.nombre } , (err , list) => {
 	// res.send({Listado: list})
-	var trabajador = JSON.parser(list)
+	var trabajador = JSON.parse(list)
 	if(err)console.log('error en la busqueda');
 	if (candidato.nombre == trabajador.user )console.log( list);
 	})
