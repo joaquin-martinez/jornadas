@@ -48,7 +48,7 @@ app.get( '/app' , (req , res) => {
 
 	// res.sendFile('/home/node/jornadas/app/saludo.html')
 	res.render('login' , { empresa : "Simpempa.sl" ,
-												 tipo : "trabajador"
+												 tipo : "administrador"
 												})
 
 
