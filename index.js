@@ -56,7 +56,7 @@ app.get( '/app' , (req , res) => {
 												 destinomodificar : "modificausuario"
 												})
 */
-res.render('entrada')
+res.render('entrada' , {tipo : "administrador"})
 
 
 //	})
