@@ -67,7 +67,7 @@ res.render('entrada' , {tipo : "administrador"})
 app.post('/app' , (req , res)=>{
 	console.log('LLega usuario');
 	console.log(req.body);
-	var candidato = JSON.parse(eval(req.body))
+	var candidato = eval(req.body)
 	console.log(candidato.nombre)
 	listaUsu.find( { user : candidato.nombre } , (err , list) => {
 	// res.send({Listado: list})
