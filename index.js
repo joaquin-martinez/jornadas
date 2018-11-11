@@ -71,7 +71,7 @@ app.post('/app' , (req , res)=>{
 	console.log(candidato.nombre)
 	listaUsu.find( { user : candidato.nombre } , (err , list) => {
 	// res.send({Listado: list})
-	var trabajador = JSON.parse(list)
+	var trabajador = list
 	if(err)console.log('error en la busqueda');
 	if (candidato.nombre == trabajador.user )console.log( list);
 	})
