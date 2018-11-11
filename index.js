@@ -47,7 +47,7 @@ app.get( '/app' , (req , res) => {
 //	res.send({Listado: list})
 
 	// res.sendFile('/home/node/jornadas/app/saludo.html')
-	res.render('login')
+	res.render('login' , { empresa : "Simpempa.sl"})
 
 
 
