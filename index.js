@@ -79,7 +79,7 @@ app.post('/app' , (req , res)=>{
 		res.render('entrada' , {tipo : "administrador"})
 								}
 	else{
-		res.send('index.html')
+		res.send('./views/index.html')
 	}
 	})
 
