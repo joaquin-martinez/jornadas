@@ -112,8 +112,8 @@ app.get( '/api/product/:productId' , (req , res) => {
 	res.send( )
 	console.log(  )
 })
-app.get( '/api/product/' , (req , res) => {
-	res.send( 200, { "products" : [] } )
+app.get( '/api/trabajadores/' , (req , res) => {
+	app.render('altausu')
 	console.log(  )
 })
 
