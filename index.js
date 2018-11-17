@@ -117,9 +117,19 @@ app.get( '/api/product/' , (req , res) => {
 	console.log(  )
 })
 
-app.post( '/api/product' , (req , res) => {
+app.post( '/app/altausu' , (req , res) => {
 	res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
 	console.log( req.body )
+
+	let nuevoUsu = new Usuar()
+	nuevoUsu.user = req.body.usuario
+	nuevoUsu.password = req.body.clave
+	nuevoUsu.tipo = req.body.tipo
+	nuevoUsu.save(err => {
+		console.log(`Error al guardar el usuario`);
+
+	})
+
 })
 app.put( '/api/product/:productId' , (req , res) => {
 	res.send( )
@@ -139,7 +149,7 @@ var UsuarioSchema = Schema({
 let listaUsu = mongoose.model('usuarios', UsuarioSchema );
 */
 
-let listaUsu = new Usuar()
+
 
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
