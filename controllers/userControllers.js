@@ -1,6 +1,6 @@
 'use strict'
 
-const Usuar = require('./models/user')
+const Usuar = require('../models/user')
 
 function setUser( req , res ) {
   res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
