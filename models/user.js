@@ -11,4 +11,4 @@ const userSchema = Schema({
 
 })
 
-module.export = mongoose.model('usuarios' , userSchema)
+module.exports = mongoose.model('usuarios' , userSchema)

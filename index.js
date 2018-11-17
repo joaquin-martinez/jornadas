@@ -9,7 +9,7 @@ const session = require('express-session')
 
 const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
-const User = require('./models/user')
+const Usuar = require('./models/user')
 
 
 const Schema = mongoose.Schema
@@ -92,7 +92,7 @@ app.post('/app' , (req , res)=>{
 app.get( '/usuarios' , (req , res) => {
 
 //	let listaUsu = new Lista()
-	User.find( {} , (err , list) => {
+	Usuar.find( {} , (err , list) => {
 	res.send({Listado: list})
 	})
 //	res.send( listado )

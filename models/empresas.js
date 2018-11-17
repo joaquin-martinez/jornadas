@@ -9,4 +9,4 @@ const empresaSchema = Schema({
   empresaNif : String
 })
 
-module.export = mongoose.model('empresas' , empresaSchema)
+module.exports = mongoose.model('empresas' , empresaSchema)

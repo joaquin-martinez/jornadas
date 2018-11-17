@@ -11,4 +11,4 @@ const jornadaSchema = Schema({
   duracion : Number
 })
 
-module.export = mongoose.model('jornadas' , jornadaSchema)
+module.exports = mongoose.model('jornadas' , jornadaSchema)
