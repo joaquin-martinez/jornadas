@@ -8,8 +8,8 @@ const session = require('express-session')
 // const html = require('http')
 
 const Empresas = requiere('./models/empresas')
-const Jornada = requiere('./models/jornada')
-const User = requiere('./models/user')
+const Jornada = require('./models/jornada')
+const User = require('./models/user')
 
 
 const Schema = mongoose.Schema
