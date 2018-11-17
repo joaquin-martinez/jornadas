@@ -36,7 +36,7 @@ function getUser ( req , res ) {
 	else{
 		res.sendFile('/home/node/jornadas/views/index.html')
 	}
-
+})
 
 }
 
