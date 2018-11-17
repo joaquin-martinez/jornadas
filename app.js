@@ -58,36 +58,11 @@ res.render('entrada' , {tipo : "administrador"})
 	console.log( 'ha llegado' )
 })
 
-app.post('/app' , (req , res)=>{
-	console.log('LLega usuario');
-	console.log(req.body);
-	var candidato = req.body
-	console.log(candidato.clave)
-	Usuar.find( { user : candidato.usuario } , (err , list) => {
-	// res.send({Listado: list})
-	var trabajador = list
-	console.log(trabajador[0])
-	if(err)console.log('error en la busqueda');
-	else if (trabajador[0] && candidato.usuario == trabajador[0].user ){
-		console.log( list);
-		res.render('entrada' , {tipo : "administrador"})
-								}
-	else{
-		res.sendFile('/home/node/jornadas/views/index.html')
-	}
-	})
+app.post('/app' , userCtr.getUser)
 
 })
 
-app.get( '/usuarios' , (req , res) => {
-
-//	let listaUsu = new Lista()
-	Usuar.find( {} , (err , list) => {
-	res.send({Listado: list})
-	})
-//	res.send( listado )
-	console.log(  )
-})
+app.get( '/usuarios' , userCtr.getUsers )
 
 
 app.get( '/saludo/:nombre' , (req , res) => {
