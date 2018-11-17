@@ -114,7 +114,7 @@ app.get( '/app/product/:productId' , (req , res) => {
 })
 app.get( '/app/trabajadores/' , (req , res) => {
 	console.log( 'estamos con los trabajadores' )
-	app.render('altausu')
+	res.render('altausu')
 	console.log( 'ya no estamos con los trabajadores' )
 })
 
