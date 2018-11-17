@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded( { extended : false } ))
 app.use( bodyParser.json() )
 app.use( express.static('public') )
 app.use( express.static('views') )
-//  app.use('/app' , rutas)
+app.use('/' , api)
 
 app.set('views' , path.join('app'))
 app.set('view engine' , 'ejs')
