@@ -7,7 +7,7 @@ const path =require('path')
 const session = require('express-session')
 // const html = require('http')
 
-const Empresas = requiere('./models/empresas')
+const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
 const User = require('./models/user')
 
