@@ -14,7 +14,7 @@ const Schema = mongoose.Schema
 
 
 const port = process.env.PORT || 3000
-const rutas = express.Router()
+// const rutas = express.Router()
 
 
 
