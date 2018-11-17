@@ -10,7 +10,7 @@ const session = require('express-session')
 const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
 const Usuar = require('./models/user')
-const userCtr = require('./controllers/usercontrollers')
+const userCtr = require('./controllers/userControllers')
 
 const Schema = mongoose.Schema
 
