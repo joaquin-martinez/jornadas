@@ -7,6 +7,10 @@ const path =require('path')
 const session = require('express-session')
 // const html = require('http')
 
+const Empresas = requiere('./models/empresas')
+const Jornada = requiere('./models/jornada')
+const User = requiere('./models/user')
+
 
 const Schema = mongoose.Schema
 
@@ -125,7 +129,7 @@ app.delete( '/api/product/:productId' , (req , res) => {
 	res.send( { "mensaje" : `borrado ${productId}. ` } )
 	console.log(  )
 })
-
+/*
 var UsuarioSchema = Schema({
    user : {type : String, required : true },
    password : {type : String, required : true },
@@ -133,6 +137,10 @@ var UsuarioSchema = Schema({
 });
 
 let listaUsu = mongoose.model('usuarios', UsuarioSchema );
+*/
+
+let listaUsu = new User()
+
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
 	if (err) {
