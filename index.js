@@ -73,7 +73,7 @@ app.post('/app' , (req , res)=>{
 	console.log(req.body);
 	var candidato = req.body
 	console.log(candidato.clave)
-	listaUsu.find( { user : candidato.usuario } , (err , list) => {
+	Usuar.find( { user : candidato.usuario } , (err , list) => {
 	// res.send({Listado: list})
 	var trabajador = list
 	console.log(trabajador[0])
