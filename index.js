@@ -5,6 +5,7 @@ const app = require('./app')
 const session = require('express-session')
 // const html = require('http')
 
+const Config = require('./config')
 const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
 // const Usuar = require('./models/user')
@@ -13,7 +14,7 @@ const Jornada = require('./models/jornada')
 const Schema = mongoose.Schema
 
 
-const port = process.env.PORT || 3000
+// const port = process.env.PORT || 3000
 // const rutas = express.Router()
 
 
@@ -31,7 +32,7 @@ let listaUsu = mongoose.model('usuarios', UsuarioSchema );
 
 
 
-const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
+const conn = mongoose.connect( Config.dbUrl , ( err , res) => {
 	if (err) {
 	return console.log( ` Error al conectar con la base de datos: ${err}` )
 		}
@@ -39,7 +40,7 @@ const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res)
 
 
 app.listen( port , () => {
-console.log( ` Aplicación corriendo en localhost, puerto ${port}` )
+console.log( ` Aplicación corriendo en localhost, puerto ${Config.port}` )
 			})
 
 
