@@ -10,7 +10,7 @@ const session = require('express-session')
 const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
 const Usuar = require('./models/user')
-
+const userCtr = require('./controllers/usercontrollers')
 
 const Schema = mongoose.Schema
 
@@ -118,20 +118,9 @@ app.get( '/app/trabajadores/' , (req , res) => {
 	console.log( 'ya no estamos con los trabajadores' )
 })
 
-app.post( '/app/altausu' , (req , res) => {
-	res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
-	console.log( req.body )
+app.post( '/app/altausu' , userCtr.setUser )
 
-	let nuevoUsu = new Usuar()
-	nuevoUsu.user = req.body.usuario
-	nuevoUsu.password = req.body.clave
-	nuevoUsu.tipo = req.body.tipo
-	nuevoUsu.save((err , user) => {
-		if (err) console.log(`Error al guardar el usuario`);
-		else console.log(user);
-	})
 
-})
 app.put( '/api/product/:productId' , (req , res) => {
 	res.send( )
 	console.log(  )
