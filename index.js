@@ -92,7 +92,7 @@ app.post('/app' , (req , res)=>{
 app.get( '/usuarios' , (req , res) => {
 
 //	let listaUsu = new Lista()
-	listaUsu.find( {} , (err , list) => {
+	User.find( {} , (err , list) => {
 	res.send({Listado: list})
 	})
 //	res.send( listado )
@@ -139,7 +139,7 @@ var UsuarioSchema = Schema({
 let listaUsu = mongoose.model('usuarios', UsuarioSchema );
 */
 
-let listaUsu = User
+// let listaUsu = User
 
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {
