@@ -139,7 +139,7 @@ var UsuarioSchema = Schema({
 let listaUsu = mongoose.model('usuarios', UsuarioSchema );
 */
 
-let listaUsu = new User()
+let listaUsu = User
 
 
 const conn = mongoose.connect( 'mongodb://172.17.0.2:27017/users' , ( err , res) => {

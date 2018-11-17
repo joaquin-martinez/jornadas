@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const empresaSchema = Schema({
+const userSchema = Schema({
   user : String,
   password : String,
   tipo : String ,
@@ -11,4 +11,4 @@ const empresaSchema = Schema({
 
 })
 
-module.export = mongoose.model('usuarios' , empresaSchema)
+module.export = mongoose.model('usuarios' , userSchema)
