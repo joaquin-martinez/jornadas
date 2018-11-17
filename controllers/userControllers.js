@@ -44,7 +44,7 @@ function getUsers ( req , res ) {
 }
 
 
-exports = {
+module.exports = {
   setUser ,
   getUser ,
   deleteUser ,
