@@ -60,8 +60,6 @@ res.render('entrada' , {tipo : "administrador"})
 
 app.post('/app' , userCtr.getUser)
 
-})
-
 app.get( '/usuarios' , userCtr.getUsers )
 
 
