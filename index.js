@@ -126,9 +126,9 @@ app.post( '/app/altausu' , (req , res) => {
 	nuevoUsu.user = req.body.usuario
 	nuevoUsu.password = req.body.clave
 	nuevoUsu.tipo = req.body.tipo
-	nuevoUsu.save(err => {
-		console.log(`Error al guardar el usuario`);
-
+	nuevoUsu.save((err , user) => {
+		if (err) console.log(`Error al guardar el usuario`);
+		else console.log(user);
 	})
 
 })
