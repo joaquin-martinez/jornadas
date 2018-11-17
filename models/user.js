@@ -11,4 +11,4 @@ const empresaSchema = Schema({
 
 })
 
-modul.export = mongoose.model('usuarios' , empresaSchema)
+module.export = mongoose.model('usuarios' , empresaSchema)
