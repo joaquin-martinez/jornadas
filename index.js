@@ -108,11 +108,11 @@ app.get( '/saludo/:nombre' , (req , res) => {
 })
 
 
-app.get( '/api/product/:productId' , (req , res) => {
+app.get( '/app/product/:productId' , (req , res) => {
 	res.send( )
 	console.log(  )
 })
-app.get( '/api/trabajadores/' , (req , res) => {
+app.get( '/app/trabajadores/' , (req , res) => {
 	app.render('altausu')
 	console.log(  )
 })
