@@ -39,7 +39,7 @@ const conn = mongoose.connect( Config.dbUrl , ( err , res) => {
 	console.log( ` Conexión a la base de datos establecida ….` )
 
 
-app.listen( port , () => {
+app.listen( Config.port , () => {
 console.log( ` Aplicación corriendo en localhost, puerto ${Config.port}` )
 			})
 
