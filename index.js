@@ -113,8 +113,9 @@ app.get( '/app/product/:productId' , (req , res) => {
 	console.log(  )
 })
 app.get( '/app/trabajadores/' , (req , res) => {
+	console.log( 'estamos con los trabajadores' )
 	app.render('altausu')
-	console.log(  )
+	console.log( 'ya no estamos con los trabajadores' )
 })
 
 app.post( '/app/altausu' , (req , res) => {
