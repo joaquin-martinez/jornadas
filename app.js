@@ -1,0 +1,123 @@
+'use strict'
+
+const express = require('express')
+const bodyParser = require('body-parser')
+const path =require('path')
+
+const userCtr = require('./controllers/userControllers')
+
+const app = express()
+
+
+app.use(bodyParser.urlencoded( { extended : false } ))
+app.use( bodyParser.json() )
+app.use( express.static('public') )
+app.use( express.static('views') )
+//  app.use('/app' , rutas)
+
+app.set('views' , path.join('app'))
+app.set('view engine' , 'ejs')
+
+
+app.get( '/' , (req , res) => {
+
+//	let listaUsu = new Lista()
+//	listaUsu.find( {} , (err , list) => {
+//	res.send({Listado: list})
+
+	res.send('./views/index.html')
+
+
+
+
+//	})
+//	res.send( listado )
+	console.log(  )
+})
+// rutas.get( '/' , (req , res) => {
+app.get( '/app' , (req , res) => {
+//	let listaUsu = new Lista()
+//	listaUsu.find( {} , (err , list) => {
+//	res.send({Listado: list})
+
+	// res.sendFile('/home/node/jornadas/app/saludo.html')
+	/*
+	res.render('login' , { empresa : "Simpempa.sl" ,
+												 tipo : "administrador",
+												 cabecera : "Edicion de usuaros",
+												 destinoalta : "altausuario",
+												 destinobaja : "bajausuario",
+												 destinomodificar : "modificausuario"
+												})
+*/
+res.render('entrada' , {tipo : "administrador"})
+
+
+//	})
+//	res.send( listado )
+	console.log( 'ha llegado' )
+})
+
+app.post('/app' , (req , res)=>{
+	console.log('LLega usuario');
+	console.log(req.body);
+	var candidato = req.body
+	console.log(candidato.clave)
+	Usuar.find( { user : candidato.usuario } , (err , list) => {
+	// res.send({Listado: list})
+	var trabajador = list
+	console.log(trabajador[0])
+	if(err)console.log('error en la busqueda');
+	else if (trabajador[0] && candidato.usuario == trabajador[0].user ){
+		console.log( list);
+		res.render('entrada' , {tipo : "administrador"})
+								}
+	else{
+		res.sendFile('/home/node/jornadas/views/index.html')
+	}
+	})
+
+})
+
+app.get( '/usuarios' , (req , res) => {
+
+//	let listaUsu = new Lista()
+	Usuar.find( {} , (err , list) => {
+	res.send({Listado: list})
+	})
+//	res.send( listado )
+	console.log(  )
+})
+
+
+app.get( '/saludo/:nombre' , (req , res) => {
+	var name = req.params.nombre
+	console.log( name )
+	res.send( { "mensaje" : ` hola ${name}. ` } )
+	console.log( name )
+})
+
+
+app.get( '/app/product/:productId' , (req , res) => {
+	res.send( )
+	console.log(  )
+})
+app.get( '/app/trabajadores/' , (req , res) => {
+	console.log( 'estamos con los trabajadores' )
+	res.render('altausu')
+	console.log( 'ya no estamos con los trabajadores' )
+})
+
+app.post( '/app/altausu' , userCtr.setUser )
+
+
+app.put( '/api/product/:productId' , (req , res) => {
+	res.send( )
+	console.log(  )
+})
+app.delete( '/api/product/:productId' , (req , res) => {
+	res.send( { "mensaje" : `borrado ${productId}. ` } )
+	console.log(  )
+})
+
+module.exports = app
