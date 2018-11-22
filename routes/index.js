@@ -4,8 +4,17 @@ const express = require('express')
 const api = express.Router()
 const userCtr = require('../controllers/userControllers')
 const session = require('express-session')
+const MongoStore = require('connect-mongo')(session)
 
-api.use('express-session')
+api.use(session({
+  secret : "afr33ty5",
+  reseave : true,
+  saveUninitialized : true,
+  store : new MongoStore({
+    url : Config.dbUrl,
+    autoreconnect : true
+  })
+}))
 
 api.get( '/' , (req , res) => {
 

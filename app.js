@@ -4,9 +4,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path =require('path')
 const api = require('./routes')
-const session = require('express-session')
+// const session = require('express-session')
 const Config = require('./config')
-const MongoStore = require('connect-mongo')(session)
+// const MongoStore = require('connect-mongo')(session)
 // const userCtr = require('./controllers/userControllers')
 
 const app = express()
@@ -17,6 +17,7 @@ app.use( bodyParser.json() )
 app.use( express.static('public') )
 app.use( express.static('views') )
 app.use('/' , api)
+/*
 app.use(session({
   secret : "afr33ty5",
   reseave : true,
@@ -26,7 +27,7 @@ app.use(session({
     autoreconnect : true
   })
 }))
-
+*/
 app.set('views' , path.join('app'))
 app.set('view engine' , 'ejs')
 
