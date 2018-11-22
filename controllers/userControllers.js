@@ -34,7 +34,7 @@ function getUser ( req , res ) {
 	else if (trabajador[0] && candidato.usuario == trabajador[0].user ){
 		console.log( list);
     console.log(trabajador[0].tipo);
-    req.session.user = trabajador[0].tipo;
+    req.session.user = trabajador[0];
 		res.render('entrada' , {tipo : req.session.user.tipo})
 								}
 	else{
