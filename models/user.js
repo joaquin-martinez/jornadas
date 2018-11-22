@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 const userSchema = Schema({
   user : { type : String , unique : true , required : true } ,
   password : String,
-  tipo : { type : String , enum : [ administrador , trabajador ] } ,
+  tipo : { type : String , enum : [ "administrador" , "trabajador" ] } ,
   empresaNif : String
 
 })
