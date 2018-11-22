@@ -1,6 +1,7 @@
 'use strict'
 
 const Usuar = require('../models/user')
+const session = require('express-session')
 
 function setUser( req , res ) {
   res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
