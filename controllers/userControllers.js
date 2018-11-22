@@ -31,7 +31,8 @@ function getUser ( req , res ) {
 	if(err)console.log('error en la busqueda');
 	else if (trabajador[0] && candidato.usuario == trabajador[0].user ){
 		console.log( list);
-		res.render('entrada' , {tipo : "administrador"})
+    req.session.user = trabajador[0]
+		res.render('entrada' , {tipo : req.session.user.tipo})
 								}
 	else{
 		res.sendFile('/home/node/jornadas/public/index.html')
