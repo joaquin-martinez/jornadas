@@ -4,8 +4,9 @@ const express = require('express')
 const api = express.Router()
 const userCtr = require('../controllers/userControllers')
 const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
 const Config = require('./config')
+const MongoStore = require('connect-mongo')(session)
+
 
 api.use(session({
   secret : "afr33ty5",
