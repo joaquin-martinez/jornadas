@@ -5,6 +5,8 @@ const api = express.Router()
 const userCtr = require('../controllers/userControllers')
 const session = require('express-session')
 
+api.use('express-session')
+
 api.get( '/' , (req , res) => {
 
 //	let listaUsu = new Lista()
