@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jornadas-laborales</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >
+  </script>
+  <script src="./js/javascript.js" ></script>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+</head>
+<body>
+  <h1>Bienvenido a Jornadas laborales .</h1>
+  <form action="./app" method="post" >
+    <fieldset>
+      <legend>logarse en Jornadas</legend>
+      <label for="usuario"> Usuario: </label>
+      <input type="text" name="usuario" id="usuario" class="text">
+      <label for="clave" > Clave: </label>
+      <input type="password" name="clave" id="clave">
+      <input type="hidden" name="accion" value="logar" >
+      <input type="submit" value="Enviar">
+    </fieldset>
+  </form>
+
+  <a href="./app" >entrar en otra página</a>
+
+</body>
+</html>

@@ -11,7 +11,7 @@ api.get( '/' , (req , res) => {
 //	listaUsu.find( {} , (err , list) => {
 //	res.send({Listado: list})
 
-	res.send('./views/index.html')
+	res.send('./public/index.html')
 
 
 
@@ -61,7 +61,9 @@ api.get( '/app/product/:productId' , (req , res) => {
 	res.send( )
 	console.log(  )
 })
-api.get( '/app/trabajadores/' , (req , res) => {
+
+//Viene de entrada.
+api.get( '/altausuarios/' , (req , res) => {
 	console.log( 'estamos con los trabajadores' )
 	res.render('altausu')
 	console.log( 'ya no estamos con los trabajadores' )

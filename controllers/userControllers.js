@@ -34,7 +34,7 @@ function getUser ( req , res ) {
 		res.render('entrada' , {tipo : "administrador"})
 								}
 	else{
-		res.sendFile('/home/node/jornadas/views/index.html')
+		res.sendFile('/home/node/jornadas/public/index.html')
 	}
 })
 
