@@ -4,17 +4,17 @@ $(()=>{
   //Funciones de despliegue.
 const fusu = ()=>{
   $("#DropdownUsu").classList.toggle("show");
-  document.getElementById("DropdownUsu").classList.toggle("show");
+//  document.getElementById("DropdownUsu").classList.toggle("show");
 }
 
 const femp = ()=>{
   $("#DropdownEmp").classList.toggle("show");
-  document.getElementById("DropdownEmp").classList.toggle("show");
+//  document.getElementById("DropdownEmp").classList.toggle("show");
 }
 
 const fjor = ()=>{
   $("#DropdownJor").classList.toggle("show");
-  document.getElementById("DropdownJor").classList.toggle("show");
+//  document.getElementById("DropdownJor").classList.toggle("show");
 }
 
   // Asignaciones de botones de menu principal.
@@ -30,17 +30,17 @@ const fjor = ()=>{
 
 const fdau = ()=>{
   $("#dau").showModal();
-  document.getElementById("dau").showModal();
+//  document.getElementById("dau").showModal();
 }
 
 const fdae = ()=>{
   $("#dae").showModal();
-  document.getElementById("dae").showModal();
+//  document.getElementById("dae").showModal();
 }
 
 const fdaj = ()=>{
   $("#daj").showModal();
-  document.getElementById("daj").showModal();
+//  document.getElementById("daj").showModal();
 }
 
 
