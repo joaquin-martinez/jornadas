@@ -18,9 +18,9 @@ const fjor = ()=>{
 }
 
   // Asignaciones de botones de menu principal.
-  $("#BtnUsu").onclick = fusu;
-  $("#BtnEmp").onclick = femp;
-  $("#BtnJor").onclick = fjor;
+  $("#BtnUsu").onclick ( fusu );
+  $("#BtnEmp").onclick ( femp);
+  $("#BtnJor").onclick ( fjor );
 
   $("#BtnUsu").onblur = fusu;
   $("#BtnEmp").onblur = femp;
