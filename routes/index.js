@@ -50,6 +50,7 @@ api.get( '/app' , (req , res) => {
 												})
 */
 res.render('entrada' , {tipo : "administrador"})
+// es.render('entrada' , {tipo : req.session.user.tipo})
 
 
 //	})
@@ -61,7 +62,7 @@ api.post('/app' , userCtr.getUser)
 
 api.get( '/usuarios' , userCtr.getUsers )
 
-
+/*
 api.get( '/saludo/:nombre' , (req , res) => {
 	var name = req.params.nombre
 	console.log( name )
@@ -81,10 +82,10 @@ api.get( '/altausuarios/' , (req , res) => {
 	res.render('altausu')
 	console.log( 'ya no estamos con los trabajadores' )
 })
-
+*/
 api.post( '/app/altausu' , userCtr.setUser )
 
-
+/*
 api.put( '/api/product/:productId' , (req , res) => {
 	res.send( )
 	console.log(  )
@@ -93,6 +94,6 @@ api.delete( '/api/product/:productId' , (req , res) => {
 	res.send( { "mensaje" : `borrado ${productId}. ` } )
 	console.log(  )
 })
-
+*/
 
 module.exports = api

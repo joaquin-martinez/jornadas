@@ -1,10 +1,92 @@
 * {
-  display:grid;
-
+  padding: 0vw;
+  margin: 0vw;
   }
+
+
 body {
-  background-color: red;
+  background-color: #ffdd99;
 }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 2vw 2vh;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  overflow: auto;
+}
+
+// Estilos de nav.
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2vw;
+  font-size: 2vw;
+  margin: 1vw
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3E8E41;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F9F9F9;
+  min-width: 8vw;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1vw 1vh;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #F1F1FF;
+}
+
+.show {
+  display: block;
+}
+
 
 @media only screen and (max-width: 600px) {
     body {

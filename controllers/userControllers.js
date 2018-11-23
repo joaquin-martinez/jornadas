@@ -31,7 +31,8 @@ function getUser ( req , res ) {
 	var trabajador = list
 	console.log(trabajador[0])
 	if(err)console.log('error en la busqueda');
-	else if (trabajador[0] && candidato.usuario == trabajador[0].user ){
+	else if (trabajador[0] && candidato.usuario == trabajador[0].user &&
+  candidato.clave == trabajador[0].password ){
 		console.log( list);
     console.log(trabajador[0].tipo);
     req.session.user = trabajador[0];
