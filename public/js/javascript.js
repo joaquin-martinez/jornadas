@@ -26,7 +26,19 @@ const fjor = ()=>{
   $("#BtnEmp").on("blur" , femp);
   $("#BtnJor").on("blur" , fjor);
 
-// Funciones de dialogo.
+// Captura de submenus.
+
+  $("#altaUsu").on("click" , fdau );
+  $("#BtnUsu").on("click" , fdae );
+  $("#BtnUsu").on("click" , fdaj );
+
+  $("#altaEmp").on("click" , fdae );
+  $("#BtnUsu").on("click" , fdae );
+  $("#BtnUsu").on("click" , fdaj );
+
+  $("#altaJor").on("click" , fdaj );
+  $("#BtnUsu").on("click" , fdae );
+  $("#BtnUsu").on("click" , fdaj );// Funciones de dialogo.
 
 const fdau = ()=>{
 //  $("#dau").showModal();
