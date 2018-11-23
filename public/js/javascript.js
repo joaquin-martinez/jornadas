@@ -26,6 +26,25 @@ const fjor = ()=>{
   $("#BtnEmp").on("blur" , femp);
   $("#BtnJor").on("blur" , fjor);
 
+// Funciones de dialogo.
+
+  const fdau = ()=>{
+  //  $("#dau").showModal();
+    document.getElementById("dau").showModal();
+  }
+
+  const fdae = ()=>{
+  //  $("#dae").showModal();
+    document.getElementById("dae").showModal();
+  }
+
+  const fdaj = ()=>{
+  //  $("#daj").showModal();
+    document.getElementById("daj").showModal();
+  }
+
+
+
 // Captura de submenus.
 
   $("#altaUsu").on("click" , fdau );
@@ -38,23 +57,7 @@ const fjor = ()=>{
 
   $("#altaJor").on("click" , fdaj );
   $("#BtnUsu").on("click" , fdae );
-  $("#BtnUsu").on("click" , fdaj );// Funciones de dialogo.
-
-const fdau = ()=>{
-//  $("#dau").showModal();
-  document.getElementById("dau").showModal();
-}
-
-const fdae = ()=>{
-//  $("#dae").showModal();
-  document.getElementById("dae").showModal();
-}
-
-const fdaj = ()=>{
-//  $("#daj").showModal();
-  document.getElementById("daj").showModal();
-}
-
+  $("#BtnUsu").on("click" , fdaj );
 
 
 // Obtencion de listados.
