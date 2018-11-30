@@ -22,7 +22,7 @@ const fjor = ()=>{
   $("#BtnEmp").on("mouseenter" , femp);
   $("#BtnJor").on("mouseenter" , fjor );
 
-  $("#BtnUsu").on("mouseleave" , fusu);
+  $(".DropdownUsu").on("mouseleave" , fusu);
   $("#BtnEmp").on("mouseleave" , femp);
   $("#BtnJor").on("mouseleave" , fjor);
 
