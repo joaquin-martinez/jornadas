@@ -86,7 +86,7 @@ $.get('./jornadas', (data)=>{
 
 
 // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("altaUsu");
@@ -95,7 +95,8 @@ var btn = document.getElementById("altaUsu");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function(e) {
+  e.preventDefault();
     modal.style.display = "block";
 }
 
