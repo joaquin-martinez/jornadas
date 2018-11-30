@@ -27,7 +27,7 @@ const fjor = ()=>{
   $("#BtnJor").on("blur" , fjor);
 
 // Funciones de dialogo.
-
+/*
   const fdau = ()=>{
     $("#dau").showModal();
   //  document.getElementById("dau").showModal();
@@ -43,7 +43,7 @@ const fjor = ()=>{
     document.getElementById("daj").showModal();
   }
 
-
+*/
 
 // Captura de submenus.
 /*
@@ -61,7 +61,7 @@ const fjor = ()=>{
 */
 
 // Obtencion de listados.
-
+/*
 const obtenUsuarios = ()=>{
 $.get('./usuarios', (data)=>{
   alert(data.Listado[0].user);
@@ -82,7 +82,7 @@ $.get('./jornadas', (data)=>{
   console.log(data);
   })
 }
-
+*/
 
 
 // Get the modal
