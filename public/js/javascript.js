@@ -18,13 +18,13 @@ const fjor = ()=>{
 }
 
   // Asignaciones de botones de menu principal.
-  $("#BtnUsu").on("click" , fusu );
-  $("#BtnEmp").on("click" , femp);
-  $("#BtnJor").on("click" , fjor );
+  $("#BtnUsu").on("mouseenter" , fusu );
+  $("#BtnEmp").on("mouseenter" , femp);
+  $("#BtnJor").on("mouseenter" , fjor );
 
-  $("#BtnUsu").on("blur" , fusu);
-  $("#BtnEmp").on("blur" , femp);
-  $("#BtnJor").on("blur" , fjor);
+  $("#BtnUsu").on("mouseleave" , fusu);
+  $("#BtnEmp").on("mouseleave" , femp);
+  $("#BtnJor").on("mouseleave" , fjor);
 
 // Funciones de dialogo.
 /*
