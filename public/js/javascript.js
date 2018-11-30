@@ -89,7 +89,7 @@ $.get('./jornadas', (data)=>{
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("altaUsu");
+var btn = document.getElementById("altaUsu1");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
