@@ -96,8 +96,11 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function(e) {
+  console.log("entra");
   e.preventDefault();
+  console.log("sigue");
     modal.style.display = "block";
+    console.log("termina");
 }
 
 // When the user clicks on <span> (x), close the modal
