@@ -107,16 +107,19 @@ btnUsu.addEventListener("click" ,function() {
 });
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span[0].onclick = function() {
     modalUsu.style.display = "none";
+}
+
+span[1].onclick = function() {
     modalEmp.style.display = "none";
 }
 
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modalUsu.style.display = "none";
-        modalEmp.style.display = "none";
+    if (event.target == modalUsu || event.target == modalEmp  ) {
+        event.target.style.display = "none";
     }
 }
 
