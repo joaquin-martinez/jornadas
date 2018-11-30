@@ -19,12 +19,12 @@ const fjor = ()=>{
 
   // Asignaciones de botones de menu principal.
   $("#BtnUsu").on("mouseenter" , fusu );
-  $("#BtnEmp").on("mouseenter" , femp);
-  $("#BtnJor").on("mouseenter" , fjor );
+  $("#menuEmp").on("mouseenter" , femp);
+  $("#menuJor").on("mouseenter" , fjor );
 
-  $(".Dropdown").on("mouseleave" , fusu);
-  $("#BtnEmp").on("mouseleave" , femp);
-  $("#BtnJor").on("mouseleave" , fjor);
+  $("#menuUsu").on("mouseleave" , fusu);
+  $("#menuEmp").on("mouseleave" , femp);
+  $("#menuJor").on("mouseleave" , fjor);
 
 // Funciones de dialogo.
 /*
