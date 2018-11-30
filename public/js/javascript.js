@@ -90,19 +90,27 @@ var modalUsu = document.getElementById("usuModal");
 var modalEmp = document.getElementById("empModal");
 
 // Get the button that opens the modal
-var btnUsu = document.getElementById("altaUsu");
-var btnEmp = document.getElementById("altaEmp");
+var btmUsu = document.getElementById("altaUsu");
+var btmEmp = document.getElementById("altaEmp");
 
 // Get the <span> element that closes the modal
 var spanUsu = document.getElementsByClassName("close")[0];
 var spanEmp = document.getElementsByClassName("close")[1];
 
 // When the user clicks on the button, open the modal
-btnUsu.addEventListener("click" ,function() {
+btmUsu.addEventListener("click" ,function() {
   console.log("entra");
 //  e.preventDefault();
 //  console.log("sigue");
     modalUsu.style.display = "block";
+    console.log("termina");
+});
+
+btmEmp.addEventListener("click" ,function() {
+  console.log("entra");
+//  e.preventDefault();
+//  console.log("sigue");
+    modalEmp.style.display = "block";
     console.log("termina");
 });
 
