@@ -83,7 +83,7 @@ api.get( '/altausuarios/' , (req , res) => {
 	console.log( 'ya no estamos con los trabajadores' )
 })
 */
-api.post( '/app/altausu' , userCtr.setUser )
+api.post( '/altausu' , userCtr.setUser )
 
 /*
 api.put( '/api/product/:productId' , (req , res) => {
