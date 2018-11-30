@@ -95,10 +95,10 @@ var btn = document.getElementById("altaUsu");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function(e) {
+btn.onclick = function() {
   console.log("entra");
-  e.preventDefault();
-  console.log("sigue");
+//  e.preventDefault();
+//  console.log("sigue");
     modal.style.display = "block";
     console.log("termina");
 }
