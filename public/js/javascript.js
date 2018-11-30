@@ -94,8 +94,8 @@ var btnUsu = document.getElementById("altaUsu");
 var btnEmp = document.getElementById("altaEmp");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-var span = document.getElementsByClassName("close")[1];
+var spanUsu = document.getElementsByClassName("close")[0];
+var spanEmp = document.getElementsByClassName("close")[1];
 
 // When the user clicks on the button, open the modal
 btnUsu.addEventListener("click" ,function() {
@@ -107,11 +107,11 @@ btnUsu.addEventListener("click" ,function() {
 });
 
 // When the user clicks on <span> (x), close the modal
-span[0].onclick = function() {
+spanUsu.onclick = function() {
     modalUsu.style.display = "none";
 }
 
-span[1].onclick = function() {
+spanEmp.onclick = function() {
     modalEmp.style.display = "none";
 }
 
