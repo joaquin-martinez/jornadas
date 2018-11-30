@@ -3,6 +3,7 @@
 const express = require('express')
 const api = express.Router()
 const userCtr = require('../controllers/userControllers')
+const emprCtr = require('../controllers/empreControllers')
 const session = require('express-session')
 const Config = require('../config')
 const MongoStore = require('connect-mongo')(session)
@@ -84,6 +85,7 @@ api.get( '/altausuarios/' , (req , res) => {
 })
 */
 api.post( '/altausu' , userCtr.setUser )
+api.post( '/altaemp' , emprCtr.setEmpresa )
 
 /*
 api.put( '/api/product/:productId' , (req , res) => {
