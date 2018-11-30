@@ -2,7 +2,7 @@
 
 const Empresa = require('../models/empresas')
 
-setEmpresa = (req , res ) => {
+const setEmpresa = (req , res ) => {
 
   let nuevaEmpresa = new Empresa()
   nuevaEmpresa.name = req.body.empresa
@@ -15,7 +15,7 @@ setEmpresa = (req , res ) => {
 
 }
 
-getEmpresa = (req , res ) => {
+const getEmpresa = (req , res ) => {
   let empresa = req.body
   console.log(empresa.nif )
   Empresa.findOne( { nif : empresa.nif } , (err , list) => {
@@ -38,15 +38,15 @@ getEmpresa = (req , res ) => {
 
 }
 
-deleteEmpresa = (req , res ) => {
+const deleteEmpresa = (req , res ) => {
 
 }
 
-putEmpresa = (req , res ) => {
+const putEmpresa = (req , res ) => {
 
 }
 
-getEmpresas = (req , res ) => {
+const getEmpresas = (req , res ) => {
 
   Empresa.find( {} , (err , list) => {
     if (err) {
