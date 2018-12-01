@@ -6,4 +6,4 @@ const salir = ( req , res )=>{
 }
 
 
-module.exports( salir )
+module.exports = salir
