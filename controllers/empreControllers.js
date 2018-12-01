@@ -8,7 +8,9 @@ const setEmpresa = (req , res ) => {
   nuevaEmpresa.name = req.body.empresa
   nuevaEmpresa.nif = req.body.nif
   nuevaEmpresa.save((err , user) => {
-    if (err) console.log(`Error al guardar la empresa.`);
+    if (err){
+      console.log(`Error al guardar la empresa ${req.body.empresa}.`);
+    }
     else console.log(user);
 
   })
