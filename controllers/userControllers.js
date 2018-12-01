@@ -83,7 +83,7 @@ function validateUser ( req , res ) {
         rees.send( { usuario : usu } )
       }
 
-    }
+    })
 }
 
     module.exports = {
