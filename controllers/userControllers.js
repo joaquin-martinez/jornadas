@@ -88,7 +88,7 @@ function validateUser ( req , res ) {
 
     module.exports = {
       setUser ,
-      validateUser
+      validateUser,
       getUser ,
       deleteUser ,
       putUserClave ,
