@@ -84,7 +84,7 @@ function validateUser ( req , res ) {
       }
 
     }
-
+}
 
     module.exports = {
       setUser ,
