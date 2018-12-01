@@ -6,73 +6,91 @@ const Usuar = require('../models/user')
 
 function setUser( req , res ) {
   res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
-	console.log( req.body )
+  console.log( req.body )
 
-	let nuevoUsu = new Usuar()
-	nuevoUsu.user = req.body.usuario
-	nuevoUsu.password = req.body.clave
-	nuevoUsu.tipo = req.body.tipo
-	nuevoUsu.save((err , user) => {
-		if (err) console.log(`Error al guardar el usuario`);
-		else console.log(user);
-	})
-
-
-
-}
-
-function getUser ( req , res ) {
-  console.log('LLega usuario');
-	console.log(req.body);
-	var candidato = req.body
-	console.log(candidato.clave)
-	Usuar.find( { user : candidato.usuario } , (err , list) => {
-	// res.send({Listado: list})
-	var trabajador = list
-	console.log(trabajador[0])
-	if(err)console.log('error en la busqueda');
-	else if (trabajador[0] && candidato.usuario == trabajador[0].user &&
-  candidato.clave == trabajador[0].password ){
-		console.log( list);
-    console.log(trabajador[0].tipo);
-    req.session.user = trabajador[0];
-		res.render('entrada' , {tipo : req.session.user.tipo})
-								}
-	else{
-		res.sendFile('/home/node/jornadas/public/index.html')
-	}
-})
-
-}
-
-function deleteUser ( req , res ) {
-
-
-
-}
-
-function putUser ( req , res ) {
-
-
-
-}
-
-function getUsers ( req , res ) {
-  Usuar.find( {} , (err , list) => {
-  res.send({Listado: list})
+  let nuevoUsu = new Usuar()
+  nuevoUsu.user = req.body.usuario
+  nuevoUsu.password = req.body.clave
+  nuevoUsu.tipo = req.body.tipo
+  nuevoUsu.save((err , user) => {
+    if (err) console.log(`Error al guardar el usuario`);
+    else console.log(user);
   })
-//	res.send( listado )
-  console.log(  )
 
 
 
 }
 
+function validateUser ( req , res ) {
+  console.log('LLega usuario');
+  console.log(req.body);
+  var candidato = req.body
+  console.log(candidato.clave)
+  Usuar.find( { user : candidato.usuario } , (err , list) => {
+    // res.send({Listado: list})
+    var trabajador = list
+    console.log(trabajador[0])
+    if(err)console.log('error en la busqueda');
+    else if (trabajador[0] && candidato.usuario == trabajador[0].user &&
+      candidato.clave == trabajador[0].password ){
+        console.log( list);
+        console.log(trabajador[0].tipo);
+        req.session.user = trabajador[0];
+        res.render('entrada' , {tipo : req.session.user.tipo})
+      }
+      else{
+        res.sendFile('/home/node/jornadas/public/index.html')
+      }
+    })
 
-module.exports = {
-  setUser ,
-  getUser ,
-  deleteUser ,
-  putUser ,
-  getUsers
-}
+  }
+
+  function deleteUser ( req , res ) {
+
+    console.log(`borrando el usuario ${req.body.usuario}`);
+    let usu = req.body
+    console.log(usu.usuario )
+    Usuar.remove( { user : usu.usuario } , (err) => {
+      console.log(`Borrado correctamente el usuario ${usu.usuario}.`);
+    })
+
+
+
+  }
+
+  function putUserClave ( req , res ) {
+    console.log(`Actualizando usuario ${req.body.usuario}`);
+    Usuar.update({user : req.body.usuario} , { password : req.body.clave } , (err, raw)=>{
+      if (err) return handleError(err);
+      console.log('The raw response from Mongo was ', raw);
+    } );
+
+  }
+
+  function getUsers ( req , res ) {
+    Usuar.find( {} , (err , list) => {
+      res.send({Listado: list})
+    })
+    //	res.send( listado )
+    console.log( "Mandada lista de usuarios." )
+  }
+
+  const getUser = ( req , res )=>{
+    Usuar.find( { user : req.body.usuario } , (err , usu ) => {
+      if(err) {
+        console.log(`No se encuentra el usuario ${req.body.usuario}`);
+      } else {
+        rees.send( { usuario : usu } )
+      }
+
+    }
+
+
+    module.exports = {
+      setUser ,
+      validateUser
+      getUser ,
+      deleteUser ,
+      putUserClave ,
+      getUsers
+    }

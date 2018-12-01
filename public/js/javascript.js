@@ -131,7 +131,10 @@ window.onclick = function(event) {
     }
 }
 
+$("#salgo").click(()=>{
+  $("#cierreModal").css("display" , "blok" )
 
+});
 
 
 

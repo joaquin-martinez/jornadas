@@ -59,8 +59,10 @@ res.render('entrada' , {tipo : "administrador"})
 	console.log( 'ha llegado' )
 })
 
-api.post('/app' , userCtr.getUser)
-
+api.post('/app' , userCtr.validateUser)
+api.post('/usuario' , userCtr.getUser)
+api.post('/modusupas' , userCtr.putUserClave)
+api.post('/delusu' , userCtr.deleteUser)
 api.get( '/usuarios' , userCtr.getUsers )
 
 /*
@@ -97,5 +99,8 @@ api.delete( '/api/product/:productId' , (req , res) => {
 	console.log(  )
 })
 */
+
+api.post( '/salir' , salirCtr.salir )
+
 
 module.exports = api

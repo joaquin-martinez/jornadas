@@ -6,7 +6,7 @@ const setEmpresa = (req , res ) => {
 
   let nuevaEmpresa = new Empresa()
   nuevaEmpresa.name = req.body.empresa
-  nuevaEmpresa.empresaNIF = req.body.nif
+  nuevaEmpresa.nif = req.body.nif
   nuevaEmpresa.save((err , user) => {
     if (err) console.log(`Error al guardar la empresa.`);
     else console.log(user);
@@ -16,6 +16,45 @@ const setEmpresa = (req , res ) => {
 }
 
 const getEmpresa = (req , res ) => {
+  let empresa = req.body
+  console.log(empresa.nif )
+  Empresa.findOne( { nif : empresa.nif } , (err , data) => {
+  // res.send({Listado: list})
+  var empresabd = data
+  console.log(data)
+  if(err)console.log('error en la busqueda');
+  else res.send(empresabd)
+
+/*
+  if (empresasbd[0] && empresa.usuario == empresasbd[0].user &&
+  empresa.clave == empresasbd[0].password ){
+    console.log( list);
+    console.log(empresasbd[0].tipo);
+    req.session.user = empresasbd[0];
+    res.render('entrada' , {tipo : req.session.user.tipo})
+                }
+  else{
+    res.sendFile('/home/node/jornadas/public/index.html')
+  }
+  */
+})
+
+
+}
+
+const deleteEmpresa = (req , res ) => {
+
+  console.log(`borrando el registro ${req.body.nif}`);
+  let empresa = req.body
+  console.log(empresa.nif )
+  Empresa.remove( { nif : empresa.nif } , (err) => {
+  console.log(`Borrada correctamente la empresa ${empresa.nif}.`);
+})
+
+
+}
+
+const putEmpresa = (req , res ) => {
   let empresa = req.body
   console.log(empresa.nif )
   Empresa.findOne( { nif : empresa.nif } , (err , list) => {
@@ -35,14 +74,6 @@ const getEmpresa = (req , res ) => {
   }
 })
 
-
-}
-
-const deleteEmpresa = (req , res ) => {
-
-}
-
-const putEmpresa = (req , res ) => {
 
 }
 
