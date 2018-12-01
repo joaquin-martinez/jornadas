@@ -101,7 +101,7 @@ api.delete( '/api/product/:productId' , (req , res) => {
 })
 */
 
-api.post( '/salir' , salirCtr.salir )
+api.post( '/salir' , salirCtr )
 
 
 module.exports = api
