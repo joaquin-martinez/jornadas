@@ -10,6 +10,7 @@ const setEmpresa = (req , res ) => {
   nuevaEmpresa.save((err , user) => {
     if (err){
       console.log(`Error al guardar la empresa ${req.body.empresa}.`);
+      console.log(err);
     }
     else console.log(user);
 
