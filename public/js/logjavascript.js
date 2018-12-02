@@ -15,8 +15,9 @@ let datos = {
      + data.mensaje );
 
     } else {
-      document.write(data);
-      window.reload();
+      window.open(./app , _self);
+//      document.write(data);
+///      window.reload();
     }
   });
 });
