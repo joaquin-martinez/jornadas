@@ -8,6 +8,7 @@ const app = require('./app')
 const Config = require('./config')
 const Empresas = require('./models/empresas')
 const Jornada = require('./models/jornada')
+
 // const Usuar = require('./models/user')
 
 

@@ -8,7 +8,7 @@ const salirCtr = require('../controllers/salirControllers')
 const session = require('express-session')
 const Config = require('../config')
 const MongoStore = require('connect-mongo')(session)
-
+const logado = requiere("./middlewares/logado")
 
 api.use(session({
   secret : "afr33ty5",
@@ -60,7 +60,7 @@ res.render('entrada' , {tipo : "administrador"})
 	console.log( 'ha llegado' )
 })
 
-api.post('/app' , userCtr.validateUser)
+api.post('/app' , logado , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
 api.post('/modusupas' , userCtr.putUserClave)
 api.post('/delusu' , userCtr.deleteUser)
