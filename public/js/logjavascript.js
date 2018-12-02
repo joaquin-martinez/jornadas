@@ -15,7 +15,7 @@ let datos = {
      + data.mensaje );
 
     } else {
-      window.open(data);
+      document.write(data);
     }
   });
 });
