@@ -4,8 +4,8 @@ $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
 //  let datos = new FormData(datosValidacion);
 let datos = {
-  usuario = $("#usuario").val(),
-  clave = $("#clave").val()
+  usuario : $("#usuario").val(),
+  clave : $("#clave").val()
 
 };
   console.log(datos);
