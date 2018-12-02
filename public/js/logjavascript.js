@@ -2,7 +2,12 @@ $(()=>{
 // Validacion.
 $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
-  let datos = new FormData(datosValidacion);
+//  let datos = new FormData(datosValidacion);
+let datos = {
+  usuario = usuario.value,
+  clave = clave.value
+
+};
   console.log(datos);
   $.post("./app" , datos , function(err , data){
     if(err){
