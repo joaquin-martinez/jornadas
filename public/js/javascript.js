@@ -141,14 +141,14 @@ $("#salgo").click(()=>{
 // Validacion.
 $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
-  let datos = e.target;
+  let datos = e.target.result;
   console.log(datos);
   $post("./app" , datos , function(err , data){
     if(err){
-      $("#salidaValidacion").text("Error en el proceso de validación.");
+      $("#salidaValidacion").html("Error en el proceso de validación.");
 
     } else {
-      $("#salidaValidacion").text("Usuario o clave incorrecta.......");
+      $("#salidaValidacion").html("Usuario o clave incorrecta.......");
     }
   });
 
