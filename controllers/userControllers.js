@@ -36,6 +36,8 @@ function validateUser ( req , res ) {
         console.log( list);
         console.log(trabajador[0].tipo);
         req.session.user = trabajador[0];
+        res.status(200);
+//        res.redirect(./entrar)
         res.render('entrada' , {tipo : req.session.user.tipo})
       }
       else {

@@ -9,9 +9,10 @@ let datos = {
 
 };
   console.log(datos);
-  $.post("./app" , datos , function(err , data){
-    if(err){
-      $("#salidaValidacion").html("validacion incorrecta. intentelo de nuevo.");
+  $.post("./app" , datos , function(data){
+    if(data){
+      $("#salidaValidacion").html("validacion incorrecta. intentelo de nuevo."
+     + data );
 
     } else {
       $("#salidaValidacion").html("Usuario o clave incorrecta.......");
