@@ -133,7 +133,7 @@ window.onclick = function(event) {
 
 $("#salgo").click(()=>{
   console.log("Peticion de salir");
-  $(".modal").css("display" , "blok" )
+  $(".modal").show();
   console.log("apertura de modal salir");
 });
 
