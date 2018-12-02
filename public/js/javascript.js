@@ -126,7 +126,7 @@ spanEmp.onclick = function() {
 */
 
 $(".close").on("click" , ()=>{
-  $("modal").hide();
+  $(".modal").hide();
 });
 
 // When the user clicks anywhere outside of the modal, close it
@@ -144,7 +144,8 @@ $("#salgo").click(()=>{
 });
 
 $("#BSalir").on("click" , ()=>{
-  fetch("./salir");
+//  fetch("./salir");
+  $.post("./salir");
 })
 
 
