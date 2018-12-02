@@ -16,6 +16,7 @@ let datos = {
 
     } else {
       document.write(data);
+      window.reload();
     }
   });
 });
