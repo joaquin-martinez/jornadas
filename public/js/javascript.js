@@ -145,9 +145,10 @@ $("#datosValidacion").on( "submit" , (e)=>{
   console.log(datos);
   $post("./app" , datos , (err , data)=>{
     if(err){
+      $("#salidaValidacion").text("Error en el proceso de validación.");
 
     } else {
-      $("#salidaValidacion").html(data);
+      $("#salidaValidacion").text("Usuario o clave incorrecta");
     }
   });
 
