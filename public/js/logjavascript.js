@@ -2,7 +2,7 @@ $(()=>{
 // Validacion.
 $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
-  let datos = e.target.result;
+  let datos = e.target;
   console.log(datos);
   $.post("./app" , datos , function(err , data){
     if(err){
