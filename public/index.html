@@ -13,16 +13,17 @@
 </head>
 <body>
   <h1>Bienvenido a Jornadas laborales .</h1>
-  <form action="./app" method="post" >
+  <form action="./app" method="post" name="datosValidacion" id="datosValidacion" >
     <fieldset>
       <legend>logarse en Jornadas</legend>
       <label for="usuario"> Usuario: </label>
-      <input type="text" name="usuario" id="usuario" class="text">
+      <input type="text" name="usuario" id="usuario" class="text" required=required >
       <label for="clave" > Clave: </label>
-      <input type="password" name="clave" id="clave">
+      <input type="password" name="clave" id="clave" required=required >
       <input type="hidden" name="accion" value="logar" >
       <input type="submit" value="Enviar">
     </fieldset>
+    <output id="salidaValidacion"></output>
   </form>
 
   <a href="./app" >entrar en otra página</a>

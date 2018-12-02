@@ -132,12 +132,26 @@ window.onclick = function(event) {
 }
 
 $("#salgo").click(()=>{
+  console.log("Peticion de salir");
   $("#cierreModal").css("display" , "blok" )
-
+  console.log("apertura de modal salir");
 });
 
 
+// Validacion.
+$("#datosValidacion").on( "submit" , (e)=>{
+  e.preventDefault();
+  let datos = e.target;
+  console.log(datos);
+  $post("./app" , datos , (err , data)=>{
+    if(err){
 
+    } else {
+      $("#salidaValidacion").html(data);
+    }
+  });
+
+});
 
 
 

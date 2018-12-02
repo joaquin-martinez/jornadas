@@ -39,7 +39,8 @@ function validateUser ( req , res ) {
         res.render('entrada' , {tipo : req.session.user.tipo})
       }
       else{
-        res.sendFile('/home/node/jornadas/public/index.html')
+//        res.sendFile('/home/node/jornadas/public/index.html')
+        res.send(error:"usuario o clave incorrecta");
       }
     })
 
