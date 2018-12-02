@@ -15,7 +15,8 @@ let datos = {
      + data.mensaje );
 
     } else {
-      window.open("./app" , "_self" );
+//      window.open("./app" , "_self" );
+      window.location.assing("./app")
 //      document.write(data);
 ///      window.reload();
     }
