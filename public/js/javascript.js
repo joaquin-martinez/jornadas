@@ -143,12 +143,12 @@ $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
   let datos = e.target;
   console.log(datos);
-  $post("./app" , datos , (err , data)=>{
+  $post("./app" , datos , function(err , data){
     if(err){
       $("#salidaValidacion").text("Error en el proceso de validación.");
 
     } else {
-      $("#salidaValidacion").text("Usuario o clave incorrecta");
+      $("#salidaValidacion").text("Usuario o clave incorrecta.......");
     }
   });
 
