@@ -60,7 +60,7 @@ res.render('entrada' , {tipo : "administrador"})
 	console.log( 'ha llegado' )
 })
 
-api.post('/app' , logado , userCtr.validateUser)
+api.post('/app' , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
 api.post('/modusupas' , userCtr.putUserClave)
 api.post('/delusu' , userCtr.deleteUser)
@@ -87,7 +87,7 @@ api.get( '/altausuarios/' , (req , res) => {
 	console.log( 'ya no estamos con los trabajadores' )
 })
 */
-api.post( '/altausu' , userCtr.setUser )
+api.post( '/altausu' , logado , userCtr.setUser )
 api.post( '/altaemp' , emprCtr.setEmpresa )
 
 /*
