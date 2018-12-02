@@ -146,9 +146,12 @@ $("#salgo").click(()=>{
 $("#BSalir").on("click" , ()=>{
 //  fetch("./salir");
   $.post("./salir");
+  window.location.assign("index.html");
 })
 
-
+$("#BNSalir").on("click" , ()=>{
+    $(".modal").hide();
+});
 
 
 
