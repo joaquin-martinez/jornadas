@@ -115,6 +115,7 @@ btmEmp.addEventListener("click" ,function() {
 });
 
 // When the user clicks on <span> (x), close the modal
+/*
 spanUsu.onclick = function() {
     modalUsu.style.display = "none";
 }
@@ -122,12 +123,16 @@ spanUsu.onclick = function() {
 spanEmp.onclick = function() {
     modalEmp.style.display = "none";
 }
+*/
 
+$(".close").on("click" , ()=>{
+  $("modal").hide();
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modalUsu || event.target == modalEmp
-    || event.target == cierremodal ) {
+    || event.target == cierreModal ) {
         event.target.style.display = "none";
     }
 }
