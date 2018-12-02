@@ -126,7 +126,8 @@ spanEmp.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modalUsu || event.target == modalEmp  ) {
+    if (event.target == modalUsu || event.target == modalEmp
+    || event.target == cierremodal ) {
         event.target.style.display = "none";
     }
 }
@@ -137,7 +138,9 @@ $("#salgo").click(()=>{
   console.log("apertura de modal salir");
 });
 
-
+$("#BSalir").on("click" , ()=>{
+  fetch("./salir");
+})
 
 
 
