@@ -16,7 +16,7 @@ let datos = {
 
     } else {
 //      window.open("./app" , "_self" );
-      window.location.assing("./app")
+      window.location.assign("./app")
 //      document.write(data);
 ///      window.reload();
     }
