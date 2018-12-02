@@ -3,7 +3,8 @@
 const salir = ( req , res )=>{
   req.session.destroy()
   console.log("Estamos fuera");
-  res.redirect("../public/index.html")
+//  res.status(200)
+  res.redirect("../index.html")
 }
 
 
