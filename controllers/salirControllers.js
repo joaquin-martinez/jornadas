@@ -5,7 +5,7 @@ const salir = ( req , res )=>{
   console.log("Estamos fuera");
   res.status(200)
   res.send();
-  res.redirect("../index.html")
+  res.redirect("../public/index.html")
 }
 
 
