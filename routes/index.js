@@ -8,7 +8,7 @@ const salirCtr = require('../controllers/salirControllers')
 const session = require('express-session')
 const Config = require('../config')
 const MongoStore = require('connect-mongo')(session)
-const logado = require("./middlewares/logado")
+const logado = require("../middlewares/logado")
 
 api.use(session({
   secret : "afr33ty5",
