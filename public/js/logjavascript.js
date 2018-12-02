@@ -11,7 +11,7 @@ let datos = {
   console.log(datos);
   $.post("./app" , datos , function(err , data){
     if(err){
-      $("#salidaValidacion").html("Error en el proceso de validación.");
+      $("#salidaValidacion").html(err);
 
     } else {
       $("#salidaValidacion").html("Usuario o clave incorrecta.......");
