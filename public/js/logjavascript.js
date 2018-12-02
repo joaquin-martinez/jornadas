@@ -10,12 +10,12 @@ let datos = {
 };
   console.log(datos);
   $.post("./app" , datos , function(data){
-    if(data){
+    if(data.mensaje){
       $("#salidaValidacion").html("validacion incorrecta. intentelo de nuevo."
-     + data );
+     + data.mensaje );
 
     } else {
-      $("#salidaValidacion").html("Usuario o clave incorrecta.......");
+      window.open(data);
     }
   });
 });
