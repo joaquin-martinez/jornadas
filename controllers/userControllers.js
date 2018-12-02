@@ -40,7 +40,7 @@ function validateUser ( req , res ) {
       }
       else{
 //        res.sendFile('/home/node/jornadas/public/index.html')
-        res.send(error:"usuario o clave incorrecta");
+        res.send({error:"usuario o clave incorrecta"});
       }
     })
 
