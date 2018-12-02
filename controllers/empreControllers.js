@@ -11,9 +11,10 @@ const setEmpresa = (req , res ) => {
     if (err){
       console.log(`Error al guardar la empresa ${req.body.empresa}.`);
       console.log(err);
+      res.status(500).send(  { "mensaje" : "Error al dar de alta la empresa." }  )
     }
-    else console.log(user);
-
+    else console.log(req.body);
+    res.status(200).send(  { "mensaje" : "Se ha dado de alta la empresa." }  )
   })
 
 }

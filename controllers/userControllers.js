@@ -5,7 +5,7 @@ const Usuar = require('../models/user')
 // const session = require('express-session')
 
 function setUser( req , res ) {
-  res.status(200).send(  { "mensaje" : "Se ha recibido el mensaje" }  )
+  res.status(200).send() //  { "mensaje" : "Se ha recibido el mensaje" }  )
   console.log( req.body )
 
   let nuevoUsu = new Usuar()
