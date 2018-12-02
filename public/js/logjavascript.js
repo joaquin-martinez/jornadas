@@ -1,4 +1,4 @@
-
+$(()=>{
 // Validacion.
 $("#datosValidacion").on( "submit" , (e)=>{
   e.preventDefault();
@@ -12,3 +12,6 @@ $("#datosValidacion").on( "submit" , (e)=>{
       $("#salidaValidacion").html("Usuario o clave incorrecta.......");
     }
   });
+});
+
+});
