@@ -66,7 +66,7 @@ api.post('/modusupas' , userCtr.putUserClave)
 api.post('/delusu' , userCtr.deleteUser)
 api.post( '/usuarios' , userCtr.getUsers )
 
-api.post('/delemp' , userCtr.deleteEmpresa)
+api.post('/delemp' , emprCtr.deleteEmpresa)
 
 /*
 api.get( '/saludo/:nombre' , (req , res) => {
