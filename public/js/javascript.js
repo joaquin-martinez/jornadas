@@ -36,10 +36,14 @@ const fjor = ()=>{
     alert(data.Listado[0].user);
     console.log(data);
 //    return data;
-data.forEach(()=>{
+
+//  data.forEach(()=>{
+
+  for (let dato in data) {
+
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
-} );
+} ;
 
 
     })
