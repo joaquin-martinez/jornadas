@@ -106,7 +106,7 @@ console.log(datos[i].user);
   $("#bajaEmp").on("click" , ()=>{
 //    let mostrarMenuBaja = new Promise();
 //    mostrarMenuBaja = ()=>{
-    obtenEmpresas();
+//    obtenEmpresas();
 
 $("#bajaEmpModal").show();
 
@@ -117,7 +117,7 @@ $("#bajaEmpModal").show();
   $("#bajaUsu").on("click" , ()=>{
 //    let mostrarMenuBaja = new Promise();
 //    mostrarMenuBaja = ()=>{
-    obtenUsuarios();
+//    obtenUsuarios();
 
 $("#bajaUsuModal").show();
 
