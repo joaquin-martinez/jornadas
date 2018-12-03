@@ -50,25 +50,41 @@ const fjor = ()=>{
   $("#altaUsu").on("click" , fdau );
   $("#altaEmp").on("click" , fdae );
   $("#altaJor").on("click" , fdaj );
+*/
+  $("#bajaUsu").on("click" , ()=>{
+//    let mostrarMenuBaja = new Promise();
+//    mostrarMenuBaja = ()=>{
+    let datos = obtenUsuarios();
 
-  $("#bajaUsu").on("click" , fdbu );
+          datos.forEach(()=>{
+    $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`
+
+  } , dato);
+
+    $("#BajaUsuModal").show();  
+
+  } );
+
+
+
   $("#bajaEmp").on("click" , fdbe );
   $("#bajaJor").on("click" , fdbj );
 
   $("#modUsu").on("click" , fdmu );
   $("#modEmp").on("click" , fdme );
   $("#modJor").on("click" , fdmj );
-*/
+
 
 // Obtencion de listados.
-/*
+
 const obtenUsuarios = ()=>{
-$.get('./usuarios', (data)=>{
+$.post('./usuarios', (data)=>{
   alert(data.Listado[0].user);
   console.log(data);
+  return data;
   })
 }
-
+/*
 const obtenEmpresas = ()=>{
 $.get('./empresas', (data)=>{
   alert(data.Listado[0].user);
@@ -153,7 +169,7 @@ $("#BNSalir").on("click" , ()=>{
     $(".modal").hide();
 });
 
-
+$("")
 
 
 
