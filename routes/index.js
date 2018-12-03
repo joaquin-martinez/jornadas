@@ -51,7 +51,7 @@ api.get( '/app' , (req , res) => {
 												 destinomodificar : "modificausuario"
 												})
 */
-res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user })
+res.render('entrada' , {tipo : "administrador" , user : req.session.user.user })
 // es.render('entrada' , {tipo : req.session.user.tipo})
 
 
