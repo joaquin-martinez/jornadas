@@ -35,30 +35,16 @@ api.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
+
 // rutas.get( '/' , (req , res) => {
 api.get( '/app' , (req , res) => {
-//	let listaUsu = new Lista()
-//	listaUsu.find( {} , (err , list) => {
-//	res.send({Listado: list})
-
-	// res.sendFile('/home/node/jornadas/app/saludo.html')
-	/*
-	res.render('login' , { empresa : "Simpempa.sl" ,
-												 tipo : "administrador",
-												 cabecera : "Edicion de usuaros",
-												 destinoalta : "altausuario",
-												 destinobaja : "bajausuario",
-												 destinomodificar : "modificausuario"
-												})
-*/
-res.render('entrada' , { tipo : req.session.user.tipo , user : req.session.user.user })
-// es.render('entrada' , {tipo : req.session.user.tipo})
-
-
-//	})
-//	res.send( listado )
+  setTimeout(()=>{},5000);
+  res.render('entrada' , { tipo : req.session.user.tipo , user : req.session.user.user })
 	console.log( 'ha llegado a /app get entrada.' )
 })
+
+
+
 
 api.post('/app' , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
