@@ -48,10 +48,10 @@ $("#optionBajaUsu").after(`<option value="${datos[i].user}" >${datos[i].user}<op
 console.log(datos[i].user);
 } ;
 
-setTimeout(()=>{
+// setTimeout(()=>{
   console.log("comienza el Show");
 $("#bajaUsuModal").show();
-}, 1000);
+// }, 1000);
 
     })
   }
