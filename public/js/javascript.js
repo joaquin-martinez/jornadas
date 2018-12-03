@@ -201,7 +201,7 @@ $("#BNSalir").on("click" , ()=>{
     $(".modal").hide();
 });
 
-$("")
+
 
 
 
