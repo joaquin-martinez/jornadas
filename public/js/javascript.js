@@ -95,7 +95,7 @@ $("#altaEmp").on("click" , fdae );
 $("#altaJor").on("click" , fdaj );
 */
 $("#bajaEmp").on("click" , ()=>{
-  alert("bajaEmp-click");
+//  alert("bajaEmp-click");
   //    obtenEmpresas();
 setTimeout(()=>{} , 5000);
   $("#bajaEmpModal").show();
