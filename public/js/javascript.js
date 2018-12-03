@@ -44,6 +44,7 @@ const fjor = ()=>{
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
 } ;
+$("#BajaUsuModal").show();
 
 
     })
@@ -95,7 +96,6 @@ $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
     obtenUsuarios();
 
 
-    $("#BajaUsuModal").show();
 
   } );
 
