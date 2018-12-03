@@ -26,6 +26,34 @@ const fjor = ()=>{
   $("#menuEmp").on("mouseleave" , femp);
   $("#menuJor").on("mouseleave" , fjor);
 
+
+
+
+  // Obtencion de listados.
+
+  const obtenUsuarios = ()=>{
+  $.post('./usuarios', (data)=>{
+    alert(data.Listado[0].user);
+    console.log(data);
+    return data;
+    })
+  }
+  /*
+  const obtenEmpresas = ()=>{
+  $.get('./empresas', (data)=>{
+    alert(data.Listado[0].user);
+    console.log(data);
+    })
+  }
+
+  const obtenJornadas = ()=>{
+  $.get('./jornadas', (data)=>{
+    alert(data.Listado[0].user);
+    console.log(data);
+    })
+  }
+  */
+
 // Funciones de dialogo.
 /*
   const fdau = ()=>{
@@ -61,7 +89,7 @@ const fjor = ()=>{
 
   } , dato);
 
-    $("#BajaUsuModal").show();  
+    $("#BajaUsuModal").show();
 
   } );
 
@@ -75,30 +103,6 @@ const fjor = ()=>{
   $("#modJor").on("click" , fdmj );
 
 
-// Obtencion de listados.
-
-const obtenUsuarios = ()=>{
-$.post('./usuarios', (data)=>{
-  alert(data.Listado[0].user);
-  console.log(data);
-  return data;
-  })
-}
-/*
-const obtenEmpresas = ()=>{
-$.get('./empresas', (data)=>{
-  alert(data.Listado[0].user);
-  console.log(data);
-  })
-}
-
-const obtenJornadas = ()=>{
-$.get('./jornadas', (data)=>{
-  alert(data.Listado[0].user);
-  console.log(data);
-  })
-}
-*/
 
 
 // Get the modal
