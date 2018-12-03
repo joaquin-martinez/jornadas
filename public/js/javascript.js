@@ -85,7 +85,7 @@ const fjor = ()=>{
     let datos = obtenUsuarios();
 
           datos.forEach(()=>{
-    $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`
+    $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
   } , dato);
 
