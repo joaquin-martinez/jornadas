@@ -47,7 +47,7 @@ $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
 setTimeout(()=>{
 $("#BajaUsuModal").show();
-}, 3000);
+}, 10000);
 
     })
   }
