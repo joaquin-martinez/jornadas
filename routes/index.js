@@ -35,7 +35,7 @@ api.get( '/' , (req , res) => {
 //	res.send( listado )
 	console.log(  )
 })
-
+/*
 // rutas.get( '/' , (req , res) => {
 api.get( '/app' , (req , res) => {
   setTimeout(()=>{},5000);
@@ -43,7 +43,7 @@ api.get( '/app' , (req , res) => {
 	console.log( 'ha llegado a /app get entrada.' )
 })
 
-
+*/
 
 
 api.post('/app' , userCtr.validateUser)
