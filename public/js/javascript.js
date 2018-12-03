@@ -35,7 +35,13 @@ const fjor = ()=>{
   $.post('./usuarios', (data)=>{
     alert(data.Listado[0].user);
     console.log(data);
-    return data;
+//    return data;
+data.forEach(()=>{
+$("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
+
+} , dato);
+
+
     })
   }
   /*
@@ -82,26 +88,22 @@ const fjor = ()=>{
   $("#bajaUsu").on("click" , ()=>{
 //    let mostrarMenuBaja = new Promise();
 //    mostrarMenuBaja = ()=>{
-    let datos = obtenUsuarios();
+    obtenUsuarios();
 
-          datos.forEach(()=>{
-    $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
-
-  } , dato);
 
     $("#BajaUsuModal").show();
 
   } );
 
 
-
+/*
   $("#bajaEmp").on("click" , fdbe );
   $("#bajaJor").on("click" , fdbj );
 
   $("#modUsu").on("click" , fdmu );
   $("#modEmp").on("click" , fdme );
   $("#modJor").on("click" , fdmj );
-
+*/
 
 
 
