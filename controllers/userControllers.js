@@ -54,9 +54,16 @@ function validateUser ( req , res ) {
 
     console.log(`borrando el usuario ${req.body.selectBajaUsu}`);
     let usu = req.body
-    console.log(usu.usuario )
+    console.log(usu.selectBajaUsu )
     Usuar.deleteOne( { user : usu.selectBajaUsu } , (err) => {
-      console.log(`Borrado correctamente el usuario ${usu.selectBajaUsu}.`);
+      if (err) {
+        console.log("no se pudo borrar el usuario: " + usu.selectBajaUsu);
+        res.status(500).redirect("/app")
+      } else {
+        res.status(200).redirect("/app")
+              console.log(`Borrado correctamente el usuario ${usu.selectBajaUsu}.`);
+      }
+
     })
 
 
