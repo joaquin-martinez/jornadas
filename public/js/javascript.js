@@ -33,7 +33,7 @@ const fjor = ()=>{
 
   const obtenUsuarios = ()=>{
   $.post('./usuarios', (data)=>{
-    alert(data.Listado[0].user);
+//    alert(data.Listado[0].user);
     console.log(data);
 //    return data;
 
@@ -42,10 +42,11 @@ const fjor = ()=>{
   for (let dato in data) {
 
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
-
+console.log(dato.user);
 } ;
 
 setTimeout(()=>{
+  console.log("comienza el Show");
 $("#BajaUsuModal").show();
 }, 50000);
 
