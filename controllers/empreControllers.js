@@ -15,6 +15,7 @@ const setEmpresa = (req , res ) => {
     } else {
       res.status(200).redirect("/app")
             console.log(`Alta correcta de la empresa: ${req.body.empresa}.`);
+}
   })
 
 }
