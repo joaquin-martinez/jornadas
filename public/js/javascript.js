@@ -50,7 +50,7 @@ console.log(datos[i].user);
 
 // setTimeout(()=>{
   console.log("comienza el Show");
-$("#bajaUsuModal").show();
+// $("#bajaUsuModal").show();
 // }, 1000);
 
     })
@@ -101,7 +101,7 @@ $("#bajaUsuModal").show();
 //    mostrarMenuBaja = ()=>{
     obtenUsuarios();
 
-
+$("#bajaUsuModal").show();
 
   } );
 
