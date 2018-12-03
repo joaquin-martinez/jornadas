@@ -57,7 +57,7 @@ res.render('entrada' , { tipo : req.session.user.tipo , user : req.session.user.
 
 //	})
 //	res.send( listado )
-	console.log( 'ha llegado' )
+	console.log( 'ha llegado a /app get entrada.' )
 })
 
 api.post('/app' , userCtr.validateUser)
