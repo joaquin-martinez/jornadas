@@ -43,9 +43,9 @@ console.log(datos);
     for (var i = 0; i < datos.length; i++) {
 
 //    let dato = dat;
-console.log("Ponemos el dato: " + dato[i].user);
-$("#optionBajaUsu").after(`<option value="${dato[i].user}" >${dato[i].user}<option>`);
-console.log(dato[i].user);
+console.log("Ponemos el dato: " + datos[i].user);
+$("#optionBajaUsu").after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
+console.log(datos[i].user);
 } ;
 
 setTimeout(()=>{
