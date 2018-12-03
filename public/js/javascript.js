@@ -36,10 +36,10 @@ const fjor = ()=>{
 //    alert(data.Listado[0].user);
     console.log(data);
 //    return data;
-
+let datos = data.Listado;
 //  data.forEach(()=>{
 
-  for (var dat in data) {
+  for (var dat in datos) {
     let dato = dat;
 console.log("Ponemos el dato: " + dato.user);
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
