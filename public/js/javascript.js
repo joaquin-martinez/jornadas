@@ -55,14 +55,21 @@ console.log(datos[i].user);
 
     })
   }
-  /*
+
   const obtenEmpresas = ()=>{
-  $.get('./empresas', (data)=>{
-    alert(data.Listado[0].user);
+  $.post('./empresas', (data)=>{
     console.log(data);
+    let datos = data.Listado;
+    console.log(datos);
+        for (var i = 0; i < datos.length; i++) {
+    console.log("Ponemos el dato: " + datos[i].name);
+    $("#optionBajaUsu").after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
+    console.log(datos[i].name);
+    } ;
+
     })
   }
-
+/*
   const obtenJornadas = ()=>{
   $.get('./jornadas', (data)=>{
     alert(data.Listado[0].user);
@@ -96,7 +103,18 @@ console.log(datos[i].user);
   $("#altaEmp").on("click" , fdae );
   $("#altaJor").on("click" , fdaj );
 */
-  $("#bajaUsu").on("click" , ()=>{
+  $("#bajaEmp").on("click" , ()=>{
+//    let mostrarMenuBaja = new Promise();
+//    mostrarMenuBaja = ()=>{
+    obtenEmpresas();
+
+$("#bajaEmpModal").show();
+
+  } );
+
+
+
+  $("#bajaEmp").on("click" , ()=>{
 //    let mostrarMenuBaja = new Promise();
 //    mostrarMenuBaja = ()=>{
     obtenUsuarios();
@@ -105,9 +123,7 @@ $("#bajaUsuModal").show();
 
   } );
 
-
-/*
-  $("#bajaEmp").on("click" , fdbe );
+  /*
   $("#bajaJor").on("click" , fdbj );
 
   $("#modUsu").on("click" , fdmu );
