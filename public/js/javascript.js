@@ -39,8 +39,9 @@ const fjor = ()=>{
 
 //  data.forEach(()=>{
 
-  for (let dato in data) {
-
+  for (var dat in data) {
+    let dato = dat;
+console.log("Ponemos el dato: " + dato.user);
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 console.log(dato.user);
 } ;
