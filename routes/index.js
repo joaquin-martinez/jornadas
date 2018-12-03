@@ -64,7 +64,7 @@ api.post('/app' , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
 api.post('/modusupas' , userCtr.putUserClave)
 api.post('/delusu' , userCtr.deleteUser)
-api.get( '/usuarios' , userCtr.getUsers )
+api.post( '/usuarios' , userCtr.getUsers )
 
 /*
 api.get( '/saludo/:nombre' , (req , res) => {
