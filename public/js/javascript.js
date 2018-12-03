@@ -39,11 +39,13 @@ const fjor = ()=>{
 let datos = data.Listado;
 //  data.forEach(()=>{
 console.log(datos);
-  for (var dato in datos) {
+//  for (var dato in datos) {
+    for (var i = 0; i < datos.length; i++) {
+
 //    let dato = dat;
-console.log("Ponemos el dato: " + dato.user);
-$("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
-console.log(dato.user);
+console.log("Ponemos el dato: " + dato[i].user);
+$("#optionBajaUsu").after(`<option value="${dato[i].user}" >${dato[i].user}<option>`);
+console.log(dato[i].user);
 } ;
 
 setTimeout(()=>{
