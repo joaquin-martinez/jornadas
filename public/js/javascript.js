@@ -50,8 +50,8 @@ console.log(datos[i].user);
 
 setTimeout(()=>{
   console.log("comienza el Show");
-$("#BajaUsuModal").show();
-}, 50000);
+$("#bajaUsuModal").show();
+}, 1000);
 
     })
   }
