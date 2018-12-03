@@ -98,6 +98,7 @@ const getEmpresas = (req , res ) => {
       throw (err)
     } else {
       res.send({Listado: list})
+      console.log('enviadas empresas.');
     }
 
   })

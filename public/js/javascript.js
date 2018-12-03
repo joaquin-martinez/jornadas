@@ -114,7 +114,7 @@ $("#bajaEmpModal").show();
 
 
 
-  $("#bajaEmp").on("click" , ()=>{
+  $("#bajaUsu").on("click" , ()=>{
 //    let mostrarMenuBaja = new Promise();
 //    mostrarMenuBaja = ()=>{
     obtenUsuarios();
