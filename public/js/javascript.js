@@ -44,8 +44,10 @@ const fjor = ()=>{
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
 } ;
-$("#BajaUsuModal").show();
 
+setTimeout(()=>{
+$("#BajaUsuModal").show();
+}, 3000);
 
     })
   }
