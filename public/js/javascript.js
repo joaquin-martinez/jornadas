@@ -39,7 +39,7 @@ const fjor = ()=>{
 data.forEach(()=>{
 $("#optionBajaUsu").after(`<option value="${dato.user}" >${dato.user}<option>`);
 
-} , dato);
+} );
 
 
     })
