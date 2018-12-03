@@ -52,11 +52,11 @@ function validateUser ( req , res ) {
 
   function deleteUser ( req , res ) {
 
-    console.log(`borrando el usuario ${req.body.usuario}`);
+    console.log(`borrando el usuario ${req.body.selectBajaUsu}`);
     let usu = req.body
     console.log(usu.usuario )
-    Usuar.remove( { user : usu.usuario } , (err) => {
-      console.log(`Borrado correctamente el usuario ${usu.usuario}.`);
+    Usuar.deleteOne( { user : usu.selectBajaUsu } , (err) => {
+      console.log(`Borrado correctamente el usuario ${usu.selectBajaUsu}.`);
     })
 
 
