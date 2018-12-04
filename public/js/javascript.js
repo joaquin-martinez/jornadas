@@ -84,13 +84,16 @@ $(()=>{
 */
 
   $("#bajaUsu").on("click" , (e)=>{
- e.stopPropagation();
+ //e.stopPropagation();
     //    obtenUsuarios();
 
     $("#bajaUsuModal").toggle();
-    e.stopPropagation();
+//    e.stopPropagation();
   } );
 
+  $("#bajaUsuModal").on("click" , (e)=>{
+    e.stopPropagation();
+  });
   /*
   $("#bajaJor").on("click" , fdbj );
 
