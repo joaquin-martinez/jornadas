@@ -26,10 +26,12 @@ api.get( '/' , (req , res) => {
 })
 
 api.post('/recarga' , (req ,res)=>{
+  console.log("entra post recarga");
   res.render('entrada' , {tipo : "administrador" , user : "joaquin"})
 //  res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
 })
 api.get('/recarga' , (req ,res)=>{
+  console.log("entra get recarga");
   res.render('entrada' , {tipo : "administrador" , user : "joaquin"})
 //  res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
 })

@@ -64,8 +64,10 @@ $(()=>{
   $("#bajaEmp").on("click" , ()=>{
     //  alert("bajaEmp-click");
     //    obtenEmpresas();
+    console.log("Click en baja empresas.");
     setTimeout(()=>{} , 5000);
     $("#bajaEmpModal").show();
+    console.log("muestra modal baja empresas");
     setTimeout(()=>{} , 5000);
   } );
 
@@ -96,18 +98,18 @@ $(()=>{
   // Get the button that opens the modal
   var btmUsu = document.getElementById("altaUsu");
   var btmEmp = document.getElementById("altaEmp");
-
+/*
   // Get the <span> element that closes the modal
   var spanUsu = document.getElementsByClassName("close")[0];
   var spanEmp = document.getElementsByClassName("close")[1];
-
+*/
   // When the user clicks on the button, open the modal
   btmUsu.addEventListener("click" ,function() {
     console.log("entra");
     //  e.preventDefault();
     //  console.log("sigue");
     modalUsu.style.display = "block";
-    console.log("termina");
+    console.log("muestra modal usuario");
   });
 
   btmEmp.addEventListener("click" ,function() {
@@ -127,6 +129,7 @@ $(()=>{
   window.onclick = function(event) {
     if (event.target == modalUsu || event.target == modalEmp
       || event.target == cierreModal ) {
+        console.log("fuera de ventana");
         event.target.style.display = "none";
       }
     }

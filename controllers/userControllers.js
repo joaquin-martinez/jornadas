@@ -22,7 +22,7 @@ function setUser( req , res ) {
 }
 
 function validateUser ( req , res ) {
-  console.log('LLega usuario');
+  console.log('LLega usuario a validate user');
   console.log(req.body);
   var candidato = req.body
   console.log(candidato.clave)
@@ -36,13 +36,14 @@ function validateUser ( req , res ) {
         console.log( list);
         console.log(trabajador[0].tipo);
         req.session.user = trabajador[0];
+        console.log("usuario en la sesion");
         res.status(200);
 //        res.redirect(./entrar)
         res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
       }
       else {
 
-
+        console.log("Mensaje de clave incorrecta");
 //        res.sendFile('/home/node/jornadas/public/index.html')
         res.send({mensaje:"usuario o clave incorrecta"});
       }
