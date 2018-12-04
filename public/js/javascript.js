@@ -87,7 +87,7 @@ $(()=>{
  e.stopPropagation();
     //    obtenUsuarios();
 
-    $("#bajaUsuModal").toogle();
+    $("#bajaUsuModal").toggle();
     e.stopPropagation();
   } );
 
