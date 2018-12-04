@@ -124,7 +124,7 @@ $(()=>{
   $(".close").on("click" , ()=>{
     $(".modal").hide();
   });
-
+/*
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modalUsu || event.target == modalEmp
@@ -133,7 +133,7 @@ $(()=>{
         event.target.style.display = "none";
       }
     }
-
+*/
     $("#salgo").click(()=>{
       console.log("Peticion de salir");
       $("#cierreModal").show();
