@@ -11,9 +11,9 @@ const setEmpresa = (req , res ) => {
     if (err){
       console.log(`Error al guardar la empresa ${req.body.empresa}.`);
       console.log(err);
-      res.status(500).redirect("/app")
+//      res.status(500).redirect("/app")
     } else {
-      res.status(200).redirect("/app")
+//      res.status(200).redirect("/app")
             console.log(`Alta correcta de la empresa: ${req.body.empresa}.`);
 }
   })
@@ -55,9 +55,9 @@ const deleteEmpresa = (req , res ) => {
   Empresa.remove( { nif : empresa.nif } , (err) => {
   if (err) {
     console.log(`Error, no se pudo Borrar correctamente la empresa ${empresa.nif}.`);
-    res.status(500).redirect("/app")
+//    res.status(500).redirect("/app")
   } else {
-    res.status(200).redirect("/app")
+//    res.status(200).redirect("/app")
       console.log(`Borrada correctamente la empresa ${empresa.nif}.`);
   }
 

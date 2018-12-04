@@ -38,7 +38,7 @@ function validateUser ( req , res ) {
         req.session.user = trabajador[0];
         res.status(200);
 //        res.redirect(./entrar)
-        res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+//        res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
       }
       else {
 
@@ -58,9 +58,9 @@ function validateUser ( req , res ) {
     Usuar.deleteOne( { user : usu.selectBajaUsu } , (err) => {
       if (err) {
         console.log("no se pudo borrar el usuario: " + usu.selectBajaUsu);
-        res.status(500).redirect("/app")
+//        res.status(500).redirect("/app")
       } else {
-        res.status(200).redirect("/app")
+//        res.status(200).redirect("/app")
               console.log(`Borrado correctamente el usuario: ${usu.selectBajaUsu}.`);
       }
 
