@@ -1,5 +1,5 @@
 $(()=>{
-
+/*
   // Funciones de menu de botones.
   //Funciones de despliegue.
   const fusu = ()=>{
@@ -29,12 +29,32 @@ $(()=>{
     e.stopPropagation();
   })
 */
-  $("#menuEmp").on("mouseenter" , femp);
-  $("#menuJor").on("mouseenter" , fjor );
+  $("#menuEmp").on("mouseenter" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownEmp").show();
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
+  $("#menuJor").on("mouseenter" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownJor").show();
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
 
-  $("#menuUsu").on("mouseleave" , fusu);
-  $("#menuEmp").on("mouseleave" , femp);
-  $("#menuJor").on("mouseleave" , fjor);
+  $("#menuUsu").on("mouseleave" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownUsu").hide();
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
+  $("#menuEmp").on("mouseleave" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownEmp").hide();
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
+  $("#menuJor").on("mouseleave" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownJor").hide();
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
 
 
 
@@ -64,35 +84,131 @@ $(()=>{
       console.log(datos);
       for (var i = 0; i < datos.length; i++) {
         console.log("Ponemos el dato: " + datos[i].name);
-        $("#optionBajaUsu").after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
+        $("#optionBajaEmp").after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
         console.log(datos[i].name);
       } ;
 
     })
   }
 
-  $("#bajaEmp").on("click" , ()=>{
-    //  alert("bajaEmp-click");
+
+
+  $("#altaUsu").on("click" , (e)=>{
     e.preventDefault();
    e.stopPropagation();
-        obtenEmpresas();
-    console.log("Click en baja empresas.");
-//    setTimeout(()=>{} , 5000);
-    $("#bajaEmpModal").show();
-    console.log("muestra modal baja empresas");
-//    setTimeout(()=>{} , 5000);
-  } );
+//        obtenUsuarios();
 
-
-
-  $("#bajaUsu").on("click" , (e)=>{
-    e.preventDefault();
-   e.stopPropagation();
-        obtenUsuarios();
-
-    $("#bajaUsuModal").toggle();
+    $("#altaUsuModal").toggle();
 //    e.stopPropagation();
   } );
+
+
+
+    $("#altaEmp").on("click" , (e)=>{
+      //  alert("bajaEmp-click");
+      e.preventDefault();
+     e.stopPropagation();
+//          obtenEmpresas();
+      console.log("Click en alta empresas.");
+  //    setTimeout(()=>{} , 5000);
+      $("#altaEmpModal").show();
+      console.log("muestra modal baja empresas");
+  //    setTimeout(()=>{} , 5000);
+    } );
+
+
+
+      $("#altaJor").on("click" , (e)=>{
+        //  alert("bajaEmp-click");
+        e.preventDefault();
+       e.stopPropagation();
+    //              obtenJornadas();
+        console.log("Click en alta jornadas.");
+    //    setTimeout(()=>{} , 5000);
+        $("#altaJorModal").show();
+        console.log("muestra modal alta jornadas");
+    //    setTimeout(()=>{} , 5000);
+      } );
+
+
+
+    $("#bajaUsu").on("click" , (e)=>{
+      e.preventDefault();
+     e.stopPropagation();
+          obtenUsuarios();
+
+      $("#bajaUsuModal").toggle();
+  //    e.stopPropagation();
+    } );
+
+
+
+      $("#bajaEmp").on("click" , (e)=>{
+        //  alert("bajaEmp-click");
+        e.preventDefault();
+       e.stopPropagation();
+            obtenEmpresas();
+        console.log("Click en baja empresas.");
+    //    setTimeout(()=>{} , 5000);
+        $("#bajaEmpModal").show();
+        console.log("muestra modal baja empresas");
+    //    setTimeout(()=>{} , 5000);
+      } );
+
+
+        $("#bajaJor").on("click" , (e)=>{
+          //  alert("bajaEmp-click");
+          e.preventDefault();
+         e.stopPropagation();
+//              obtenJornadas();
+          console.log("Click en baja jornadas.");
+      //    setTimeout(()=>{} , 5000);
+          $("#bajaJorModal").show();
+          console.log("muestra modal baja jornadas");
+      //    setTimeout(()=>{} , 5000);
+        } );
+
+
+
+
+            $("#modiUsu").on("click" , (e)=>{
+              e.preventDefault();
+             e.stopPropagation();
+                  obtenUsuarios();
+
+              $("#modiUsuModal").toggle();
+          //    e.stopPropagation();
+            } );
+
+
+
+              $("#modiEmp").on("click" , (e)=>{
+                //  alert("bajaEmp-click");
+                e.preventDefault();
+               e.stopPropagation();
+                    obtenEmpresas();
+                console.log("Click en modificar empresas.");
+            //    setTimeout(()=>{} , 5000);
+                $("#modiEmpModal").show();
+                console.log("muestra modal modificar empresas");
+            //    setTimeout(()=>{} , 5000);
+              } );
+
+
+                $("#modiJor").on("click" , (e)=>{
+                  //  alert("bajaEmp-click");
+                  e.preventDefault();
+                 e.stopPropagation();
+        //              obtenJornadas();
+                  console.log("Click en modificar jornadas.");
+              //    setTimeout(()=>{} , 5000);
+                  $("#modiJorModal").show();
+                  console.log("muestra modal modificar jornadas");
+              //    setTimeout(()=>{} , 5000);
+                } );
+
+
+
 /*
   $("#bajaUsuModal").on("click" , (e)=>{
     e.preventDefault();

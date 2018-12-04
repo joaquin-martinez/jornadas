@@ -1,0 +1,29 @@
+<div id="altaJorModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+  <span class="close">&times;</span>
+
+<h1>Jornadas laborales.</h1>
+<form action="./altajor" method="post" >
+<fieldset>
+  <legend>Alta usuarios en Jornadas</legend>
+  <label for="fechIni"> Fecha de inicio: </label>
+  <input type="date" name="fechIni" id="fechIni" class="text">
+  <label for="horasOpen" > Horas de la jornada: </label>
+  <input type="number" name="horasOpen" id="horasOpen">
+  <label for="asignarTurnos" > Asignación de los turnos: </label>
+  <input type="button" name="Asignar Turnos" id="asignarTurnos" >
+
+  <p>Seleccione Trabajador:</p>
+  <select class="" name="trabajadorTurno" id="trabajadorTurno" >
+    <option value="trabajador">Trabajador</option>
+    <option value="administrador">Administrador</option>
+  </select>
+
+  <input type="submit" value="Grabar">
+</fieldset>
+</form>
+
+</div>
+</div>
