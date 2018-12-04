@@ -84,10 +84,10 @@ $(()=>{
 */
 
   $("#bajaUsu").on("click" , (e)=>{
-// e.stopPropagation();
+ e.stopPropagation();
     //    obtenUsuarios();
 
-    $("#bajaUsuModal").show();
+    $("#bajaUsuModal").toogle();
     e.stopPropagation();
   } );
 
