@@ -45,6 +45,13 @@ api.get( '/app' , (req , res) => {
 
 */
 
+api.post('/recarga' , (req ,res)=>{
+res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+})
+
+
+
+
 
 api.post('/app' , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
