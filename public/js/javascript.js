@@ -3,7 +3,8 @@ $(()=>{
   // Funciones de menu de botones.
   //Funciones de despliegue.
   const fusu = ()=>{
-    $("#DropdownUsu").toggle();
+//    $("#DropdownUsu").toggle();
+    $("#DropdownUsu").show());
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   }
 
@@ -18,7 +19,12 @@ $(()=>{
   }
 
   // Asignaciones de botones de menu principal.
-  $("#BtnUsu").on("mouseenter" , fusu );
+  $("#menuUsu").on("mouseenter" , ()=>{
+//    $("#DropdownUsu").toggle();
+    $("#DropdownUsu").show());
+    //  document.getElementById("DropdownUsu").classList.toggle("show");
+  } );
+
   $("#menuEmp").on("mouseenter" , femp);
   $("#menuJor").on("mouseenter" , fjor );
 
@@ -46,7 +52,7 @@ $(()=>{
       console.log("comienza el Show");
     })
   }
-
+/*
   const obtenEmpresas = ()=>{
     $.post('./empresas', (data)=>{
       console.log(data);
@@ -71,7 +77,7 @@ $(()=>{
     setTimeout(()=>{} , 5000);
   } );
 
-
+*/
 
   $("#bajaUsu").on("click" , ()=>{
 
@@ -92,8 +98,8 @@ $(()=>{
 
 
   // Get the modal
-  var modalUsu = document.getElementById("usuModal");
-  var modalEmp = document.getElementById("empModal");
+  var modalUsu = document.getElementById("altausuModal");
+  var modalEmp = document.getElementById("altaempModal");
 
   // Get the button that opens the modal
   var btmUsu = document.getElementById("altaUsu");
