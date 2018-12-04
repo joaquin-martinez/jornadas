@@ -122,6 +122,7 @@ $(()=>{
   btmUsu.addEventListener("click" ,function() {
     console.log("entra");
     e.preventDefault();
+       e.stopPropagation();
     //  console.log("sigue");
     modalUsu.style.display = "block";
     console.log("muestra modal usuario");
@@ -130,6 +131,7 @@ $(()=>{
   btmEmp.addEventListener("click" ,function() {
     console.log("entra");
     e.preventDefault();
+       e.stopPropagation();
     //  console.log("sigue");
     modalEmp.style.display = "block";
     console.log("termina");
