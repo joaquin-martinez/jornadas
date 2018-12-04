@@ -84,11 +84,11 @@ $(()=>{
 */
 
   $("#bajaUsu").on("click" , (e)=>{
-e.stopPropagation();
+// e.stopPropagation();
     //    obtenUsuarios();
 
     $("#bajaUsuModal").show();
-// e.stopPropagation();
+    e.stopPropagation();
   } );
 
   /*
