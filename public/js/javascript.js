@@ -24,11 +24,11 @@ $(()=>{
     $("#DropdownUsu").show();
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   } );
-
-  $(".modal").click((e)=>{
+/*
+  $(".modal-content").click((e)=>{
     e.stopPropagation();
   })
-
+*/
   $("#menuEmp").on("mouseenter" , femp);
   $("#menuJor").on("mouseenter" , fjor );
 
@@ -83,12 +83,12 @@ $(()=>{
 
 */
 
-  $("#bajaUsu").on("click" , ()=>{
-
+  $("#bajaUsu").on("click" , (e)=>{
+e.stopPropagation();
     //    obtenUsuarios();
 
     $("#bajaUsuModal").show();
-
+// e.stopPropagation();
   } );
 
   /*
