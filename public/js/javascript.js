@@ -56,7 +56,7 @@ $(()=>{
       console.log("comienza el Show");
     })
   }
-/*
+
   const obtenEmpresas = ()=>{
     $.post('./empresas', (data)=>{
       console.log(data);
@@ -73,20 +73,22 @@ $(()=>{
 
   $("#bajaEmp").on("click" , ()=>{
     //  alert("bajaEmp-click");
-    //    obtenEmpresas();
+    e.preventDefault();
+   e.stopPropagation();
+        obtenEmpresas();
     console.log("Click en baja empresas.");
-    setTimeout(()=>{} , 5000);
+//    setTimeout(()=>{} , 5000);
     $("#bajaEmpModal").show();
     console.log("muestra modal baja empresas");
-    setTimeout(()=>{} , 5000);
+//    setTimeout(()=>{} , 5000);
   } );
 
-*/
+
 
   $("#bajaUsu").on("click" , (e)=>{
     e.preventDefault();
    e.stopPropagation();
-    //    obtenUsuarios();
+        obtenUsuarios();
 
     $("#bajaUsuModal").toggle();
 //    e.stopPropagation();
