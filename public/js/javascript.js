@@ -25,7 +25,7 @@ $(()=>{
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   } );
 
-  $(".dropdown").click((e)=>{
+  $(".modal").click((e)=>{
     e.stopPropagation();
   })
 
