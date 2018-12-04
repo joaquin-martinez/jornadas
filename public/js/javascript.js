@@ -19,11 +19,15 @@ $(()=>{
   }
 
   // Asignaciones de botones de menu principal.
-  $("#menuUsu").on("mouseenter" ,"focus", ()=>{
+  $("#menuUsu").on("mouseenter" , ()=>{
 //    $("#DropdownUsu").toggle();
     $("#DropdownUsu").show();
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   } );
+
+  $(".dropdown").click((e)=>{
+    e.stopPropagation();
+  })
 
   $("#menuEmp").on("mouseenter" , femp);
   $("#menuJor").on("mouseenter" , fjor );
