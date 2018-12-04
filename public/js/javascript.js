@@ -4,7 +4,7 @@ $(()=>{
   //Funciones de despliegue.
   const fusu = ()=>{
 //    $("#DropdownUsu").toggle();
-    $("#DropdownUsu").show());
+    $("#DropdownUsu").show();
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   }
 
