@@ -38,7 +38,7 @@ function validateUser ( req , res ) {
         req.session.user = trabajador[0];
         res.status(200);
 //        res.redirect(./entrar)
-//        res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+        res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
       }
       else {
 
