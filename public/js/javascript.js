@@ -84,18 +84,20 @@ $(()=>{
 */
 
   $("#bajaUsu").on("click" , (e)=>{
-//    e.preventDefault();
-//   e.stopPropagation();
+    e.preventDefault();
+   e.stopPropagation();
     //    obtenUsuarios();
 
     $("#bajaUsuModal").toggle();
 //    e.stopPropagation();
   } );
-
+/*
   $("#bajaUsuModal").on("click" , (e)=>{
     e.preventDefault();
     e.stopPropagation();
   });
+
+  */
   /*
   $("#bajaJor").on("click" , fdbj );
 
