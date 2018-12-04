@@ -10,8 +10,8 @@ $(()=>{
   // Asignaciones de botones de menu principal.
   $("#menuUsu").on("mouseenter" , ()=>{
 //    $("#DropdownUsu").toggle();
-    $("#DropdownUsu").show();
-    //  document.getElementById("DropdownUsu").classList.toggle("show");
+//    $("#DropdownUsu").show();
+    document.getElementById("DropdownUsu").classList.toggle("show");
   } );
 
   // Get the modal
