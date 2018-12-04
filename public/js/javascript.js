@@ -84,7 +84,8 @@ $(()=>{
 */
 
   $("#bajaUsu").on("click" , (e)=>{
- //e.stopPropagation();
+    e.preventDefault();
+   e.stopPropagation();
     //    obtenUsuarios();
 
     $("#bajaUsuModal").toggle();
@@ -92,6 +93,7 @@ $(()=>{
   } );
 
   $("#bajaUsuModal").on("click" , (e)=>{
+    e.preventDefault();
     e.stopPropagation();
   });
   /*
