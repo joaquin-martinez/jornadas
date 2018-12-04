@@ -19,9 +19,9 @@ $(()=>{
   }
 
   // Asignaciones de botones de menu principal.
-  $("#menuUsu").on("mouseenter" , ()=>{
+  $("#menuUsu").on("mouseenter" ,"focus", ()=>{
 //    $("#DropdownUsu").toggle();
-    $("#DropdownUsu").show());
+    $("#DropdownUsu").show();
     //  document.getElementById("DropdownUsu").classList.toggle("show");
   } );
 
