@@ -121,7 +121,7 @@ $(()=>{
   // When the user clicks on the button, open the modal
   btmUsu.addEventListener("click" ,function() {
     console.log("entra");
-    //  e.preventDefault();
+    e.preventDefault();
     //  console.log("sigue");
     modalUsu.style.display = "block";
     console.log("muestra modal usuario");
@@ -129,7 +129,7 @@ $(()=>{
 
   btmEmp.addEventListener("click" ,function() {
     console.log("entra");
-    //  e.preventDefault();
+    e.preventDefault();
     //  console.log("sigue");
     modalEmp.style.display = "block";
     console.log("termina");
