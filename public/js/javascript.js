@@ -60,141 +60,89 @@ $(()=>{
 
     })
   }
+
+  $("#bajaEmp").on("click" , ()=>{
+    //  alert("bajaEmp-click");
+    //    obtenEmpresas();
+    setTimeout(()=>{} , 5000);
+    $("#bajaEmpModal").show();
+    setTimeout(()=>{} , 5000);
+  } );
+
+
+
+  $("#bajaUsu").on("click" , ()=>{
+
+    //    obtenUsuarios();
+
+    $("#bajaUsuModal").show();
+
+  } );
+
   /*
-  const obtenJornadas = ()=>{
-  $.get('./jornadas', (data)=>{
-  alert(data.Listado[0].user);
-  console.log(data);
-})
-}
-*/
+  $("#bajaJor").on("click" , fdbj );
 
-// Funciones de dialogo.
-/*
-const fdau = ()=>{
-$("#dau").showModal();
-//  document.getElementById("dau").showModal();
-}
-
-const fdae = ()=>{
-//  $("#dae").showModal();
-document.getElementById("dae").showModal();
-}
-
-const fdaj = ()=>{
-//  $("#daj").showModal();
-document.getElementById("daj").showModal();
-}
-
-*/
-
-// Captura de submenus.
-/*
-$("#altaUsu").on("click" , fdau );
-$("#altaEmp").on("click" , fdae );
-$("#altaJor").on("click" , fdaj );
-*/
-$("#bajaEmp").on("click" , ()=>{
-//  alert("bajaEmp-click");
-  //    obtenEmpresas();
-setTimeout(()=>{} , 5000);
-  $("#bajaEmpModal").show();
-setTimeout(()=>{} , 5000);
-} );
+  $("#modUsu").on("click" , fdmu );
+  $("#modEmp").on("click" , fdme );
+  $("#modJor").on("click" , fdmj );
+  */
 
 
 
-$("#bajaUsu").on("click" , ()=>{
+  // Get the modal
+  var modalUsu = document.getElementById("usuModal");
+  var modalEmp = document.getElementById("empModal");
 
-  //    obtenUsuarios();
+  // Get the button that opens the modal
+  var btmUsu = document.getElementById("altaUsu");
+  var btmEmp = document.getElementById("altaEmp");
 
-  $("#bajaUsuModal").show();
+  // Get the <span> element that closes the modal
+  var spanUsu = document.getElementsByClassName("close")[0];
+  var spanEmp = document.getElementsByClassName("close")[1];
 
-} );
-
-/*
-$("#bajaJor").on("click" , fdbj );
-
-$("#modUsu").on("click" , fdmu );
-$("#modEmp").on("click" , fdme );
-$("#modJor").on("click" , fdmj );
-*/
-
-
-
-// Get the modal
-var modalUsu = document.getElementById("usuModal");
-var modalEmp = document.getElementById("empModal");
-
-// Get the button that opens the modal
-var btmUsu = document.getElementById("altaUsu");
-var btmEmp = document.getElementById("altaEmp");
-
-// Get the <span> element that closes the modal
-var spanUsu = document.getElementsByClassName("close")[0];
-var spanEmp = document.getElementsByClassName("close")[1];
-
-// When the user clicks on the button, open the modal
-btmUsu.addEventListener("click" ,function() {
-  console.log("entra");
-  //  e.preventDefault();
-  //  console.log("sigue");
-  modalUsu.style.display = "block";
-  console.log("termina");
-});
-
-btmEmp.addEventListener("click" ,function() {
-  console.log("entra");
-  //  e.preventDefault();
-  //  console.log("sigue");
-  modalEmp.style.display = "block";
-  console.log("termina");
-});
-
-// When the user clicks on <span> (x), close the modal
-/*
-spanUsu.onclick = function() {
-modalUsu.style.display = "none";
-}
-
-spanEmp.onclick = function() {
-modalEmp.style.display = "none";
-}
-*/
-
-$(".close").on("click" , ()=>{
-  $(".modal").hide();
-});
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalUsu || event.target == modalEmp
-    || event.target == cierreModal ) {
-      event.target.style.display = "none";
-    }
-  }
-
-  $("#salgo").click(()=>{
-    console.log("Peticion de salir");
-    $("#cierreModal").show();
-    console.log("apertura de modal salir");
+  // When the user clicks on the button, open the modal
+  btmUsu.addEventListener("click" ,function() {
+    console.log("entra");
+    //  e.preventDefault();
+    //  console.log("sigue");
+    modalUsu.style.display = "block";
+    console.log("termina");
   });
 
-  $("#BSalir").on("click" , ()=>{
-    //  fetch("./salir");
-    $.post("./salir");
-    window.location.assign("index.html");
-  })
+  btmEmp.addEventListener("click" ,function() {
+    console.log("entra");
+    //  e.preventDefault();
+    //  console.log("sigue");
+    modalEmp.style.display = "block";
+    console.log("termina");
+  });
 
-  $("#BNSalir").on("click" , ()=>{
+
+  $(".close").on("click" , ()=>{
     $(".modal").hide();
   });
 
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modalUsu || event.target == modalEmp
+      || event.target == cierreModal ) {
+        event.target.style.display = "none";
+      }
+    }
 
+    $("#salgo").click(()=>{
+      console.log("Peticion de salir");
+      $("#cierreModal").show();
+      console.log("apertura de modal salir");
+    });
 
+    $("#BSalir").on("click" , ()=>{
+      $.post("./salir");
+      window.location.assign("index.html");
+    })
 
-
-
-
-
-});
+    $("#BNSalir").on("click" , ()=>{
+      $(".modal").hide();
+    });
+  });
