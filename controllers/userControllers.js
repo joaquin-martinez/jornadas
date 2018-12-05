@@ -18,7 +18,7 @@ function setUser( req , res ) {
 
       console.log(user);
 //      res.status(200)
-      res.redirect("http://google.es")
+      res.redirect('back');
 //      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
     }
 
