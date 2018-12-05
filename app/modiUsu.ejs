@@ -3,20 +3,33 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-<!--    <form class="" action="/delusu" method="post">
+
+    <h2>Modificación de usuarios.</h2>
+    <label for="selectBajaUsu">Seleccione el usuario a modificar.</label>
+    <select class="" name="selectModiUsu" id="selectModiUsu" >
+      <option value="" id="optionModiUsu"></option>
+    </select>
+
+    <form class="" action="/modusu" method="post">
       <fieldset>
-        <legend>Baja de usuario.</legend>
-        <label for="selectBajaUsu">Seleccione el usuario a dar de baja</label>
-        <select class="" name="selectBajaUsu" id="selectBajaUsu" >
-          <option value="" id="optionBajaUsu"></option>
+        <legend>Datos usuario</legend>
+        <label for="musuario"> Usuario: </label>
+        <input type="text" name="musuario" id="musuario" class="text" disabled >
+        <label for="mclave" > Clave: </label>
+        <input type="password" name="mclave" id="mclave">
+        <label for="mclaveconfir" > Confirmacion de clave: </label>
+        <input type="password" name="mclaveconfir" id="mclaveconfir" >
+
+        <p>Tipo de usuario:</p>
+        <select class="" name="mtipo">
+          <option value="trabajador">Trabajador</option>
+          <option value="administrador">Administrador</option>
         </select>
-        <input type="submit" name="ejecutaBajaUsu" value="EjecutaBaja">
+
+
+        <input type="submit" name="ejecutaModiUsu" value="Ejecuta modificación">
       </fieldset>
     </form>
 
-
--->
-Contenido necesario para la modificacion del usuario.
   </div>
-
 </div>

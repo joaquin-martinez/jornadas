@@ -14,7 +14,14 @@ function setUser( req , res ) {
   nuevoUsu.tipo = req.body.tipo
   nuevoUsu.save((err , user) => {
     if (err) console.log(`Error al guardar el usuario`);
-    else console.log(user);
+    else {
+
+      console.log(user);
+      res.status(200);
+//        res.redirect(./entrar)
+      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+    }
+
   })
 
 
@@ -71,9 +78,10 @@ function validateUser ( req , res ) {
 
   }
 
-  function putUserClave ( req , res ) {
-    console.log(`Actualizando usuario ${req.body.usuario}`);
-    Usuar.update({user : req.body.usuario} , { password : req.body.clave } , (err, raw)=>{
+  function putUser ( req , res ) {
+    console.log(`Actualizando usuario ${req.body.musuario}`);
+    Usuar.update({user : req.body.usuario} , { password : req.body.mclave ,
+     tipo : req.body.mtipo } , (err, raw)=>{
       if (err) return handleError(err);
       console.log('The raw response from Mongo was ', raw);
     } );
@@ -104,6 +112,6 @@ function validateUser ( req , res ) {
       validateUser,
       getUser ,
       deleteUser ,
-      putUserClave ,
+      putUser ,
       getUsers
     }

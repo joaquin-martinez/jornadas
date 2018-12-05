@@ -2,21 +2,25 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-   <span class="close">&times;</span>
-<!--     <form class="" action="/delusu" method="post">
+    <span class="close">&times;</span>
+
+    <h2>Baja de empresa.</h2>
+    <label for="selectModiEmp">Seleccione la empresa a modificar.</label>
+    <select class="" name="selectModiNif" id="selectModiNif" >
+      <option value="" id="optionModiEmp"></option>
+    </select>
+
+    <form class="" action="/modiemp" method="post">
       <fieldset>
-        <legend>Baja de usuario.</legend>
-        <label for="selectBajaUsu">Seleccione el usuario a dar de baja</label>
-        <select class="" name="selectBajaUsu" id="selectBajaUsu" >
-          <option value="" id="optionBajaUsu"></option>
-        </select>
-        <input type="submit" name="ejecutaBajaUsu" value="EjecutaBaja">
+        <legend>Datos de la empresa.</legend>
+        <label for="mempresa"> Nombre de empresa: </label>
+        <input type="text" name="mempresa" id="mempresa" class="text" disabled >
+        <label for="mnif" > Código empresa: </label>
+        <input type="text" name="mnif" id="mnif" required disabled >
+        <input type="submit" value="Guardar cambios" disabled >
       </fieldset>
     </form>
 
-
--->
-Contenido necesario para la modificacion de la empresa.
 
   </div>
 

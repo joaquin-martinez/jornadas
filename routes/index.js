@@ -38,7 +38,7 @@ api.get('/recarga' , (req ,res)=>{
 
 api.post('/app' , userCtr.validateUser)
 api.post('/usuario' , userCtr.getUser)
-api.post('/modusupas' , userCtr.putUserClave)
+api.post('/modusu' , userCtr.putUser)
 api.post('/delusu' , userCtr.deleteUser)
 api.post( '/usuarios' , userCtr.getUsers )
 api.post( '/altausu' , logado , userCtr.setUser )
