@@ -61,14 +61,15 @@ $("#menuJor").on("mouseleave" , ()=>{
 
 // Obtencion de listados.
 
-const obtenUsuarios = ( origen , destino)=>{
+const obtenUsuarios = ()=>{
+// const obtenUsuarios = ( origen , destino)=>{
 //  $.post('./usuarios', (data)=>{
   $.post(origen, (data)=>{
     //    alert(data.Listado[0].user);
     console.log(data);
     let datos = data.Listado;
     console.log(datos);
-    let opcionesUsu = $(destino);
+    let opcionesUsu = $("#optionBajaUsu");
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
       opcionesUsu.after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
@@ -137,10 +138,11 @@ $("#altaJor").on("click" , (e)=>{
 $("#bajaUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
-  obtenUsuarios( "./usuarios" , "optionBajaUsu" );
-  setTimeout(()=>{
+  obtenUsuarios();
+//  obtenUsuarios( "./usuarios" , "optionBajaUsu" );
+//  setTimeout(()=>{
   $("#bajaUsuModal").toggle();
-  } , 5000 );
+//  } , 5000 );
   //    e.stopPropagation();
 } );
 
