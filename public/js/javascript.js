@@ -138,8 +138,9 @@ $("#bajaUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
   obtenUsuarios( "./usuarios" , "optionBajaUsu" );
-
+  setTimeout(()=>{
   $("#bajaUsuModal").toggle();
+  } , 5000 );
   //    e.stopPropagation();
 } );
 
