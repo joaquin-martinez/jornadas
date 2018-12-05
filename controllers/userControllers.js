@@ -17,9 +17,9 @@ function setUser( req , res ) {
     else {
 
       console.log(user);
-      res.status(200).redirect('back');
-//      res.redirect('back');
-//      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+//      res.status(200).redirect('back');
+      res.redirect('back');
+      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
     }
 
   })
