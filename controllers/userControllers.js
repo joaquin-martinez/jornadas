@@ -18,8 +18,8 @@ function setUser( req , res ) {
 
       console.log(user);
 //      res.status(200)
-      res.redirect("../recarga")
-      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+      res.redirect("http://google.es")
+//      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
     }
 
   })
