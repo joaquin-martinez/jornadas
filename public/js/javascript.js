@@ -70,7 +70,7 @@ const obtenUsuarios = ( origen , destino)=>{
     console.log(datos);
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
-      $("\"#" + destino + "\"").after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
+      $(destino).after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
       console.log(datos[i].user);
     } ;
 
