@@ -5,7 +5,7 @@ const Usuar = require('../models/user')
 // const session = require('express-session')
 
 function setUser( req , res ) {
-  res.status(200).send() //  { "mensaje" : "Se ha recibido el mensaje" }  )
+//  res.status(200).send() //  { "mensaje" : "Se ha recibido el mensaje" }  )
   console.log( req.body )
 
   let nuevoUsu = new Usuar()
@@ -18,8 +18,8 @@ function setUser( req , res ) {
 
       console.log(user);
 //      res.status(200).redirect('back');
-      res.redirect('back');
-      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
+      res.redirect('../recarga');
+//      res.render('entrada' , {tipo : req.session.user.tipo , user : req.session.user.user})
     }
 
   })
