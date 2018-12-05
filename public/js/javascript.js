@@ -63,8 +63,8 @@ $("#menuJor").on("mouseleave" , ()=>{
 
 const obtenUsuarios = ()=>{
 // const obtenUsuarios = ( origen , destino)=>{
-//  $.post('./usuarios', (data)=>{
-  $.post(origen, (data)=>{
+  $.post('./usuarios', (data)=>{
+//  $.post(origen, (data)=>{
     //    alert(data.Listado[0].user);
     console.log(data);
     let datos = data.Listado;
