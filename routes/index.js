@@ -41,6 +41,7 @@ api.post('/usuario' , userCtr.getUser)
 api.post('/modusupas' , userCtr.putUserClave)
 api.post('/delusu' , userCtr.deleteUser)
 api.post( '/usuarios' , userCtr.getUsers )
+api.post( '/empresas' , userCtr.getEmpresas )
 
 api.post('/delemp' , emprCtr.deleteEmpresa)
 
