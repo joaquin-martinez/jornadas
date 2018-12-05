@@ -17,7 +17,7 @@ $(()=>{
     //  $("#DropdownJor").classList.toggle("show");
     document.getElementById("DropdownJor").classList.toggle("show");
   }
-
+*/
   // Asignaciones de botones de menu principal.
   $("#menuUsu").on("mouseenter" , ()=>{
 //    $("#DropdownUsu").toggle();
@@ -225,7 +225,7 @@ $(()=>{
   */
 
 
-
+/*
   // Get the modal
   var modalUsu = document.getElementById("altausuModal");
   var modalEmp = document.getElementById("altaempModal");
@@ -239,6 +239,7 @@ $(()=>{
   var spanEmp = document.getElementsByClassName("close")[1];
 */
   // When the user clicks on the button, open the modal
+/*
   btmUsu.addEventListener("click" ,function() {
     console.log("entra");
     e.preventDefault();
@@ -257,7 +258,7 @@ $(()=>{
     console.log("termina");
   });
 
-
+*/
   $(".close").on("click" , ()=>{
     $(".modal").hide();
   });
