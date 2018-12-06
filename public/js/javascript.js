@@ -32,13 +32,13 @@ e.stopPropagation();
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
 $("#menuEmp").on("click"  , ()=>{
-      $("#DropdownUsu").toggle();
+      $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 // $("#menuJor").on("mouseenter" , "click"  , ()=>{
 $("#menuJor").on( "click"  , ()=>{
-      $("#DropdownUsu").toggle();
+      $("#DropdownJor").toggle();
 //  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
@@ -73,7 +73,19 @@ const obtenUsuarios = ( accion )=>{
     console.log(data);
     let datos = data.Listado;
     console.log(datos);
-    let opcionesUsu = $("\"#option" + accion + "Usu\"");
+    let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
+    switch (accion) {
+      case baja:
+        opcionesUsu = $("#optionBajaUsu")
+        break;
+      case Modi:
+        opcionesUsu = $("#optionModiUsu")
+        break;
+
+      default:
+
+    }
+
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
       opcionesUsu.after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
@@ -89,9 +101,21 @@ const obtenEmpresas = ()=>{
     console.log(data);
     let datos = data.Listado;
     console.log(datos);
+    let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
+    switch (accion) {
+      case baja:
+        opcionesUsu = $("#optionBajaEmp")
+        break;
+      case Modi:
+        opcionesUsu = $("#optionModiEmp")
+        break;
+
+      default:
+
+    }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      $("#optionBajaEmp").after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
+      opcionesUsu.after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
       console.log(datos[i].name);
     } ;
 
@@ -156,7 +180,7 @@ $("#bajaEmp").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
-  obtenEmpresas();
+  obtenEmpresas( "baja" );
   console.log("Click en baja empresas.");
   //    setTimeout(()=>{} , 5000);
   $("#bajaEmpModal").show();
@@ -195,7 +219,7 @@ $("#modiEmp").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
-  obtenEmpresas();
+  obtenEmpresas( "Modi" );
   console.log("Click en modificar empresas.");
   //    setTimeout(()=>{} , 5000);
   $("#modiEmpModal").show();
