@@ -110,6 +110,7 @@ const obtenEmpresas = ( accion )=>{
     switch (accion) {
       case "Baja":
         opcionesUsu = $("#optionBajaEmp");
+        $("#optionBajaEmp~option").remove();
 //        cadena = `<option value="${datos[i].nif}" >${datos[i].name}<option>`
         break;
       case "Modi":
