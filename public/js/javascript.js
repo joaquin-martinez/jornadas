@@ -61,7 +61,7 @@ $("#menuJor").on("mouseleave" , ()=>{
 
 // Obtencion de listados.
 
-const obtenUsuarios = ()=>{
+const obtenUsuarios = ( accion )=>{
 // const obtenUsuarios = ( origen , destino)=>{
   $.post('./usuarios', (data)=>{
 //  $.post(origen, (data)=>{
@@ -69,7 +69,7 @@ const obtenUsuarios = ()=>{
     console.log(data);
     let datos = data.Listado;
     console.log(datos);
-    let opcionesUsu = $("#optionBajaUsu");
+    let opcionesUsu = $("\"#option" + accion + "Usu\"");
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
       opcionesUsu.after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
@@ -138,7 +138,7 @@ $("#altaJor").on("click" , (e)=>{
 $("#bajaUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
-  obtenUsuarios();
+  obtenUsuarios( "Baja" );
 //  obtenUsuarios( "./usuarios" , "optionBajaUsu" );
 //  setTimeout(()=>{
   $("#bajaUsuModal").toggle();
@@ -179,7 +179,7 @@ $("#bajaJor").on("click" , (e)=>{
 $("#modiUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
-  obtenUsuarios();
+  obtenUsuarios( "Modi" );
 
   $("#modiUsuModal").toggle();
   //    e.stopPropagation();

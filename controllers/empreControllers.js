@@ -15,6 +15,7 @@ const setEmpresa = (req , res ) => {
     } else {
 //      res.status(200).redirect("/app")
             console.log(`Alta correcta de la empresa: ${req.body.empresa}.`);
+        res.status(200).redirect("../recarga")
 }
   })
 
@@ -59,6 +60,7 @@ const deleteEmpresa = (req , res ) => {
   } else {
 //    res.status(200).redirect("/app")
       console.log(`Borrada correctamente la empresa ${empresa.nif}.`);
+        res.status(200).redirect("../recarga")
   }
 
 
@@ -69,22 +71,11 @@ const deleteEmpresa = (req , res ) => {
 
 const putEmpresa = (req , res ) => {
   let empresa = req.body
-  console.log(empresa.nif )
-  Empresa.findOne( { nif : empresa.nif } , (err , list) => {
-  // res.send({Listado: list})
-  var trabajador = list
-  console.log(trabajador[0])
-  if(err)console.log('error en la busqueda');
-  else if (trabajador[0] && empresa.usuario == trabajador[0].user &&
-  empresa.clave == trabajador[0].password ){
-    console.log( list);
-    console.log(trabajador[0].tipo);
-    req.session.user = trabajador[0];
-    res.render('entrada' , {tipo : req.session.user.tipo})
-                }
-  else{
-    res.sendFile('/home/node/jornadas/public/index.html')
-  }
+  console.log(empresa.mnif )
+  Empresa.update( { nif : empresa.mnif } , { name : empresa.mempresa } (err, raw)=>{
+   if (err) return handleError(err);
+   console.log('The raw response from Mongo was ', raw);
+           res.status(200).redirect("../recarga")
 })
 
 
