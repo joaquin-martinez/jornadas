@@ -187,7 +187,7 @@ $("#bajaEmp").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
-  obtenEmpresas( "baja" );
+  obtenEmpresas( "Baja" );
   console.log("Click en baja empresas.");
   //    setTimeout(()=>{} , 5000);
   $("#bajaEmpModal").show();
