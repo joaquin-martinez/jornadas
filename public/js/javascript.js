@@ -74,12 +74,16 @@ const obtenUsuarios = ( accion )=>{
     let datos = data.Listado;
     console.log(datos);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
+    let cadena = null;
     switch (accion) {
       case "Baja":
-        opcionesUsu = $("#optionBajaUsu")
+        opcionesUsu = $("#optionBajaUsu");
+        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
         break;
       case "Modi":
-        opcionesUsu = $("#optionModiUsu")
+        opcionesUsu = $("#optionModiUsu");
+        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
+
         break;
 
       default:
@@ -88,7 +92,7 @@ const obtenUsuarios = ( accion )=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
-      opcionesUsu.after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
+      opcionesUsu.after(cadena);
       console.log(datos[i].user);
     } ;
 
@@ -100,14 +104,17 @@ const obtenEmpresas = ( accion )=>{
   $.post('./empresas', (data)=>{
     console.log(data);
     let datos = data.Listado;
+        let cadena = null;
     console.log(datos);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
       case "Baja":
-        opcionesUsu = $("#optionBajaEmp")
+        opcionesUsu = $("#optionBajaEmp");
+        cadena = `<option value="${datos[i].nif}" >${datos[i].name}<option>`
         break;
       case "Modi":
-        opcionesUsu = $("#optionModiEmp")
+        opcionesUsu = $("#optionModiEmp");
+        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
         break;
 
       default:
@@ -115,7 +122,7 @@ const obtenEmpresas = ( accion )=>{
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesUsu.after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
+      opcionesUsu.after(cadena);
       console.log(datos[i].name);
     } ;
 
