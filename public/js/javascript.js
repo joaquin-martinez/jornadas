@@ -37,7 +37,7 @@ $("#menuEmp").on("click"  , ()=>{
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 // $("#menuJor").on("mouseenter" , "click"  , ()=>{
-$("#menuJor").on( "hover"  , ()=>{
+$("#menuJor").on( "mouseenter mouseleave"  , ()=>{
       $("#DropdownJor").toggle();
 //  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
@@ -122,7 +122,7 @@ const obtenEmpresas = ( accion )=>{
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesUsu.after(`<option value="${datos[i].mnif}" >${datos[i].mname}<option>`);
+      opcionesUsu.after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
       console.log(datos[i].name);
     } ;
 
@@ -158,15 +158,15 @@ $("#altaEmp").on("click" , (e)=>{
 
 $("#altaJor").on("click" , (e)=>{
   //  alert("bajaEmp-click");
-//  e.preventDefault();
-//  e.stopPropagation();
+  e.preventDefault();
+  e.stopPropagation();
   //              obtenJornadas();
   console.log("Click en alta jornadas.");
   //    setTimeout(()=>{} , 5000);
   $("#altaJorModal").show();
   console.log("muestra modal alta jornadas");
   //    setTimeout(()=>{} , 5000);
-} , false );
+} );
 
 
 
