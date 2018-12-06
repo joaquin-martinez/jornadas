@@ -19,7 +19,7 @@ document.getElementById("DropdownJor").classList.toggle("show");
 }
 */
 // Asignaciones de botones de menu principal.
-$("#menuUsu").on("mouseenter" , ()=>{
+$("#menuUsu").on("mouseenter" , "click" , ()=>{
   //    $("#DropdownUsu").toggle();
   $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
@@ -29,12 +29,12 @@ $(".modal-content").click((e)=>{
 e.stopPropagation();
 })
 */
-$("#menuEmp").on("mouseenter" , ()=>{
+$("#menuEmp").on("mouseenter" , "click"  , ()=>{
   //    $("#DropdownUsu").toggle();
   $("#DropdownEmp").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
-$("#menuJor").on("mouseenter" , ()=>{
+$("#menuJor").on("mouseenter" , "click"  , ()=>{
   //    $("#DropdownUsu").toggle();
   $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
