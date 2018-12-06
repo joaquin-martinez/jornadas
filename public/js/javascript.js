@@ -75,10 +75,10 @@ const obtenUsuarios = ( accion )=>{
     console.log(datos);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
-      case baja:
+      case "Baja":
         opcionesUsu = $("#optionBajaUsu")
         break;
-      case Modi:
+      case "Modi":
         opcionesUsu = $("#optionModiUsu")
         break;
 
@@ -96,7 +96,7 @@ const obtenUsuarios = ( accion )=>{
   })
 }
 
-const obtenEmpresas = ()=>{
+const obtenEmpresas = ( accion )=>{
   $.post('./empresas', (data)=>{
     console.log(data);
     let datos = data.Listado;
