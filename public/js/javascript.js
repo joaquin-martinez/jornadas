@@ -1,25 +1,29 @@
 $(()=>{
-  /*
+
   // Funciones de menu de botones.
   //Funciones de despliegue.
   const fusu = ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownUsu").show();
-  //  document.getElementById("DropdownUsu").classList.toggle("show");
+//      $("#DropdownUsu").toggle();
+  document.getElementById("DropdownUsu").classList.toggle("show");
 }
 
 const femp = ()=>{
-$("#DropdownEmp").toggle();
-//  document.getElementById("DropdownEmp").classList.toggle("show");
+// $("#DropdownEmp").toggle();
+  document.getElementById("DropdownEmp").classList.toggle("show");
 }
 
 const fjor = ()=>{
 //  $("#DropdownJor").classList.toggle("show");
 document.getElementById("DropdownJor").classList.toggle("show");
 }
-*/
+
+document.getElementById("menuUsu").onclick = fusu;
+document.getElementById("menuEmp").onclick = femp;
+document.getElementById("menuJor").onclick = fjor;
+
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
+/*
 $("#menuUsu").on( "mouseenter mouseleave click" , ()=>{
       $("#DropdownUsu").toggle();
 //  $("#DropdownUsu").show();
@@ -31,6 +35,7 @@ e.stopPropagation();
 })
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
+/*
 $("#menuEmp").on("mouseenter mouseleave"  , ()=>{
       $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
