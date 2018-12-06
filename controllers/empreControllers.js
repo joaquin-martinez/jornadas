@@ -72,7 +72,7 @@ const deleteEmpresa = (req , res ) => {
 const putEmpresa = (req , res ) => {
   let empresa = req.body
   console.log(empresa.mnif )
-  Empresa.update( { nif : empresa.mnif } , { name : empresa.mempresa } (err, raw)=>{
+  Empresa.findOneAndUpdate( { nif : empresa.mnif } , { name : empresa.mempresa } , (err, raw)=>{
    if (err) return handleError(err);
    console.log('The raw response from Mongo was ', raw);
            res.status(200).redirect("../recarga")

@@ -80,7 +80,7 @@ function validateUser ( req , res ) {
 
   function putUser ( req , res ) {
     console.log(`Actualizando usuario ${req.body.musuario}`);
-    Usuar.update({user : req.body.usuario} , { password : req.body.mclave ,
+    Usuar.findOneAndUpdate({user : req.body.usuario} , { password : req.body.mclave ,
      tipo : req.body.mtipo } , (err, raw)=>{
       if (err) return handleError(err);
       console.log('The raw response from Mongo was ', raw);
