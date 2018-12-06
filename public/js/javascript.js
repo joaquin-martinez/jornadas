@@ -19,9 +19,10 @@ document.getElementById("DropdownJor").classList.toggle("show");
 }
 */
 // Asignaciones de botones de menu principal.
-$("#menuUsu").on("mouseenter" , "click" , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownUsu").show();
+// $("#menuUsu").on("mouseenter" , "click" , ()=>{
+$("#menuUsu").on( "click" , ()=>{
+      $("#DropdownUsu").toggle();
+//  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 /*
@@ -29,17 +30,20 @@ $(".modal-content").click((e)=>{
 e.stopPropagation();
 })
 */
-$("#menuEmp").on("mouseenter" , "click"  , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownEmp").show();
+// $("#menuEmp").on("mouseenter"  , ()=>{
+$("#menuEmp").on("click"  , ()=>{
+      $("#DropdownUsu").toggle();
+//  $("#DropdownEmp").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
-$("#menuJor").on("mouseenter" , "click"  , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownJor").show();
+// $("#menuJor").on("mouseenter" , "click"  , ()=>{
+$("#menuJor").on( "click"  , ()=>{
+      $("#DropdownUsu").toggle();
+//  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 
+/*
 $("#menuUsu").on("mouseleave" , ()=>{
   //    $("#DropdownUsu").toggle();
   $("#DropdownUsu").hide();
@@ -55,7 +59,7 @@ $("#menuJor").on("mouseleave" , ()=>{
   $("#DropdownJor").hide();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
-
+*/
 
 
 
