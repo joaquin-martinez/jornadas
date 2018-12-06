@@ -103,10 +103,10 @@ const obtenEmpresas = ()=>{
     console.log(datos);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
-      case baja:
+      case "Baja":
         opcionesUsu = $("#optionBajaEmp")
         break;
-      case Modi:
+      case "Modi":
         opcionesUsu = $("#optionModiEmp")
         break;
 
