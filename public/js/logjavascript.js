@@ -11,6 +11,7 @@ let datos = {
   console.log(datos);
   $.post("./app" , datos , function(data){
     if(data.mensaje){
+      datosValidacion.reset();
       $("#salidaValidacion").html("validacion incorrecta. intentelo de nuevo."
      + data.mensaje );
 

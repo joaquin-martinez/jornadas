@@ -66,9 +66,9 @@ function validateUser ( req , res ) {
     Usuar.deleteOne( { user : usu.selectBajaUsu } , (err) => {
       if (err) {
         console.log("no se pudo borrar el usuario: " + usu.selectBajaUsu);
-//        res.status(500).redirect("/app")
+        res.status(500).redirect("../recarga")
       } else {
-//        res.status(200).redirect("/app")
+        res.status(200).redirect("../recarga")
               console.log(`Borrado correctamente el usuario: ${usu.selectBajaUsu}.`);
       }
 
@@ -84,6 +84,7 @@ function validateUser ( req , res ) {
      tipo : req.body.mtipo } , (err, raw)=>{
       if (err) return handleError(err);
       console.log('The raw response from Mongo was ', raw);
+              res.status(200).redirect("../recarga")
     } );
 
   }
