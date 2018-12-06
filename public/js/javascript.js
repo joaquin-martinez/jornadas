@@ -20,7 +20,7 @@ document.getElementById("DropdownJor").classList.toggle("show");
 */
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
-$("#menuUsu").on( "click" , ()=>{
+$("#menuUsu").on( "mouseenter mouseleave click" , ()=>{
       $("#DropdownUsu").toggle();
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
@@ -31,7 +31,7 @@ e.stopPropagation();
 })
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
-$("#menuEmp").on("click"  , ()=>{
+$("#menuEmp").on("mouseenter mouseleave"  , ()=>{
       $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
@@ -78,10 +78,14 @@ const obtenUsuarios = ( accion )=>{
     switch (accion) {
       case "Baja":
         opcionesUsu = $("#optionBajaUsu");
+        $("#optionBajaUsu~option").remove();
+
 //        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
         break;
       case "Modi":
         opcionesUsu = $("#optionModiUsu");
+        $("#optionModiUsu~option").remove();
+
 //        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
 
         break;
@@ -115,6 +119,8 @@ const obtenEmpresas = ( accion )=>{
         break;
       case "Modi":
         opcionesUsu = $("#optionModiEmp");
+
+        $("#optionModiEmp~option").remove();
 //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
         break;
 
