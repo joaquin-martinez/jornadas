@@ -367,7 +367,7 @@ $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 console.log(e.currentTarget.text);
 musuario.value = e.currentTarget.value ;
-console.log(listUsu.map(u.user == e.currentTarget.value));
+console.log(listUsu.map(u => u.user == e.currentTarget.value));
 
 });
 
