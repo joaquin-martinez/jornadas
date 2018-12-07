@@ -349,10 +349,11 @@ $("#BNSalir").on("click" , ()=>{
 });
 
 
-$("#selectModiUsu").on("change" , false , ()=>{
-   let optionSelect= this.option[this.selectedIndex];
+$("#selectModiUsu").on("change" , false , (e)=>{
+//   let optionSelect= this.option[this.selectedIndex];
+//   let optionSelect= this.option[this.selectedIndex];
 
-musuario.value = optionSelect.value ;
+musuario.value = this.value ;
 
 });
 
