@@ -24,7 +24,8 @@ document.getElementById("menuJor").onclick = fjor;
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
-$("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
+// $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
+$("#BtnUsu").on( "mouseenter mouseleave" ,false , (event)=>{
 
       $("#DropdownUsu").toggle();
       console.log(event.type);
