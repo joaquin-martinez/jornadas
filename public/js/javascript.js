@@ -353,7 +353,7 @@ $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
 
-musuario.value = this.value ;
+musuario.value = e.data.value ;
 
 });
 
