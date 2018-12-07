@@ -29,8 +29,8 @@ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       $("#DropdownUsu").toggle();
       console.log(event.type);
       console.log(event.delegateTarget);
-      console.log(event.target);
-      console.log(event.delegateTarget.style.display);
+      console.log(event.target.style.display);
+      console.log(event.target );
       console.log(event.delegateTarget.id);
 
 //      console.log(event.data);
