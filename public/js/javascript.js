@@ -25,7 +25,7 @@ document.getElementById("menuJor").onclick = fjor;
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
 // $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
-$("#menuUsu #menuEmp #menuJor ").on( "mouseenter mouseleave" , (event)=>{
+$("#menuUsu , #menuEmp , #menuJor ").on( "mouseenter mouseleave" , (event)=>{
 // $("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
 
 
