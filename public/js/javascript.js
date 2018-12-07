@@ -29,7 +29,7 @@ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       $("#DropdownUsu").toggle();
       console.log(event.type);
       console.log(event.delegateTarget);
-      console.log(event.data.id);
+      console.log(event.data.name);
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
