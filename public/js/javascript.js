@@ -1,4 +1,9 @@
 $(()=>{
+
+let listUsu = new Array();
+let listEmp = new Array();
+let listJor = new Array();
+
 /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
@@ -24,12 +29,12 @@ document.getElementById("menuJor").onclick = fjor;
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
-// $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
-$("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
+ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
+// $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
 // $("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
 
 
-//      $("#DropdownUsu").toggle();
+      $("#DropdownUsu").toggle();
 
       console.log(event.type);
       console.log(event.delegateTarget);
@@ -37,7 +42,7 @@ $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
       console.log(event.target );
       console.log(event.delegateTarget.id);
 //      console.log(event.delegateTarget:firs-of-type);
-            $(event.delegateTarget div:firs-child).toggle();
+//            $(event.delegateTarget div:firs-child).toggle();
 
 //      console.log(event.data);
 //      console.log(event.data.name);
@@ -50,7 +55,7 @@ e.stopPropagation();
 })
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
-/*
+
 $("#menuEmp").on("mouseenter mouseleave"  , ()=>{
       $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
@@ -62,7 +67,7 @@ $("#menuJor").on( "mouseenter mouseleave"  , ()=>{
 //  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
-*/
+
 /*
 $("#menuUsu").on("mouseleave" , ()=>{
   //    $("#DropdownUsu").toggle();
@@ -90,9 +95,10 @@ const obtenUsuarios = ( accion )=>{
   $.post('./usuarios', (data)=>{
 //  $.post(origen, (data)=>{
     //    alert(data.Listado[0].user);
+    listUsu = data.Listado;
     console.log(data);
     let datos = data.Listado;
-    console.log(datos);
+    console.log(listUsu);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
 //    let cadena = null;
     switch (accion) {
@@ -128,8 +134,9 @@ const obtenEmpresas = ( accion )=>{
   $.post('./empresas', (data)=>{
     console.log(data);
     let datos = data.Listado;
+    let listEmp = data.Listado;
 //        let cadena = null;
-    console.log(datos);
+    console.log(listEmp);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
       case "Baja":
@@ -360,7 +367,17 @@ $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 console.log(e.currentTarget.text);
 musuario.value = e.currentTarget.value ;
+console.log(listUsu.map(u.user == e.currentTarget.value));
 
+});
+
+
+$("#selectModiEmp").on("change" , false , (e)=>{
+//   let optionSelect= this.option[this.selectedIndex];
+//   let optionSelect= this.option[this.selectedIndex];
+console.log(e.currentTarget.text);
+mempresa.value = e.currentTarget.text ;
+mnif.value = e.currentTarget.value
 });
 
 
