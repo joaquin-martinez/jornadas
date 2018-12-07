@@ -30,9 +30,11 @@ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       console.log(event.type);
       console.log(event.delegateTarget);
       console.log(event.target);
+      console.log(event.target.name);
+      console.log(event.delegateTarget.id);
 
-      console.log(event.data);
-      console.log(event.data.name);
+//      console.log(event.data);
+//      console.log(event.data.name);
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
