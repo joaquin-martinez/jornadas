@@ -37,7 +37,7 @@ $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
       console.log(event.target );
       console.log(event.delegateTarget.id);
 //      console.log(event.delegateTarget:firs-of-type);
-            $(event.delegateTarget div:nth-child(1)).toggle();
+            $(event.delegateTarget.id div:firs-child).toggle();
 
 //      console.log(event.data);
 //      console.log(event.data.name);
