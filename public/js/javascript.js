@@ -25,8 +25,11 @@ document.getElementById("menuJor").onclick = fjor;
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
 $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
+
       $("#DropdownUsu").toggle();
       console.log(event.type);
+      console.log(event.delegateTarget);
+      console.log(event.data.id);
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
