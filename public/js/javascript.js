@@ -30,12 +30,13 @@ $(".dropdown").on( "mouseenter mouseleave" , (event)=>{
 
 
 //      $("#DropdownUsu").toggle();
-      $(this).toggle();
+
       console.log(event.type);
       console.log(event.delegateTarget);
       console.log(event.target.style.display);
       console.log(event.target );
       console.log(event.delegateTarget.id);
+            $(event.delegateTarget).toggle();
 
 //      console.log(event.data);
 //      console.log(event.data.name);
