@@ -29,6 +29,9 @@ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       $("#DropdownUsu").toggle();
       console.log(event.type);
       console.log(event.delegateTarget);
+      console.log(event.target);
+
+      console.log(event.data);
       console.log(event.data.name);
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
