@@ -1,5 +1,5 @@
 $(()=>{
-
+/*
   // Funciones de menu de botones.
   //Funciones de despliegue.
   const fusu = ()=>{
@@ -23,8 +23,8 @@ document.getElementById("menuJor").onclick = fjor;
 
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
-/*
-$("#menuUsu").on( "mouseenter mouseleave click" , ()=>{
+*/
+$("#menuUsu").on( "mouseenter mouseleave" , ()=>{
       $("#DropdownUsu").toggle();
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
@@ -35,7 +35,7 @@ e.stopPropagation();
 })
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
-/*
+*/
 $("#menuEmp").on("mouseenter mouseleave"  , ()=>{
       $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
