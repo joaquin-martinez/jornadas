@@ -30,7 +30,7 @@ $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       console.log(event.type);
       console.log(event.delegateTarget);
       console.log(event.target);
-      console.log(event.target.name);
+      console.log(event.delegateTarget.style.display);
       console.log(event.delegateTarget.id);
 
 //      console.log(event.data);
