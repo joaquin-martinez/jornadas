@@ -350,9 +350,9 @@ $("#BNSalir").on("click" , ()=>{
 
 
 $("#selectModiUsu").on("change" , false , ()=>{
-musuario.value = this.option[this.selectedIndex].value;
+   let optionSelect= this.option[this.selectedIndex];
 
-
+musuario.value = optionSelect.value ;
 
 });
 
