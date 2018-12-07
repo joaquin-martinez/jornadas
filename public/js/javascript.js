@@ -26,7 +26,7 @@ document.getElementById("menuJor").onclick = fjor;
 */
 $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
       $("#DropdownUsu").toggle();
-      console.log(event.target);
+      console.log(event.type);
 //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
