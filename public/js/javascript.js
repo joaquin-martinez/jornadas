@@ -25,9 +25,12 @@ document.getElementById("menuJor").onclick = fjor;
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
 // $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
-$("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
+$("#menuUsu #menuEmp #menuJor ").on( "mouseenter mouseleave" , (event)=>{
+// $("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
 
-      $("#DropdownUsu").toggle();
+
+//      $("#DropdownUsu").toggle();
+      $(this).toggle();
       console.log(event.type);
       console.log(event.delegateTarget);
       console.log(event.target.style.display);
@@ -45,7 +48,7 @@ e.stopPropagation();
 })
 */
 // $("#menuEmp").on("mouseenter"  , ()=>{
-
+/*
 $("#menuEmp").on("mouseenter mouseleave"  , ()=>{
       $("#DropdownEmp").toggle();
 //  $("#DropdownEmp").show();
@@ -57,7 +60,7 @@ $("#menuJor").on( "mouseenter mouseleave"  , ()=>{
 //  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
-
+*/
 /*
 $("#menuUsu").on("mouseleave" , ()=>{
   //    $("#DropdownUsu").toggle();
