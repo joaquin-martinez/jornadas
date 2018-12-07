@@ -33,7 +33,7 @@ $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
 
       console.log(event.type);
       console.log(event.delegateTarget);
-      console.log(event.delegateTarget.style.display);
+//      console.log(event.delegateTarget.style.display);
       console.log(event.target );
       console.log(event.delegateTarget.id);
 //      console.log(event.delegateTarget:firs-of-type);
