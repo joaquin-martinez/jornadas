@@ -352,8 +352,8 @@ $("#BNSalir").on("click" , ()=>{
 $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
-console.log(e.data.value);
-musuario.value = e.data.value[0] ;
+console.log(e.currentTarget.value);
+musuario.value = e.currentTarget.value[0] ;
 
 });
 
