@@ -347,4 +347,19 @@ $("#BSalir").on("click" , ()=>{
 $("#BNSalir").on("click" , ()=>{
   $(".modal").hide();
 });
+
+
+$("#selectModiUsu").on("change" , false , ()=>{
+musuario.value = this.option[this.selectedIndex].value;
+
+
+
+});
+
+
+
+
+
+
+
 });
