@@ -367,10 +367,15 @@ $("#BNSalir").on("click" , ()=>{
 $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
-console.log(e.currentTarget.innerHTML);
+// console.log(e.currentTarget.innerHTML);
+ console.log(e.currentTarget.innerHTML);
 musuario.value = e.currentTarget.value ;
-console.log(listUsu.filter(u => u.user == e.currentTarget.value));
+let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
+console.log(seleccionados);
 
+musuario.value = seleccionados[0].user;
+mclave.value = seleccionados[0].password:
+midusu.value = seleccionados[0]._id:
 });
 
 
@@ -378,11 +383,13 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
 
-let seleccionado = listEmp.filter((u)=>u.nif == e.currentTarget.value);
+let seleccionado = listEmp.filter(u => u.nif == e.currentTarget.value);
 
 console.log(seleccionado);
 mempresa.value = seleccionado[0].name ;
 mnif.value = seleccionado[0].name;
+midemp.value = seleccionados[0]._id:
+
 });
 
 
