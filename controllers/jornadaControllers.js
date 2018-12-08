@@ -1,6 +1,6 @@
 'use strict'
 
-const Usuar = require('../models/jornada ')
+const Jornada = require('../models/jornada')
 
 setJornada = (req , res ) => {
   console.log("Se procede a crear una jornada");
