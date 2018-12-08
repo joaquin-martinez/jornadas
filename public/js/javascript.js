@@ -378,11 +378,11 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
 
-let seleccionado = listEmp.find((u)=>u.nif == e.currentTarget.value);
+let seleccionado = listEmp.filter((u)=>u.nif == e.currentTarget.value);
 
 console.log(seleccionado);
-mempresa.value = e.currentTarget.selected.text ;
-mnif.value = e.currentTarget.value;
+mempresa.value = seleccionado[0].name ;
+mnif.value = seleccionado[0].name;
 });
 
 
