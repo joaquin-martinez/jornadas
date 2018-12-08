@@ -7,9 +7,11 @@
 <h1>Alta jornadas laborales.</h1>
 
 
-<form action="./altajor" method="post" >
+<form action="./altajor" method="post" id="formaltajor" >
 <fieldset>
   <legend>Datos para crear una jornada.</legend>
+  <div class="" id="jordatprop">
+
 
 <label for="selectAltaJorE">Seleccione la empresa:</label>
 <select class="" name="selectAltaJorE" id="selectAltaJorE" >
@@ -21,7 +23,7 @@
   <label for="horasOpen" > Horas de la jornada: </label>
   <input type="number" name="horasOpen" id="horasOpen">
   <label for="asignarTurnos" > Asignación de los turnos: </label>
-
+  </div>
   <p>Seleccione Trabajador:</p>
   <label for="selectAltaJorT">Seleccione el trabajador del turno:</label>
   <select class="" name="selectAltaJorT" id="selectAltaJorT" >

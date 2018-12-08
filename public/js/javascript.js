@@ -321,13 +321,15 @@ $("#modiJor").on("click" , (e)=>{
 
 $("#asignarTurnos").on("click" , false , (e)=>{
 
-  turno = new Turno( horasTurno.selectAltaJorT  ,
+  turno = new Turno( selectAltaJorT.value  ,
       horasTurno.value );
 
     jornada = new Jornada( selectAltaJorE.value ,
         fechIni.value , horasOpen.value , turno );
 
         console.log(jornada);
+        $(formaltajor).reset();
+        $(jordatprop).hide();
 
 });
 
