@@ -344,8 +344,9 @@ $(asignarMasTurnos).on("click" , ()=>{
           console.log(jornada);
 });
 
-$(formaltajor).on("submit" , ()=>{
-  $.post( "/altajor" , jornada , (data)=>{
+$(formaltajor).on("submit" , (e)=>{
+  e.preventDefault();
+  $.post( "/altajor" , Json.stringify(jornada) , (data)=>{
     $(altaJorModal).hide();
   });
 });
