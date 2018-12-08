@@ -7,7 +7,8 @@ $(()=>{
   class Turno {
     constructor(usuario , horasTur) {
       this.usuario = usuario;
-      this.horasTur = horasTur
+      this.horasTur = horasTur;
+      this.horaIni = horaIni;
     }
   }
 
@@ -325,7 +326,7 @@ $("#asignarTurnos").on("click" , false , (e)=>{
       horasTurno.value );
 
     jornada = new Jornada( selectAltaJorE.value ,
-        fechIni.value , horasOpen.value , turno );
+        fechIni.value , horasOpen.value , horaIni.value , turno );
 
         console.log(jornada);
         formaltajor.reset();
@@ -346,7 +347,7 @@ $(asignarMasTurnos).on("click" , ()=>{
 
 $(formaltajor).on("submit" , (e)=>{
   e.preventDefault();
-  $.post( "/altajor" , Json.stringify(jornada) , (data)=>{
+  $.post( "/altajor" , JSON.stringify(jornada) , (data)=>{
     $(altaJorModal).hide();
   });
 });

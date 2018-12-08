@@ -14,24 +14,26 @@
 
 
 <label for="selectAltaJorE">Seleccione la empresa:</label>
-<select class="" name="selectAltaJorE" id="selectAltaJorE" >
+<select class="" name="selectAltaJorE" id="selectAltaJorE" required >
   <option value="" id="optionAltaJorE"></option>
 </select>
 
   <label for="fechIni"> Fecha de inicio: </label>
-  <input type="date" name="fechIni" id="fechIni" class="text">
+  <input type="date" name="fechIni" id="fechIni" class="text" required >
   <label for="horasOpen" > Horas de la jornada: </label>
-  <input type="number" name="horasOpen" id="horasOpen">
+  <input type="number" name="horasOpen" id="horasOpen" value="8" required >
   <label for="asignarTurnos" > Asignación de los turnos: </label>
   </div>
   <p>Seleccione Trabajador:</p>
   <label for="selectAltaJorT">Seleccione el trabajador del turno:</label>
-  <select class="" name="selectAltaJorT" id="selectAltaJorT" >
+  <select class="" name="selectAltaJorT" id="selectAltaJorT" required >
     <option value="" id="optionAltaJorT"></option>
   </select>
 
   <label for="horasTurno" > Horas de la jornada: </label>
-  <input type="number" name="horasTurno" id="horasTurno">
+  <input type="number" name="horasTurno" id="horasTurno" required value="8" >
+  <label for="horaIni" > Hora de la entrada: </label>
+  <input type="time" name="horaIni" id="horaIni" required value="8" >
 
   <input type="button" value="Asignar mas Turnos" id="asignarTurnos" >
   <input type="button" value="Asignar mass Turnos" id="asignarMasTurnos" >
