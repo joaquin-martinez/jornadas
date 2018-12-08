@@ -5,7 +5,7 @@ $(()=>{
   let listJor = new Array();
 
   class Turno {
-    constructor(usuario , horasTur) {
+    constructor(usuario , horasTur , horaIni ) {
       this.usuario = usuario;
       this.horasTur = horasTur;
       this.horaIni = horaIni;
