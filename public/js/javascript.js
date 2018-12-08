@@ -339,7 +339,7 @@ $("#asignarTurnos").on("click" , false , (e)=>{
 $(asignarMasTurnos).on("click" , ()=>{
   let turno = new Turno( selectAltaJorT.value  ,
       horasTurno.value );
-  jornada.turno.push(turno);
+  jornada.turnos.push(turno);
           formaltajor.reset();
           console.log(jornada);
 });
