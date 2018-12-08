@@ -354,7 +354,7 @@ $(submitAltaJor).on("click" , (e)=>{
   console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
-  $.post( "/altajor" , datos , (data)=>{
+  $.post( "/altajor" , {datos : datos} , (data)=>{
     $(altaJorModal).hide();
     $(jordatprop).show();
     formaltajor.reset();
