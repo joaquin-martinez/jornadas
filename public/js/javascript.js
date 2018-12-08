@@ -123,7 +123,7 @@ const obtenUsuarios = ( accion )=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
-      opcionesUsu.after(`<option class="opusu" value="${datos[i].user}" >${datos[i].user}<option>`);
+      opcionesUsu.after(`<option class="opusu" value="${datos[i].user}" >${datos[i].user}</option>`);
       console.log(datos[i].user);
     } ;
 
@@ -377,8 +377,11 @@ console.log(listUsu.filter(u => u.user == e.currentTarget.value));
 $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
-console.log(e.currentTarget.innerHTML);
-mempresa.value = e.currentTarget.text ;
+
+let seleccionado = listEmp.find((u)=>u.nif == e.currentTarget.value);
+
+console.log(seleccionado);
+mempresa.value = e.currentTarget.selected.text ;
 mnif.value = e.currentTarget.value;
 });
 
