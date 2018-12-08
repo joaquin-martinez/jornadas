@@ -323,10 +323,10 @@ $("#modiJor").on("click" , (e)=>{
 $("#asignarTurnos").on("click" , false , (e)=>{
 
   let turno = new Turno( selectAltaJorT.value  ,
-      horasTurno.value );
+      horasTurno.value , horaIni.value  );
 
     jornada = new Jornada( selectAltaJorE.value ,
-        fechIni.value , horasOpen.value , horaIni.value , turno );
+        fechIni.value , horasOpen.value , turno );
 
         console.log(jornada);
         formaltajor.reset();
@@ -347,7 +347,9 @@ $(asignarMasTurnos).on("click" , ()=>{
 
 $(formaltajor).on("submit" , (e)=>{
   e.preventDefault();
-  $.post( "/altajor" , JSON.stringify(jornada) , (data)=>{
+  let datos = JSON.stringify(jornada);
+  console.log(datos);
+  $.post( "/altajor" , datos , (data)=>{
     $(altaJorModal).hide();
   });
 });
