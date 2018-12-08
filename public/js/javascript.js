@@ -321,7 +321,7 @@ $("#modiJor").on("click" , (e)=>{
 
 $("#asignarTurnos").on("click" , false , (e)=>{
 
-  turno = new Turno( selectAltaJorT.value  ,
+  let turno = new Turno( selectAltaJorT.value  ,
       horasTurno.value );
 
     jornada = new Jornada( selectAltaJorE.value ,
@@ -330,10 +330,19 @@ $("#asignarTurnos").on("click" , false , (e)=>{
         console.log(jornada);
         formaltajor.reset();
         $(jordatprop).hide();
+        $(asignarTurnos).hide();
+        $(asignarMasTurnos).show();
+
 
 });
 
-
+$(asignarMasTurnos).on("click" , ()=>{
+  let turno = new Turno( selectAltaJorT.value  ,
+      horasTurno.value );
+  jornada.turno.push(turno);
+          formaltajor.reset();
+          console.log(jornada);
+});
 
 /*
 $("#bajaUsuModal").on("click" , (e)=>{
