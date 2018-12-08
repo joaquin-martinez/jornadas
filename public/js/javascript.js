@@ -352,7 +352,7 @@ $(submitAltaJor).on("click" , (e)=>{
   e.preventDefault();
   guardaTurno();
   console.log(jornada);
-  let datos = JSON.parse(jornada);
+  let datos = JSON.stringify(jornada);
   console.log(datos);
   $.post( "/altajor" , datos , (data)=>{
     $(altaJorModal).hide();
