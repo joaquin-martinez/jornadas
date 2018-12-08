@@ -376,7 +376,11 @@ console.log(seleccionados);
 musuario.value = seleccionados[0].user;
 mclave.value = seleccionados[0].password;
 midusu.value = seleccionados[0]._id;
-$("mtipo").val(seleccionados[0].tipo).attr("selected")
+console.log(seleccionados[0].tipo);
+if (seleccionados[0].tipo == "administrador") {
+$("mtipo[value='administrador']").attr("selected")
+}
+
 
 });
 
