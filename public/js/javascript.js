@@ -374,8 +374,8 @@ let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
 console.log(seleccionados);
 
 musuario.value = seleccionados[0].user;
-mclave.value = seleccionados[0].password:
-midusu.value = seleccionados[0]._id:
+mclave.value = seleccionados[0].password;
+midusu.value = seleccionados[0]._id;
 });
 
 
@@ -388,7 +388,7 @@ let seleccionado = listEmp.filter(u => u.nif == e.currentTarget.value);
 console.log(seleccionado);
 mempresa.value = seleccionado[0].name ;
 mnif.value = seleccionado[0].name;
-midemp.value = seleccionados[0]._id:
+midemp.value = seleccionados[0]._id;
 
 });
 
