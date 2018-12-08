@@ -158,7 +158,7 @@ const obtenEmpresas = ( accion )=>{
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesUsu.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}<option>`);
+      opcionesUsu.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}</option>`);
       console.log(datos[i].name);
     } ;
 
