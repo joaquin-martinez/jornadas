@@ -348,7 +348,7 @@ const guardaTurno = ()=>{
 
 $(asignarMasTurnos).on("click" , guardaTurno );
 
-$(formaltajor).submit((e)=>{
+$(submitAltaJor).on("click" , ((e)=>{
   e.preventDefault();
   guardaTurno();
   console.log(jornada);
