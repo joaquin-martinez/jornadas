@@ -365,7 +365,7 @@ $("#BNSalir").on("click" , ()=>{
 $("#selectModiUsu").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
-console.log(e.currentTarget.text);
+console.log(e.currentTarget.innerHTML);
 musuario.value = e.currentTarget.value ;
 console.log(listUsu.filter(u => u.user == e.currentTarget.value));
 
@@ -375,7 +375,7 @@ console.log(listUsu.filter(u => u.user == e.currentTarget.value));
 $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
-console.log(e.currentTarget.text);
+console.log(e.currentTarget.innerHTML);
 mempresa.value = e.currentTarget.text ;
 mnif.value = e.currentTarget.value;
 });
