@@ -110,7 +110,8 @@ const obtenUsuarios = ( accion )=>{
         break;
       case "Modi":
         opcionesUsu = $("#optionModiUsu");
-        $("#optionModiUsu~option").remove();
+//        $("#optionModiUsu~option").remove();
+                $(".opusu").remove();
 
 //        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
 
@@ -122,7 +123,7 @@ const obtenUsuarios = ( accion )=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].user);
-      opcionesUsu.after(`<option value="${datos[i].user}" >${datos[i].user}<option>`);
+      opcionesUsu.after(`<option class="opusu" value="${datos[i].user}" >${datos[i].user}<option>`);
       console.log(datos[i].user);
     } ;
 
@@ -147,7 +148,8 @@ const obtenEmpresas = ( accion )=>{
       case "Modi":
         opcionesUsu = $("#optionModiEmp");
 
-        $("#optionModiEmp~option").remove();
+//        $("#optionModiEmp~option").remove();
+        $(".opemp").remove();
 //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
         break;
 
@@ -156,7 +158,7 @@ const obtenEmpresas = ( accion )=>{
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesUsu.after(`<option value="${datos[i].nif}" >${datos[i].name}<option>`);
+      opcionesUsu.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}<option>`);
       console.log(datos[i].name);
     } ;
 
