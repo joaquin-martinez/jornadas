@@ -346,7 +346,8 @@ $(asignarMasTurnos).on("click" , ()=>{
 });
 
 $(formaltajor).on("submit" , (e)=>{
-  e.preventDefault();
+//  e.preventDefault();
+  console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
   $.post( "/altajor" , datos , (data)=>{
