@@ -12,7 +12,7 @@ $(()=>{
   }
 
   class Jornada {
-    constructor( codigo , feha , horasJor , turno ) {
+    constructor( codigo , fecha , horasJor , turno ) {
       this.codigo = codigo;
       this.fecha = fecha;
       this.horasJor = horasJor;
