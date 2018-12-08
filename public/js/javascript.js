@@ -214,7 +214,7 @@ $("#altaJor").on("click" , (e)=>{
   e.stopPropagation();
 
     obtenEmpresas( "Jorn" );
-      obtenUsuarios("Jorn");
+//      obtenUsuarios("Jorn");
   //              obtenJornadas();
   console.log("Click en alta jornadas.");
   //    setTimeout(()=>{} , 5000);
