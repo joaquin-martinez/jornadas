@@ -3,6 +3,7 @@ $(()=>{
   let listUsu = new Array();
   let listEmp = new Array();
   let listJor = new Array();
+  let jornada = null;
 
   class Turno {
     constructor(usuario , horasTur , horaIni ) {
@@ -337,16 +338,19 @@ $("#asignarTurnos").on("click" , false , (e)=>{
 
 });
 
-$(asignarMasTurnos).on("click" , ()=>{
+const guardaTurno = ()=>{
   let turno = new Turno( selectAltaJorT.value  ,
-      horasTurno.value );
+      horasTurno.value , horaIni.value );
   jornada.turnos.push(turno);
           formaltajor.reset();
           console.log(jornada);
-});
+}
+
+$(asignarMasTurnos).on("click" , guardaTurno );
 
 $(formaltajor).submit((e)=>{
   e.preventDefault();
+  guardaTurno();
   console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
