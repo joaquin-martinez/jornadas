@@ -149,7 +149,7 @@ const obtenEmpresas = ( accion )=>{
         opcionesUsu = $("#optionModiEmp");
 
 //        $("#optionModiEmp~option").remove();
-        $(".opemp").remove();
+        $(".opemp").remove("option");
 //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
         break;
 
