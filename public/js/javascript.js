@@ -214,6 +214,7 @@ $("#altaJor").on("click" , (e)=>{
   e.stopPropagation();
 
     obtenEmpresas( "Jorn" );
+      obtenUsuarios("Jorn");
   //              obtenJornadas();
   console.log("Click en alta jornadas.");
   //    setTimeout(()=>{} , 5000);
@@ -302,10 +303,10 @@ $("#modiJor").on("click" , (e)=>{
 } );
 
 
-$("asignarTurnos").on("click" , false , (e)=>{
+$("#asignarTurnos").on("click" , false , (e)=>{
 
-  $("#selectAltaJorT").attr("disabled" , false);
-  obternerUsu("Jorn");
+//  $("#selectAltaJorT").attr("disabled" , false);
+obtenUsuarios("Jorn");
 
 });
 /*

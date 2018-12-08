@@ -9,31 +9,31 @@
 
 <form action="./altajor" method="post" >
 <fieldset>
+  <legend>Datos para crear una jornada.</legend>
 
-<label for="selectAltaJorE">Seleccione la jornada a modificar:</label>
+<label for="selectAltaJorE">Seleccione la empresa:</label>
 <select class="" name="selectAltaJorE" id="selectAltaJorE" >
   <option value="" id="optionAltaJorE"></option>
 </select>
 
-  <legend>Alta usuarios en Jornadas</legend>
   <label for="fechIni"> Fecha de inicio: </label>
   <input type="date" name="fechIni" id="fechIni" class="text">
   <label for="horasOpen" > Horas de la jornada: </label>
   <input type="number" name="horasOpen" id="horasOpen">
   <label for="asignarTurnos" > Asignación de los turnos: </label>
-  <input type="button" name="Asignar Turnos" id="asignarTurnos" >
 
   <p>Seleccione Trabajador:</p>
   <label for="selectAltaJorT">Seleccione el trabajador del turno:</label>
-  <select class="" name="selectAltaJorT" id="selectAltaJorT" disabled >
+  <select class="" name="selectAltaJorT" id="selectAltaJorT" >
     <option value="" id="optionAltaJorT"></option>
   </select>
 
   <label for="horasTurno" > Horas de la jornada: </label>
   <input type="number" name="horasTurno" id="horasTurno">
-  
 
-  <input type="submit" value="Grabar">
+  <input type="button" value="Asignar mas Turnos" id="asignarTurnos" >
+
+  <input type="submit" value="Grabar y salir">
 </fieldset>
 </form>
 
