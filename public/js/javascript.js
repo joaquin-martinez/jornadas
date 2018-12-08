@@ -328,7 +328,7 @@ $("#asignarTurnos").on("click" , false , (e)=>{
         fechIni.value , horasOpen.value , turno );
 
         console.log(jornada);
-        $(formaltajor).reset();
+        formaltajor.reset();
         $(jordatprop).hide();
 
 });
