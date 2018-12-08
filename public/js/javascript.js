@@ -117,6 +117,15 @@ const obtenUsuarios = ( accion )=>{
 
         break;
 
+        case "Jorn":
+          opcionesUsu = $("#optionAltaJorT");
+
+  //        $("#optionModiEmp~option").remove();
+          $(".opemp").remove("option");
+  //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+          break;
+
+
       default:
 
     }
@@ -138,27 +147,34 @@ const obtenEmpresas = ( accion )=>{
     listEmp = data.Listado;
 //        let cadena = null;
     console.log(listEmp);
-    let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
+    let opcionesempr = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
       case "Baja":
-        opcionesUsu = $("#optionBajaEmp");
+        opcionesempr = $("#optionBajaEmp");
         $("#optionBajaEmp~option").remove();
 //        cadena = `<option value="${datos[i].nif}" >${datos[i].name}<option>`
         break;
       case "Modi":
-        opcionesUsu = $("#optionModiEmp");
+        opcionesempr = $("#optionModiEmp");
 
 //        $("#optionModiEmp~option").remove();
         $(".opemp").remove("option");
 //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
         break;
+        case "Jorn":
+          opcionesempr = $("#optionAltaJorE");
+
+  //        $("#optionModiEmp~option").remove();
+          $(".opemp").remove("option");
+  //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+          break;
 
       default:
 
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesUsu.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}</option>`);
+      opcionesempr.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}</option>`);
       console.log(datos[i].name);
     } ;
 
@@ -196,6 +212,8 @@ $("#altaJor").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
+
+    obtenEmpresas( "Jorn" );
   //              obtenJornadas();
   console.log("Click en alta jornadas.");
   //    setTimeout(()=>{} , 5000);
@@ -284,7 +302,12 @@ $("#modiJor").on("click" , (e)=>{
 } );
 
 
+$("asignarTurnos").on("click" , false , (e)=>{
 
+  $("#selectAltaJorT").attr("disabled" , false);
+  obternerUsu("Jorn");
+
+});
 /*
 $("#bajaUsuModal").on("click" , (e)=>{
 e.preventDefault();

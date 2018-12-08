@@ -4,9 +4,17 @@
 <div class="modal-content">
   <span class="close">&times;</span>
 
-<h1>Jornadas laborales.</h1>
+<h1>Alta jornadas laborales.</h1>
+
+
 <form action="./altajor" method="post" >
 <fieldset>
+
+<label for="selectAltaJorE">Seleccione la jornada a modificar:</label>
+<select class="" name="selectAltaJorE" id="selectAltaJorE" >
+  <option value="" id="optionAltaJorE"></option>
+</select>
+
   <legend>Alta usuarios en Jornadas</legend>
   <label for="fechIni"> Fecha de inicio: </label>
   <input type="date" name="fechIni" id="fechIni" class="text">
@@ -16,10 +24,14 @@
   <input type="button" name="Asignar Turnos" id="asignarTurnos" >
 
   <p>Seleccione Trabajador:</p>
-  <select class="" name="trabajadorTurno" id="trabajadorTurno" >
-    <option value="trabajador">Trabajador</option>
-    <option value="administrador">Administrador</option>
+  <label for="selectAltaJorT">Seleccione el trabajador del turno:</label>
+  <select class="" name="selectAltaJorT" id="selectAltaJorT" disabled >
+    <option value="" id="optionAltaJorT"></option>
   </select>
+
+  <label for="horasTurno" > Horas de la jornada: </label>
+  <input type="number" name="horasTurno" id="horasTurno">
+  
 
   <input type="submit" value="Grabar">
 </fieldset>
