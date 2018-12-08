@@ -1,20 +1,20 @@
 $(()=>{
 
-let listUsu = new Array();
-let listEmp = new Array();
-let listJor = new Array();
+  let listUsu = new Array();
+  let listEmp = new Array();
+  let listJor = new Array();
 
-/*
+  /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
   const fusu = ()=>{
-//      $("#DropdownUsu").toggle();
+  //      $("#DropdownUsu").toggle();
   document.getElementById("DropdownUsu").classList.toggle("show");
 }
 
 const femp = ()=>{
 // $("#DropdownEmp").toggle();
-  document.getElementById("DropdownEmp").classList.toggle("show");
+document.getElementById("DropdownEmp").classList.toggle("show");
 }
 
 const fjor = ()=>{
@@ -29,24 +29,24 @@ document.getElementById("menuJor").onclick = fjor;
 // Asignaciones de botones de menu principal.
 // $("#menuUsu").on("mouseenter" , "click" , ()=>{
 */
- $("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
-// $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
-// $("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
+$("#menuUsu").on( "mouseenter mouseleave" , (event)=>{
+  // $("#menuUsu , #menuEmp , #menuJor").on( "mouseenter mouseleave" , (event)=>{
+  // $("#BtnUsu").on( "mouseenter mouseleave click" ,false , (event)=>{
 
 
-      $("#DropdownUsu").toggle();
+  $("#DropdownUsu").toggle();
 
-      console.log(event.type);
-      console.log(event.delegateTarget);
-//      console.log(event.delegateTarget.style.display);
-      console.log(event.target );
-      console.log(event.delegateTarget.id);
-//      console.log(event.delegateTarget:firs-of-type);
-//            $(event.delegateTarget div:firs-child).toggle();
+  console.log(event.type);
+  console.log(event.delegateTarget);
+  //      console.log(event.delegateTarget.style.display);
+  console.log(event.target );
+  console.log(event.delegateTarget.id);
+  //      console.log(event.delegateTarget:firs-of-type);
+  //            $(event.delegateTarget div:firs-child).toggle();
 
-//      console.log(event.data);
-//      console.log(event.data.name);
-//  $("#DropdownUsu").show();
+  //      console.log(event.data);
+  //      console.log(event.data.name);
+  //  $("#DropdownUsu").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 /*
@@ -57,32 +57,32 @@ e.stopPropagation();
 // $("#menuEmp").on("mouseenter"  , ()=>{
 
 $("#menuEmp").on("mouseenter mouseleave"  , ()=>{
-      $("#DropdownEmp").toggle();
-//  $("#DropdownEmp").show();
+  $("#DropdownEmp").toggle();
+  //  $("#DropdownEmp").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 // $("#menuJor").on("mouseenter" , "click"  , ()=>{
 $("#menuJor").on( "mouseenter mouseleave"  , ()=>{
-      $("#DropdownJor").toggle();
-//  $("#DropdownJor").show();
+  $("#DropdownJor").toggle();
+  //  $("#DropdownJor").show();
   //  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 
 /*
 $("#menuUsu").on("mouseleave" , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownUsu").hide();
-  //  document.getElementById("DropdownUsu").classList.toggle("show");
+//    $("#DropdownUsu").toggle();
+$("#DropdownUsu").hide();
+//  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 $("#menuEmp").on("mouseleave" , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownEmp").hide();
-  //  document.getElementById("DropdownUsu").classList.toggle("show");
+//    $("#DropdownUsu").toggle();
+$("#DropdownEmp").hide();
+//  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 $("#menuJor").on("mouseleave" , ()=>{
-  //    $("#DropdownUsu").toggle();
-  $("#DropdownJor").hide();
-  //  document.getElementById("DropdownUsu").classList.toggle("show");
+//    $("#DropdownUsu").toggle();
+$("#DropdownJor").hide();
+//  document.getElementById("DropdownUsu").classList.toggle("show");
 } );
 */
 
@@ -91,39 +91,39 @@ $("#menuJor").on("mouseleave" , ()=>{
 // Obtencion de listados.
 
 const obtenUsuarios = ( accion )=>{
-// const obtenUsuarios = ( origen , destino)=>{
+  // const obtenUsuarios = ( origen , destino)=>{
   $.post('./usuarios', (data)=>{
-//  $.post(origen, (data)=>{
+    //  $.post(origen, (data)=>{
     //    alert(data.Listado[0].user);
     listUsu = data.Listado;
     console.log(data);
     let datos = data.Listado;
     console.log(listUsu);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
-//    let cadena = null;
+    //    let cadena = null;
     switch (accion) {
       case "Baja":
-        opcionesUsu = $("#optionBajaUsu");
-        $("#optionBajaUsu~option").remove();
+      opcionesUsu = $("#optionBajaUsu");
+      $("#optionBajaUsu~option").remove();
 
-//        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
-        break;
+      //        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
+      break;
       case "Modi":
-        opcionesUsu = $("#optionModiUsu");
-//        $("#optionModiUsu~option").remove();
-                $(".opusu").remove();
+      opcionesUsu = $("#optionModiUsu");
+      $("#optionModiUsu~option").remove();
+      //                $(".opusu").remove();
 
-//        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
+      //        cadena = `<option value="${datos[i].user}" >${datos[i].user}<option>`
 
-        break;
+      break;
 
-        case "Jorn":
-          opcionesUsu = $("#optionAltaJorT");
+      case "Jorn":
+      opcionesUsu = $("#optionAltaJorT");
 
-  //        $("#optionModiEmp~option").remove();
-          $(".opemp").remove("option");
-  //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
-          break;
+      $("#optionAltaJorT~option").remove();
+      //          $(".opemp").remove("option");
+      //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+      break;
 
 
       default:
@@ -145,29 +145,29 @@ const obtenEmpresas = ( accion )=>{
     console.log(data);
     let datos = data.Listado;
     listEmp = data.Listado;
-//        let cadena = null;
+    //        let cadena = null;
     console.log(listEmp);
     let opcionesempr = null; // $("\"#option" + accion + "Usu\"");
     switch (accion) {
       case "Baja":
-        opcionesempr = $("#optionBajaEmp");
-        $("#optionBajaEmp~option").remove();
-//        cadena = `<option value="${datos[i].nif}" >${datos[i].name}<option>`
-        break;
+      opcionesempr = $("#optionBajaEmp");
+      $("#optionBajaEmp~option").remove();
+      //        cadena = `<option value="${datos[i].nif}" >${datos[i].name}<option>`
+      break;
       case "Modi":
-        opcionesempr = $("#optionModiEmp");
+      opcionesempr = $("#optionModiEmp");
 
-//        $("#optionModiEmp~option").remove();
-        $(".opemp").remove("option");
-//        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
-        break;
-        case "Jorn":
-          opcionesempr = $("#optionAltaJorE");
+      $("#optionModiEmp~option").remove();
+      //        $(".opemp").remove("option");
+      //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+      break;
+      case "Jorn":
+      opcionesempr = $("#optionAltaJorE");
 
-  //        $("#optionModiEmp~option").remove();
-          $(".opemp").remove("option");
-  //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
-          break;
+      $("#optionAltaJorE~option").remove();
+      //          $(".opemp").remove("option");
+      //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+      break;
 
       default:
 
@@ -183,9 +183,9 @@ const obtenEmpresas = ( accion )=>{
 
 
 
-$("#altaUsu").on("click" , (e)=>{
-  e.preventDefault();
-  e.stopPropagation();
+$("#altaUsu").on("click" , false , (e)=>{
+//  e.preventDefault();
+//  e.stopPropagation();
   //        obtenUsuarios();
 
   $("#altaUsuModal").toggle();
@@ -213,8 +213,8 @@ $("#altaJor").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
 
-    obtenEmpresas( "Jorn" );
-//      obtenUsuarios("Jorn");
+  obtenEmpresas( "Jorn" );
+  obtenUsuarios("Jorn");
   //              obtenJornadas();
   console.log("Click en alta jornadas.");
   //    setTimeout(()=>{} , 5000);
@@ -229,10 +229,10 @@ $("#bajaUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
   obtenUsuarios( "Baja" );
-//  obtenUsuarios( "./usuarios" , "optionBajaUsu" );
-//  setTimeout(()=>{
+  //  obtenUsuarios( "./usuarios" , "optionBajaUsu" );
+  //  setTimeout(()=>{
   $("#bajaUsuModal").toggle();
-//  } , 5000 );
+  //  } , 5000 );
   //    e.stopPropagation();
 } );
 
@@ -305,8 +305,8 @@ $("#modiJor").on("click" , (e)=>{
 
 $("#asignarTurnos").on("click" , false , (e)=>{
 
-//  $("#selectAltaJorT").attr("disabled" , false);
-obtenUsuarios("Jorn");
+  //  $("#selectAltaJorT").attr("disabled" , false);
+  // obtenUsuarios("Jorn");
 
 });
 /*
@@ -389,36 +389,36 @@ $("#BNSalir").on("click" , ()=>{
 
 
 $("#selectModiUsu").on("change" , false , (e)=>{
-//   let optionSelect= this.option[this.selectedIndex];
-//   let optionSelect= this.option[this.selectedIndex];
-// console.log(e.currentTarget.innerHTML);
- console.log(e.currentTarget.innerHTML);
-musuario.value = e.currentTarget.value ;
-let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
-console.log(seleccionados);
+  //   let optionSelect= this.option[this.selectedIndex];
+  //   let optionSelect= this.option[this.selectedIndex];
+  // console.log(e.currentTarget.innerHTML);
+  console.log(e.currentTarget.innerHTML);
+  musuario.value = e.currentTarget.value ;
+  let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
+  console.log(seleccionados);
 
-musuario.value = seleccionados[0].user;
-mclave.value = seleccionados[0].password;
-midusu.value = seleccionados[0]._id;
-console.log(seleccionados[0].tipo);
-if (seleccionados[0].tipo == "administrador") {
-$("#mtipo option[value=administrador]").attr("selected" , true );
-}
+  musuario.value = seleccionados[0].user;
+  mclave.value = seleccionados[0].password;
+  midusu.value = seleccionados[0]._id;
+  console.log(seleccionados[0].tipo);
+  if (seleccionados[0].tipo == "administrador") {
+    $("#mtipo option[value=administrador]").attr("selected" , true );
+  }
 
 
 });
 
 
 $("#selectModiEmp").on("change" , false , (e)=>{
-//   let optionSelect= this.option[this.selectedIndex];
-//   let optionSelect= this.option[this.selectedIndex];
+  //   let optionSelect= this.option[this.selectedIndex];
+  //   let optionSelect= this.option[this.selectedIndex];
 
-let seleccionado = listEmp.find(u => u.nif == e.currentTarget.value);
+  let seleccionado = listEmp.find(u => u.nif == e.currentTarget.value);
 
-console.log(seleccionado);
-mempresa.value = seleccionado.name ;
-mnif.value = seleccionado.nif;
-midemp.value = seleccionados._id;
+  console.log(seleccionado);
+  mempresa.value = seleccionado.name ;
+  mnif.value = seleccionado.nif;
+  midemp.value = seleccionados._id;
 
 });
 
