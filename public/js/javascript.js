@@ -135,7 +135,7 @@ const obtenEmpresas = ( accion )=>{
   $.post('./empresas', (data)=>{
     console.log(data);
     let datos = data.Listado;
-    let listEmp = data.Listado;
+    listEmp = data.Listado;
 //        let cadena = null;
     console.log(listEmp);
     let opcionesUsu = null; // $("\"#option" + accion + "Usu\"");
@@ -383,12 +383,12 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 //   let optionSelect= this.option[this.selectedIndex];
 
-let seleccionado = listEmp.filter(u => u.nif == e.currentTarget.value);
+let seleccionado = listEmp.find(u => u.nif == e.currentTarget.value);
 
 console.log(seleccionado);
-mempresa.value = seleccionado[0].name ;
-mnif.value = seleccionado[0].name;
-midemp.value = seleccionados[0]._id;
+mempresa.value = seleccionado.name ;
+mnif.value = seleccionado.nif;
+midemp.value = seleccionados._id;
 
 });
 
