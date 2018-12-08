@@ -4,7 +4,21 @@ $(()=>{
   let listEmp = new Array();
   let listJor = new Array();
 
+  class Turno {
+    constructor(usuario , horasTur) {
+      this.usuario = usuario;
+      this.horasTur = horasTur
+    }
+  }
 
+  class Jornada {
+    constructor( codigo , feha , horasJor , turno ) {
+      this.codigo = codigo;
+      this.fecha = fecha;
+      this.horasJor = horasJor;
+      this.turnos = [turno];
+    }
+  }
 
   /*
   // Funciones de menu de botones.
@@ -307,10 +321,18 @@ $("#modiJor").on("click" , (e)=>{
 
 $("#asignarTurnos").on("click" , false , (e)=>{
 
-  //  $("#selectAltaJorT").attr("disabled" , false);
-  // obtenUsuarios("Jorn");
+  turno = new Turno( horasTurno.selectAltaJorT  ,
+      horasTurno.value );
+
+    jornada = new Jornada( selectAltaJorE.value ,
+        fechIni.value , horasOpen.value , turno );
+
+        console.log(jornada);
 
 });
+
+
+
 /*
 $("#bajaUsuModal").on("click" , (e)=>{
 e.preventDefault();

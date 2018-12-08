@@ -10,18 +10,21 @@ const setJornada = (req , res ) => {
 
 const getJornada = (req , res ) => {
   console.log("Se procede a recuperar una jornada");
+
   res.status(200).redirect("../recarga")
 
 }
 
 const deleteJornada = (req , res ) => {
   console.log("Se procede a borrar una jornada");
+    console.log(req.body);
   res.status(200).redirect("../recarga")
 
 }
 
 const putJornada = (req , res ) => {
   console.log("Se procede a actualizar una jornada");
+    console.log(req.body);
   res.status(200).redirect("../recarga")
 
 }
