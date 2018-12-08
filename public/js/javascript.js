@@ -378,7 +378,7 @@ mclave.value = seleccionados[0].password;
 midusu.value = seleccionados[0]._id;
 console.log(seleccionados[0].tipo);
 if (seleccionados[0].tipo == "administrador") {
-$("mtipo[value=administrador]").prop("selected" , "selected");
+$("#mtipo option[value=administrador]").attr("selected" , true );
 }
 
 
