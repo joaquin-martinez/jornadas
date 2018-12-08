@@ -4,6 +4,8 @@ $(()=>{
   let listEmp = new Array();
   let listJor = new Array();
 
+
+
   /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
