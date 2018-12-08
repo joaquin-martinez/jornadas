@@ -345,8 +345,8 @@ $(asignarMasTurnos).on("click" , ()=>{
           console.log(jornada);
 });
 
-$(formaltajor , asignarMasTurnos ).on("submit" , (e)=>{
-//  e.preventDefault();
+$(formaltajor).submit((e)=>{
+  e.preventDefault();
   console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
