@@ -345,13 +345,16 @@ $(asignarMasTurnos).on("click" , ()=>{
           console.log(jornada);
 });
 
-$(formaltajor).on("submit" , (e)=>{
+$(formaltajor , asignarMasTurnos ).on("submit" , (e)=>{
 //  e.preventDefault();
   console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
   $.post( "/altajor" , datos , (data)=>{
     $(altaJorModal).hide();
+    $(jordatprop).show();
+    formaltajor.reset();
+
   });
 });
 
