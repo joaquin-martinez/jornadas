@@ -376,7 +376,7 @@ console.log(seleccionados);
 musuario.value = seleccionados[0].user;
 mclave.value = seleccionados[0].password;
 midusu.value = seleccionados[0]._id;
-$("mtipo").val(seleccionados[0].tipo)
+$("mtipo").val(seleccionados[0].tipo).attr("selected")
 
 });
 
