@@ -377,7 +377,7 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 //   let optionSelect= this.option[this.selectedIndex];
 console.log(e.currentTarget.text);
 mempresa.value = e.currentTarget.text ;
-mnif.value = e.currentTarget.value
+mnif.value = e.currentTarget.value;
 });
 
 
