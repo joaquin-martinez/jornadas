@@ -39,7 +39,9 @@ const getJornadas = (accion)=>{
     }
 
     let cadena = ""
-    datos.forEach(u => {cadena += "<div>" + u.codigo + "</div>"});
+    datos.forEach(u => {cadena += "<div class='salPrin' >Nombre Empresa: " +
+     u.codigo + " fecha: " + u.fecha +` Hora de apertura: ${u.horaApertu} Horas de apertura: ${u.horasJor} \n\r Turnos:
+     Empleado: ${u.turno.usuario} Hora entrada: ` + " </div>"});
     $(principal).html(cadena);
 
   });
@@ -216,7 +218,7 @@ const obtenEmpresas = ( accion )=>{
     }
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].name);
-      opcionesempr.after(`<option class="opemp" value="${datos[i].nif}" >${datos[i].name}</option>`);
+      opcionesempr.after(`<option class="opemp" value="${datos[i].name}" >${datos[i].name}</option>`);
       console.log(datos[i].name);
     } ;
 
