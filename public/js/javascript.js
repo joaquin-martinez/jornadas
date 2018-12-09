@@ -38,7 +38,7 @@ const getJornadas = (accion)=>{
 
     }
 
-    let cadena = datos.reduce((u ,v) => u.concat(v));
+    let cadena = datos.reduce((u ,v) => {u += v});
     $(principal).text(cadena);
 
   });
