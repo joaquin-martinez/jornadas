@@ -44,9 +44,16 @@ const putJornada = (req , res ) => {
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
   Jornada.find( {} , (err , list)=>{
-    res.send({listado : list })
-  });
-  res.status(200).redirect("../recarga")
+    if(err){
+      console.log("Error al leer las jornadas.");
+    } else{
+          res.send({listado : list })
+            console.log("Mandada lista de jornadas");
+    }
+
+  })
+
+//  res.status(200).redirect("../recarga")
 
 }
 
