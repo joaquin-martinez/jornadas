@@ -17,20 +17,6 @@ const setJornada = (req , res ) => {
     }
   } );
 
-
-
-
-
-    /*
-  registro.date = data ;
-  registro.nif = data ;
-  registro.hora = data ;
-  registro.duracion = data ;
-  registro = data ;
-  registro = data ;
-  registro = data ;
-  registro = data ;
-  */
   res.status(200).redirect("../recarga")
 }
 
@@ -57,6 +43,9 @@ const putJornada = (req , res ) => {
 
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
+  Jornada.find( {} , (err , list)=>{
+    res.send({listado : list })
+  });
   res.status(200).redirect("../recarga")
 
 }

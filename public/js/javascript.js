@@ -23,6 +23,28 @@ $(()=>{
     }
   }
 
+const getJornadas = (accion)=>{
+  $-post("./jornadas" , (data)=>{
+    listJor = data.listado;
+    let datos = data.listado;
+    console.log(datos);
+    let opcionesJor = null;
+    switch (accion) {
+      case "inicio":
+        opcionesJor = $(principal);
+        opcionesJor.innerHTML("");
+        break;
+      default:
+
+    }
+
+    datos.foreach(u => opcionesJor.innerHTML(d));
+
+
+  });
+}
+
+
   /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
