@@ -6,11 +6,11 @@ const Schema = mongoose.Schema
 const jornadaSchema = Schema({
   date : { type : Date , default : Date.now() },
   nif : String ,
-  hora : Date,
+  hora : String,
   duracion : Number ,
   turnos : [{
               user: String ,
-              horaTurno : Date ,
+              horaTurno : String ,
               duracionTurno : Number
               }]
 })

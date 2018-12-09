@@ -14,9 +14,10 @@ $(()=>{
   }
 
   class Jornada {
-    constructor( codigo , fecha , horasJor , turno ) {
+    constructor( codigo , fecha , horaApertu , horasJor , turno ) {
       this.codigo = codigo;
       this.fecha = fecha;
+      this.horaApertu = horaApertu ;
       this.horasJor = horasJor;
       this.turnos = [turno];
     }
@@ -327,7 +328,7 @@ $("#asignarTurnos").on("click" , false , (e)=>{
       horasTurno.value , horaIni.value  );
 
     jornada = new Jornada( selectAltaJorE.value ,
-        fechIni.value , horasOpen.value , turno );
+        fechIni.value ,horaApertu.value , horasOpen.value , turno );
 
         console.log(jornada);
         formaltajor.reset();

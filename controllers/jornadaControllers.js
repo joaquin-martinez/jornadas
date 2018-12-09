@@ -4,7 +4,20 @@ const Jornada = require('../models/jornada')
 
 const setJornada = (req , res ) => {
   console.log("Se procede a crear una jornada");
-  console.log(req.body);
+  let data = JSON.parse(req.body.datos);
+  console.log(req.body.datos);
+  console.log(data);
+  /*
+  let registro = new Jornada();
+  registro.date = data ;
+  registro.nif = data ;
+  registro.hora = data ;
+  registro.duracion = data ;
+  registro = data ;
+  registro = data ;
+  registro = data ;
+  registro = data ;
+  */
   res.status(200).redirect("../recarga")
 }
 
