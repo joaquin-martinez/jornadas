@@ -42,8 +42,8 @@ const getJornadas = (accion)=>{
     datos.forEach(u => {cadena +=
      "<p class='' ><span class='title'>Jornada:</span>" +
      "</p><p class='jorlis' ><span class='itmes'> Nombre Empresa: </span>" + u.codigo
-      + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + date(u.fecha).getDate() + " - " + date(u.fecha).getMonth()+1
-      + " - " + date(u.fecha).getYear() +
+      + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + Date(u.fecha).getDate() + " - " + Date(u.fecha).getMonth()+1
+      + " - " + Date(u.fecha).getYear() +
       `</p><p class='jorlis' ><span class='itmes'> Hora de apertura: </span>${u.horaApertu}
     </p><p class='jorlis' ><span class='itmes'>  Horas de jornada: </span>${u.horasJor} </p>
       <span class='turnos'> Turnos: </span>`;
