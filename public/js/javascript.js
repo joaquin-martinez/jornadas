@@ -47,15 +47,15 @@ const getJornadas = (accion)=>{
       <span class='turnos'> Turnos: </span><br>`;
 for (var i = 0; i < u.turnos.length; i++) {
 
-      cadena += `Empleado: ${u.turnos[i].usuario} 
+      cadena += `Empleado: ${u.turnos[i].usuario}
      <br>
       Hora entrada: ${u.turnos[i].horaIni}
        <br>
        Horas de trabajo: ${u.turnos[i].horasTur}`
-       + " </div>"});
+       + " </div>";
 
 }
-
+});
     $(principal).html(cadena);
 
   });
