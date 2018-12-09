@@ -130,10 +130,10 @@ main {
 }
 
 .salPrin{
-  background-color: red;
+  background-color: beige;
 }
 
-.jorlist{
+.jorlis{
   padding-left: : 4em;
 }
 
@@ -142,7 +142,7 @@ main {
 }
 
 .itmes{
-  color green;
+  color : green;
 }
 
 @media only screen and (max-width: 600px) {
