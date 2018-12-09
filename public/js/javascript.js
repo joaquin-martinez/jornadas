@@ -24,7 +24,7 @@ $(()=>{
   }
 
 const getJornadas = (accion)=>{
-  $-post("./jornadas" , (data)=>{
+  $.post("./jornadas" , (data)=>{
     listJor = data.listado;
     let datos = data.listado;
     console.log(datos);
