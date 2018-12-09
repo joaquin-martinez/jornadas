@@ -55,16 +55,14 @@ for (var i = 0; i < u.turnos.length; i++) {
 
        <p = class='turlis' ><span class='itmes'>Horas de trabajo: </span>${u.turnos[i].horasTur}</p>`;
      }
-
-
+   }
       cadena += " </div>";
- }
-
+          $(principal).html(cadena);
 });
-    $(principal).html(cadena);
+
 
   });
-}
+
 
 getJornadas("inicio");
   /*
