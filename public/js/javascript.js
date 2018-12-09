@@ -349,7 +349,7 @@ const guardaTurno = ()=>{
           console.log(jornada);
 }
 
-$("#asignarTurnos").on("click" , false , guardaTurno );
+$("#asignarTurnos").on("click" , false , guardaJornada );
 
 $(asignarMasTurnos).on("click" , guardaTurno );
 
