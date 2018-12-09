@@ -143,11 +143,17 @@ main {
   margin: 1em;
 }
 
+.turnos{
+  padding: 5em;
+  color: orange;
+}
+
 .itmes{
   color : green;
 }
 
 .title{
+    padding-left: 2em;
   color : red;
 }
 
