@@ -339,7 +339,7 @@ $("#modiJor").on("click" , (e)=>{
 }
 
 
-$("#asignarTurnos").on("click" , false , guardaTurno );
+
 
 const guardaTurno = ()=>{
   let turno = new Turno( selectAltaJorT.value  ,
@@ -348,6 +348,8 @@ const guardaTurno = ()=>{
           formaltajor.reset();
           console.log(jornada);
 }
+
+$("#asignarTurnos").on("click" , false , guardaTurno );
 
 $(asignarMasTurnos).on("click" , guardaTurno );
 
