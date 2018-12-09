@@ -288,6 +288,7 @@ $("#bajaJor").on("click" , (e)=>{
 $("#modiUsu").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
+  formModiUsu.reset();
   obtenUsuarios( "Modi" );
 
   $("#modiUsuModal").toggle();
