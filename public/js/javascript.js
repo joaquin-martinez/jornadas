@@ -321,8 +321,7 @@ $("#modiJor").on("click" , (e)=>{
   //    setTimeout(()=>{} , 5000);
 } );
 
-
-$("#asignarTurnos").on("click" , false , (e)=>{
+ const guardaJornada = ()=>{
 
   let turno = new Turno( selectAltaJorT.value  ,
       horasTurno.value , horaIni.value  );
@@ -337,7 +336,10 @@ $("#asignarTurnos").on("click" , false , (e)=>{
         $(asignarMasTurnos).show();
 
 
-});
+}
+
+
+$("#asignarTurnos").on("click" , false , guardaTurno );
 
 const guardaTurno = ()=>{
   let turno = new Turno( selectAltaJorT.value  ,
@@ -351,7 +353,9 @@ $(asignarMasTurnos).on("click" , guardaTurno );
 
 $(submitAltaJor).on("click" , (e)=>{
   e.preventDefault();
-  guardaTurno();
+  if (jornada == null){
+    guardaJornada();
+  } else  guardaTurno();
   console.log(jornada);
   let datos = JSON.stringify(jornada);
   console.log(datos);
@@ -359,6 +363,7 @@ $(submitAltaJor).on("click" , (e)=>{
     $(altaJorModal).hide();
     $(jordatprop).show();
     formaltajor.reset();
+    jornada = null;
 
   });
 });
