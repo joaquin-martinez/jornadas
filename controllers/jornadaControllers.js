@@ -44,7 +44,6 @@ const putJornada = (req , res ) => {
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
   Jornada.find( {} , (err , list)=>{
-    usuar.populate(informe , { path : })
     if(err){
       console.log("Error al leer las jornadas.");
     } else{
