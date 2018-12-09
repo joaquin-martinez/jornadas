@@ -467,9 +467,11 @@ $("#selectModiUsu").on("change" , false , (e)=>{
   midusu.value = seleccionados[0]._id;
   console.log(seleccionados[0].tipo);
   if (seleccionados[0].tipo == "administrador") {
+    $("#mtipo option[value='vacio']").attr("selected" , false );
     $("#mtipo option[value='administrador']").attr("selected" , true );
     $("#mtipo option[value='trabajador']").attr("selected" , false );
   } else {
+    $("#mtipo option[value='vacio']").attr("selected" , false );
     $("#mtipo option[value='trabajador']").attr("selected" , true );
     $("#mtipo option[value='administrador']").attr("selected" , false );
 
