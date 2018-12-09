@@ -32,13 +32,13 @@ const getJornadas = (accion)=>{
     switch (accion) {
       case "inicio":
         opcionesJor = $(principal);
-        opcionesJor.innerHTML("");
+        opcionesJor.html("");
         break;
       default:
 
     }
 
-    datos.foreach(u => opcionesJor.innerHTML(d));
+    datos.foreach(u => opcionesJor.text(u));
 
 
   });
