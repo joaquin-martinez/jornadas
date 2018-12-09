@@ -39,7 +39,7 @@ const getJornadas = (accion)=>{
     }
 
     let cadena = ""
-    datos.forEach(u => {cadena += "<div>" + JSON.parse(u) + "</div>"});
+    datos.forEach(u => {cadena += "<div>" + u.codigo + "</div>"});
     $(principal).html(cadena);
 
   });
