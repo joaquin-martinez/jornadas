@@ -44,7 +44,7 @@ const getJornadas = (accion)=>{
   });
 }
 
-
+getJornadas("inicio");
   /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
