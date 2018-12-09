@@ -53,9 +53,9 @@ for (var i = 0; i < u.turnos.length; i++) {
 
       <p = class='turlis' ><span class='itmes'>Hora entrada: </span>${u.turnos[i].horaIni}</p>
 
-       <p = class='turlis' ><span class='itmes'>Horas de trabajo: </span>${u.turnos[i].horasTur}</p>`;
+       <p = class='turlis' ><span class='itmes'>Horas de trabajo: </span>${u.turnos[i].horasTur} <br></p>`;
      }
-//     cadena += "Jornada :";
+     cadena += "<br>";
    })
       cadena += "</div>";
           $(principal).html(cadena);
