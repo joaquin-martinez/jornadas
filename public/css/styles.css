@@ -129,6 +129,20 @@ main {
   display: none;
 }
 
+.salPrin{
+  background-color: red;
+}
+
+.jorlist{
+  padding: 5em;
+}
+
+.turlis{
+  padding: 7em;
+}
+
+
+
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;

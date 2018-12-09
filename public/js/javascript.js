@@ -38,23 +38,25 @@ const getJornadas = (accion)=>{
 
     }
 
-    let cadena = ""
-    datos.forEach(u => {cadena += "<div class='salPrin' ><p>Nombre Empresa: " +
+    let cadena = "<div class='salPrin' >"
+    datos.forEach(u => {cadena +=
+     "<p class='jorlis' >Nombre Empresa: " +
      u.codigo
-      + "</p><p> fecha: " + u.fecha +
-      `</p><p> Hora de apertura: ${u.horaApertu}
-    </p><p>  Horas de jornada: ${u.horasJor} </p>
-      <span class='turnos'> Turnos: </span><br>`;
+      + "</p><p class='jorlis' > fecha: " + u.fecha +
+      `</p><p class='jorlis' > Hora de apertura: ${u.horaApertu}
+    </p><p class='jorlis' >  Horas de jornada: ${u.horasJor} </p>
+      <span class='turnos'> Turnos: </span>`;
 for (var i = 0; i < u.turnos.length; i++) {
 
-      cadena += `Empleado: ${u.turnos[i].usuario}
-     <br>
-      Hora entrada: ${u.turnos[i].horaIni}
-       <br>
-       Horas de trabajo: ${u.turnos[i].horasTur}`
-       + " </div>";
+      cadena += `<p = class='turlis' >Empleado: ${u.turnos[i].usuario}</p>
 
-}
+      <p = class='turlis' >Hora entrada: ${u.turnos[i].horaIni}</p>
+
+       <p = class='turlis' >Horas de trabajo: ${u.turnos[i].horasTur}</p>`;
+       }
+      cadena += " </div>";
+
+
 });
     $(principal).html(cadena);
 
