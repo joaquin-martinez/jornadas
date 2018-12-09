@@ -38,8 +38,8 @@ const getJornadas = (accion)=>{
 
     }
 
-    datos.foreach(u => opcionesJor.text(u));
-
+    let cadena = datos.reduce((u ,v) => u.concat(b));
+    $(principal).text(cadena);
 
   });
 }
