@@ -7,8 +7,21 @@ const setJornada = (req , res ) => {
   let data = JSON.parse(req.body.datos);
   console.log(req.body.datos);
   console.log(data);
-  /*
-  let registro = new Jornada();
+
+  let registro = new Jornada( data );
+  registro.save((err , user) => {
+    if (err) console.log(`Error al guardar el usuario`);
+    else {
+
+      console.log(user);
+    }
+  } );
+
+
+
+
+
+    /*
   registro.date = data ;
   registro.nif = data ;
   registro.hora = data ;

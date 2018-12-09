@@ -4,14 +4,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const jornadaSchema = Schema({
-  date : { type : Date , default : Date.now() },
-  nif : String ,
-  hora : String,
-  duracion : Number ,
+  fecha : { type : Date , default : Date.now() },
+  codigo : String ,
+  horaApertu : String,
+  horasJor : Number ,
   turnos : [{
-              user: String ,
-              horaTurno : String ,
-              duracionTurno : Number
+              usuario: String ,
+              horaIni : String ,
+              horasTur : Number
               }]
 })
 
