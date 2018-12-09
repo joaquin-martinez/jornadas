@@ -38,7 +38,8 @@ const getJornadas = (accion)=>{
 
     }
 
-    let cadena = datos.reduce((u ,v) => {u += v});
+    let cadena = ""
+    datos.forEach(u => {cadena += u});
     $(principal).text(cadena);
 
   });
