@@ -202,9 +202,9 @@ const obtenEmpresas = ( accion )=>{
 
 
 
-$("#altaUsu").on("click" , false , (e)=>{
-//  e.preventDefault();
-//  e.stopPropagation();
+$("#altaUsu").on("click" , (e)=>{
+  e.preventDefault();
+  e.stopPropagation();
   //        obtenUsuarios();
 
   $("#altaUsuModal").toggle();
