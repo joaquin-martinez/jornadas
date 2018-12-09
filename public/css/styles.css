@@ -145,6 +145,10 @@ main {
   color : green;
 }
 
+.title{
+  color : red;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;

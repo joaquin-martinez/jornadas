@@ -40,7 +40,7 @@ const getJornadas = (accion)=>{
 
     let cadena = "<div class='salPrin' >";
     datos.forEach(u => {cadena +=
-     "<p class='jorlis' ><span class='itmes'>Jornada:</span>" +
+     "<p class='jorlis' ><span class='title'>Jornada:</span>" +
      "</p><p class='jorlis' ><span class='itmes'> Nombre Empresa: </span>" + u.codigo
       + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + u.fecha +
       `</p><p class='jorlis' ><span class='itmes'> Hora de apertura: </span>${u.horaApertu}
