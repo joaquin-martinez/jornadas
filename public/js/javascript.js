@@ -455,6 +455,7 @@ $("#selectModiUsu").on("change" , false , (e)=>{
   //   let optionSelect= this.option[this.selectedIndex];
   //   let optionSelect= this.option[this.selectedIndex];
   // console.log(e.currentTarget.innerHTML);
+  formModiUsu.reset();
   console.log(e.currentTarget.innerHTML);
   musuario.value = e.currentTarget.value ;
   let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
