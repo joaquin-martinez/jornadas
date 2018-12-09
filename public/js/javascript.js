@@ -38,21 +38,22 @@ const getJornadas = (accion)=>{
 
     }
 
-    let cadena = "<div class='salPrin' >"
+    let cadena = "<div class='salPrin' >";
     datos.forEach(u => {cadena +=
-     "<p class='jorlis' >Nombre Empresa: " +
+     "<p class='jorlis' ><span class='itmes'>Nombre Empresa: </span>" +
      u.codigo
-      + "</p><p class='jorlis' > fecha: " + u.fecha +
-      `</p><p class='jorlis' > Hora de apertura: ${u.horaApertu}
-    </p><p class='jorlis' >  Horas de jornada: ${u.horasJor} </p>
+      + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + u.fecha +
+      `</p><p class='jorlis' ><span class='itmes'> Hora de apertura: </span>${u.horaApertu}
+    </p><p class='jorlis' ><span class='itmes'>  Horas de jornada: </span>${u.horasJor} </p>
       <span class='turnos'> Turnos: </span>`;
+
 for (var i = 0; i < u.turnos.length; i++) {
 
-      cadena += `<p = class='turlis' >Empleado: ${u.turnos[i].usuario}</p>
+      cadena += `<p = class='turlis' ><span class='itmes'>Empleado: </span>${u.turnos[i].usuario}</p>
 
-      <p = class='turlis' >Hora entrada: ${u.turnos[i].horaIni}</p>
+      <p = class='turlis' ><span class='itmes'>Hora entrada: </span>${u.turnos[i].horaIni}</p>
 
-       <p = class='turlis' >Horas de trabajo: ${u.turnos[i].horasTur}</p>`;
+       <p = class='turlis' ><span class='itmes'>Horas de trabajo: </span>${u.turnos[i].horasTur}</p>`;
        }
       cadena += " </div>";
 

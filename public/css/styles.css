@@ -134,14 +134,16 @@ main {
 }
 
 .jorlist{
-  padding: 5em;
+  padding-left: : 4em;
 }
 
 .turlis{
-  padding: 7em;
+  padding-left: : 7em;
 }
 
-
+.itmes{
+  color green;
+}
 
 @media only screen and (max-width: 600px) {
     body {
