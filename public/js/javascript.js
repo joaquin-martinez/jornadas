@@ -467,8 +467,10 @@ $("#selectModiUsu").on("change" , false , (e)=>{
   console.log(seleccionados[0].tipo);
   if (seleccionados[0].tipo == "administrador") {
     $("#mtipo option[value='administrador']").attr("selected" , true );
+    $("#mtipo option[value='trabajador']").attr("selected" , false );
   } else {
     $("#mtipo option[value='trabajador']").attr("selected" , true );
+    $("#mtipo option[value='administrador']").attr("selected" , false );
 
   }
 
