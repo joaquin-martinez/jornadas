@@ -40,7 +40,7 @@ const getJornadas = (accion)=>{
 
     let cadena = ""
     datos.forEach(u => {cadena += "<div class='salPrin' >Nombre Empresa: " +
-     u.codigo + " fecha: " + u.fecha +` Hora de apertura: ${u.horaApertu} Horas de apertura: ${u.horasJor} <br> Turnos:
+     u.codigo + " fecha: \n\r " + u.fecha +` Hora de apertura: ${u.horaApertu} Horas de jornada: ${u.horasJor} <br><span class='turnos'> Turnos: </span><br>
      Empleado: ${u.turnos[0].usuario} <br> Hora entrada: ${u.turnos[0].horaIni} <br> Horas de trabajo: ${u.turnos[0].horasTur}` + " </div>"});
     $(principal).html(cadena);
 
