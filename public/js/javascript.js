@@ -637,6 +637,9 @@ console.log("click en borrar turno de modif");
   });
 //  listJorH.turnos = turnosNuevos;
   console.log(turnosNuevos);
+  console.log(listJorH[indice].turnos);
+  listJorH[indice].turnos = turnosNuevos
+  console.log(listJorH[indice].turnos);  
 
 });
 
