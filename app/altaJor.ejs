@@ -24,7 +24,7 @@
   <input type="time" name="horaApertu" id="horaApertu" required value="18:00" >
 
   <label for="horasOpen" > Horas de la jornada: </label>
-  <input type="number" name="horasOpen" id="horasOpen" value="8" required >
+  <input type="number" name="horasOpen" id="horasOpen" value="8" min="0" max="24" required >
   <label for="asignarTurnos" > Asignación de los turnos: </label>
   </div>
   <p>Seleccione Trabajador:</p>
@@ -34,7 +34,7 @@
   </select>
 
   <label for="horasTurno" > Horas de la jornada: </label>
-  <input type="number" name="horasTurno" id="horasTurno" required value="8" >
+  <input type="number" name="horasTurno" id="horasTurno" required value="8" min="0" max="24" >
   <label for="horaIni" > Hora de la entrada: </label>
   <input type="time" name="horaIni" id="horaIni" required value="18:00" >
 
