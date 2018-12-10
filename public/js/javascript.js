@@ -91,14 +91,17 @@ const getJorHisto = (accion)=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].codigo);
-      opcionesJor.after(`<option class="opusu" value="${datos[i]._id}" >${datos[i].fecha} : ${datos[i].codigo}</option>`);
+      opcionesJor.append(`<option class="opusu" value="${datos[i]._id}" >
+       ${(new Date(u.fecha)).getDate()} - ${((new Date(u.fecha)).getMonth()+1)}
+      - ${(new Date(u.fecha)).getFullYear()}
+       : ${datos[i].codigo}</option>`);
       console.log(datos[i].user);
     } ;
 
 /*
     let cadena = "<div class='salPrin' >";
     datos.forEach(u => {cadena +=
-     "<p class='' ><span class='title'>Jornada:</span>" +
+     "<p class='' ><span class='title'> Jornada:</span>" +
      "</p><p class='jorlis' ><span class='itmes'> Nombre Empresa: </span>" + u.codigo
       + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + (new Date(u.fecha)).getDate() + " - "
        + ((new Date(u.fecha)).getMonth()+1)
