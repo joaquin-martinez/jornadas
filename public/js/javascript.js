@@ -611,13 +611,12 @@ $("#selectModiJor").on("cahnge" , (e)=>{
 
   turnos.forEach((i)=>{
 
-  $("#frameTurnos").append(
-    "<input type=\"radio\"> name=\"turnoSel\" value=\""
-    + i._id + "\" >" + i.usuario + " - " + i.horaIni +
-    " - " + i.horasTur
+    let cadena =     "<input type=\"radio\"> name=\"turnoSel\" value=\""
+        + i._id + "\" >" + i.usuario + " - " + i.horaIni +
+        " - " + i.horasTur;
 
-  );
-)};
+  $("#frameTurnos").append(cadena);
+});
 
 
 });
