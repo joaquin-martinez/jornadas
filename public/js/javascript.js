@@ -624,9 +624,10 @@ $("#selectModiJor").on("change" , (e)=>{
 $("#modiborraturn").on("click" , ()=>{
 //  let turno = $(input[])
 console.log("click en borrar turno de modif");
-  listJorH.turnos = listJorH.turnos.filter((t)=>{
+  let turnosNuevos = listJorH.turnos.filter((t)=>{
     t._id == !$("input[type='radio']").value;
   });
+  listJorH.turnos = turnosNuevos;
   console.log(listJorH.turnos);
 
 });
