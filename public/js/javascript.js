@@ -617,8 +617,7 @@ $("#selectModiJor").on("change" , (e)=>{
 
   $("#frameTurnos").append(cadena);
 });
-  cadena = "<input type=\"button\" value=\"Borrar turno\" >
-   <input type=\"button\" value=\"Crear turno\" >";
+  cadena = "<input type=\"button\" value=\"Borrar turno\" ><input type=\"button\" value=\"Crear turno\" >";
   $("#frameTurnos").append(cadena);
 });
 
