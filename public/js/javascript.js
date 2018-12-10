@@ -608,10 +608,18 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 
 $("#selectModiJor").on("change" , (e)=>{
     frameTurnos.innerHTML="";
-  let seleccionado = listJorH.find(u => u._id == e.currentTarget.value);
-  let turnos = seleccionado.turnos;
+    indice = 0;
+    encontrado = false;
+  let seleccionado = listJorH.find((u ,i) =>{
+    if(u._id == e.currentTarget.value){
+      indice = i;
+      encontrado = true;
+    }
+    return encontrado;
+  } );
+  turnosMB = seleccionado.turnos;
 
-  turnos.forEach((i)=>{
+  turnosMB.forEach((i)=>{
 
     let cadena =     "<input type=\"radio\" name=\"turnoSel\" value=\""
         + i._id + "\" >" + i.usuario + " - " + i.horaIni +
@@ -624,11 +632,11 @@ $("#selectModiJor").on("change" , (e)=>{
 $("#modiborraturn").on("click" , ()=>{
 //  let turno = $(input[])
 console.log("click en borrar turno de modif");
-  let turnosNuevos = listJorH.turnos.filter((t)=>{
+  let turnosNuevos = turnosMB.filter((t)=>{
     t._id == !$("input[type='radio']").value;
   });
-  listJorH.turnos = turnosNuevos;
-  console.log(listJorH.turnos);
+//  listJorH.turnos = turnosNuevos;
+  console.log(turnosNuevos);
 
 });
 
