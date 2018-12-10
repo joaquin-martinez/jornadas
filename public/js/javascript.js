@@ -633,7 +633,8 @@ $("#modiborraturn").on("click" , ()=>{
 //  let turno = $(input[])
 console.log("click en borrar turno de modif");
   let turnosNuevos = turnosMB.filter((t)=>{
-
+    console.log("id de los turnos: " + t._id);
+    console.log("id seleccionado ; " + $("input[type='radio']").value);
     if(t._id == !$("input[type='radio']").value)return true;
     else return false;
   });
