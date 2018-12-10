@@ -378,7 +378,7 @@ $("#bajaJor").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
 
-  getJorHisto();
+  getJorHisto("baja");
   //              obtenJornadas();
   console.log("Click en baja jornadas menu.");
   //    setTimeout(()=>{} , 5000);
@@ -419,7 +419,7 @@ $("#modiJor").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
-  getJorHisto();
+  getJorHisto("modi");
   //              obtenJornadas();
   console.log("Click en modificar jornadas menu.");
   //    setTimeout(()=>{} , 5000);
