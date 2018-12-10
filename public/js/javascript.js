@@ -635,7 +635,7 @@ console.log("click en borrar turno de modif");
   let turnosNuevos = turnosMB.filter((t)=>{
     console.log("id de los turnos: " + t._id);
     console.log("id seleccionado ; " + $("input[name='turnoSel']").val());
-    if(t._id == !$("input[name='turnoSel']").val())return true;
+    if(t._id != ($("input[name='turnoSel']").val())) return true;
     else return false;
   });
 //  listJorH.turnos = turnosNuevos;
