@@ -634,8 +634,8 @@ $("#modiborraturn").on("click" , ()=>{
 console.log("click en borrar turno de modif");
   let turnosNuevos = turnosMB.filter((t)=>{
     console.log("id de los turnos: " + t._id);
-    console.log("id seleccionado ; " + $("input[name='turnoSel']").value);
-    if(t._id == !$("input[type='radio']").value)return true;
+    console.log("id seleccionado ; " + $("input[name='turnoSel']").val());
+    if(t._id == !$("input[type='radio']").val())return true;
     else return false;
   });
 //  listJorH.turnos = turnosNuevos;
