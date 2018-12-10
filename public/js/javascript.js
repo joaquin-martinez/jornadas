@@ -611,14 +611,15 @@ $("#selectModiJor").on("change" , (e)=>{
 
   turnos.forEach((i)=>{
 
-    let cadena =     "<input type=\"radio\"> name=\"turnoSel\" value=\""
+    let cadena =     "<input type=\"radio\" name=\"turnoSel\" value=\""
         + i._id + "\" >" + i.usuario + " - " + i.horaIni +
-        " - " + i.horasTur;
+        " - " + i.horasTur + "<br>";
 
   $("#frameTurnos").append(cadena);
 });
-
-
+  cadena = "<input type=\"button\" value=\"Borrar turno\" >
+   <input type=\"button\" value=\"Crear turno\" >";
+  $("#frameTurnos").append(cadena);
 });
 
 
