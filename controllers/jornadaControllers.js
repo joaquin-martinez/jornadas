@@ -44,7 +44,9 @@ const putJornada = (req , res ) => {
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
   let date = Date.now();
-  date = Date( date.getFullDay , date.getMonth , date.getDate);
+  stringDate = date.getFullYear + "-" + (date.getMonth +1) + "-" + date.getDate ;
+  console.log(stringDate);
+  date = new Date( stringDate );
   console.log(date);
   Jornada.find( { fecha : { date }  } , (err , list)=>{
     if(err){
