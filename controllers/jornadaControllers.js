@@ -74,7 +74,7 @@ const getJornadas  = (req , res ) => {
     }
 
   })
-
+}
 
   const getJorHist  = (req , res ) => {
     console.log("Se procede a recuperar las jornadas");
