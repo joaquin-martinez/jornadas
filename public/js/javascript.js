@@ -622,7 +622,7 @@ $("#selectModiJor").on("change" , (e)=>{
   turnosMB.forEach((i , indice)=>{
 
     let cadena =     "<input type=\"radio\" name=\"turnoSel\" value=\""
-        + i._id + "\" id=\"radio" + indice + " >" + i.usuario + " - " + i.horaIni +
+        + i._id + "\" id=\"radio" + indice + "\" >" + i.usuario + " - " + i.horaIni +
         " - " + i.horasTur + "<br>";
 
   $("#frameTurnos").append(cadena);
