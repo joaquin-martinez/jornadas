@@ -619,12 +619,21 @@ $("#selectModiJor").on("change" , (e)=>{
 
   $("#frameTurnos").append(cadena);
 });
-  cadena = "<input type=\"button\" value=\"Borrar turno\" ><input type=\"button\" value=\"Crear turno\" >";
+  cadena = "<input type=\"button\" value=\"Borrar turno\" id=\"modiborraturn\" ><input type=\"button\" value=\"Crear turno\" id=\"modicreaturn\" >";
   $("#frameTurnos").append(cadena);
 });
 
+$("#modiborraturn").on("click" , ()=>{
+//  let turno = $(input[])
+  listJor.turnos = listJor.turnos.filter((t)=>{
+    t._id == !$("input[type='radio']").value;
+  });
+  console.log(listJor.turnos);
 
+});
 
+$("#modicreaturn").on("click" , ()=>{
 
+});
 
 });
