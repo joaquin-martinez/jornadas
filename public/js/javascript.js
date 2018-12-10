@@ -3,6 +3,7 @@ $(()=>{
   let listUsu = new Array();
   let listEmp = new Array();
   let listJor = new Array();
+  let listJorH = new Array();
   let jornada = null;
 
   class Turno {
@@ -68,6 +69,63 @@ for (var i = 0; i < u.turnos.length; i++) {
 
 
 getJornadas("inicio");
+
+const getJorHisto = (accion)=>{
+  $.post("./jorhisto" , (data)=>{
+    listJorH = data.listado;
+    let datos = data.listado;
+    console.log(datos);
+    let opcionesJor = null;
+    switch (accion) {
+      case "baja":
+        opcionesJor = $(selectBajaJor);
+        opcionesJor.html("");
+        break;
+        case "modi":
+          opcionesJor = $(selectModiJor);
+          opcionesJor.html("");
+          break;
+      default:
+
+    }
+
+    for (var i = 0; i < datos.length; i++) {
+      console.log("Ponemos el dato: " + datos[i].codigo);
+      opcionesUsu.after(`<option class="opusu" value="${datos[i]._id}" >${datos[i].fecha} : ${datos[i].codigo}</option>`);
+      console.log(datos[i].user);
+    } ;
+
+/*
+    let cadena = "<div class='salPrin' >";
+    datos.forEach(u => {cadena +=
+     "<p class='' ><span class='title'>Jornada:</span>" +
+     "</p><p class='jorlis' ><span class='itmes'> Nombre Empresa: </span>" + u.codigo
+      + "</p><p class='jorlis' ><span class='itmes'> Fecha: </span>" + (new Date(u.fecha)).getDate() + " - "
+       + ((new Date(u.fecha)).getMonth()+1)
+      + " - " + (new Date(u.fecha)).getFullYear() +
+      `</p><p class='jorlis' ><span class='itmes'> Hora de apertura: </span>${u.horaApertu}
+    </p><p class='jorlis' ><span class='itmes'>  Horas de jornada: </span>${u.horasJor} </p>
+      <span class='turnos'> Turnos: </span>`;
+
+for (var i = 0; i < u.turnos.length; i++) {
+
+      cadena += `<p = class='turlis' ><span class='itmes'>Empleado: </span>${u.turnos[i].usuario}</p>
+
+      <p = class='turlis' ><span class='itmes'>Hora entrada: </span>${u.turnos[i].horaIni}</p>
+
+       <p = class='turlis' ><span class='itmes'>Horas de trabajo: </span>${u.turnos[i].horasTur} <br></p>`;
+     }
+     cadena += "<br>";
+   })
+      cadena += "</div>";
+          $(principal).html(cadena);
+          */
+});
+
+
+  };
+
+
   /*
   // Funciones de menu de botones.
   //Funciones de despliegue.
@@ -319,8 +377,10 @@ $("#bajaJor").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
+
+  getJorHisto();
   //              obtenJornadas();
-  console.log("Click en baja jornadas.");
+  console.log("Click en baja jornadas menu.");
   //    setTimeout(()=>{} , 5000);
   $("#bajaJorModal").show();
   console.log("muestra modal baja jornadas");
@@ -347,7 +407,7 @@ $("#modiEmp").on("click" , (e)=>{
   e.preventDefault();
   e.stopPropagation();
   obtenEmpresas( "Modi" );
-  console.log("Click en modificar empresas.");
+  console.log("Click en modificar empresas menu.");
   //    setTimeout(()=>{} , 5000);
   $("#modiEmpModal").show();
   console.log("muestra modal modificar empresas");
@@ -359,8 +419,9 @@ $("#modiJor").on("click" , (e)=>{
   //  alert("bajaEmp-click");
   e.preventDefault();
   e.stopPropagation();
+  getJorHisto();
   //              obtenJornadas();
-  console.log("Click en modificar jornadas.");
+  console.log("Click en modificar jornadas menu.");
   //    setTimeout(()=>{} , 5000);
   $("#modiJorModal").show();
   console.log("muestra modal modificar jornadas");

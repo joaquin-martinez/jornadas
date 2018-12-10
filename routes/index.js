@@ -54,6 +54,7 @@ api.post( '/modiemp' , emprCtr.putEmpresa )
 
 api.post('/deljor' , jornCtr.deleteJornada)
 api.post( '/jornadas' , jornCtr.getJornadas )
+api.post( '/jorhisto' , jornCtr.getJorHist )
 api.post( '/altajor' , jornCtr.setJornada )
 api.post( '/modijor' , jornCtr.putJornada )
 

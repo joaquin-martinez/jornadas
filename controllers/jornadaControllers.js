@@ -14,10 +14,11 @@ const setJornada = (req , res ) => {
     else {
 
       console.log(user);
+        res.status(200).redirect("../recarga");
     }
   } );
 
-  res.status(200).redirect("../recarga")
+
 }
 
 const getJornada = (req , res ) => {
@@ -30,7 +31,20 @@ const getJornada = (req , res ) => {
 const deleteJornada = (req , res ) => {
   console.log("Se procede a borrar una jornada");
     console.log(req.body);
-  res.status(200).redirect("../recarga")
+    let usu = req.body
+    console.log(usu.selectBajaJor )
+    Jornada.deleteOne( { _id : usu.selectBajaJor } , (err) => {
+      if (err) {
+        console.log("no se pudo borrar el usuario: " + usu.selectBajaJor);
+        res.status(500).redirect("../recarga")
+      } else {
+        res.status(200).redirect("../recarga")
+              console.log(`Borrado correctamente el usuario: ${usu.selectBajaJor}.`);
+      }
+
+    })
+
+//  res.status(200).redirect("../recarga")
 
 }
 
@@ -61,6 +75,18 @@ const getJornadas  = (req , res ) => {
 
   })
 
+
+  const getJorHist  = (req , res ) => {
+    console.log("Se procede a recuperar las jornadas");
+    Jornada.find( {} , (err , list)=>{
+      if(err){
+        console.log("Error al leer las jornadas.");
+      } else{
+            res.send({listado : list })
+              console.log("Mandada lista de jornadas");
+      }
+
+    })
 //  res.status(200).redirect("../recarga")
 
 }
@@ -71,5 +97,6 @@ module.exports = {
   getJornada ,
   deleteJornada ,
   putJornada ,
+  getJorHist ,
   getJornadas
 }
