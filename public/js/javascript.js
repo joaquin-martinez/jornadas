@@ -78,12 +78,14 @@ const getJorHisto = (accion)=>{
     let opcionesJor = null;
     switch (accion) {
       case "baja":
-        opcionesJor = $(selectBajaJor);
-        opcionesJor.html("");
+        opcionesJor = $(optionBajaJor);
+          $("#optionBajaJor~option").remove();
+//        opcionesJor.html("");
         break;
         case "modi":
-          opcionesJor = $(selectModiJor);
-          opcionesJor.html("");
+          opcionesJor = $(optionModiJor);
+          $("#optionModiJor~option").remove();
+//          opcionesJor.html("");
           break;
       default:
 
@@ -91,7 +93,7 @@ const getJorHisto = (accion)=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].codigo);
-      opcionesJor.append(`<option class="opusu" value="${datos[i]._id}" >
+      opcionesJor.after(`<option class="opusu" value="${datos[i]._id}" >
        ${(new Date(datos[i].fecha)).getDate()} - ${((new Date(datos[i].fecha)).getMonth()+1)}
       - ${(new Date(datos[i].fecha)).getFullYear()}
        : ${datos[i].codigo}</option>`);
@@ -603,7 +605,22 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 
 });
 
+$("#selectModiJor").on("cahnge" , ()=>{
+  let seleccionado = listJor.find(u => u._id == e.currentTarget.value);
+  let turnos = seleccionado.turnos;
 
+  forEach(i in turnos){
+
+  $("#frameTurnos").append(
+    "<input type=\"radio\"> name=\"turnoSel\" value=\""
+    + i._id + "\" >" + i.usuario + " - " + i.horaIni +
+    " - " + i.horasTur 
+
+  );
+  }
+
+
+});
 
 
 
