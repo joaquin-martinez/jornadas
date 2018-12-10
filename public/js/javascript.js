@@ -617,7 +617,7 @@ $("#selectModiJor").on("cahnge" , (e)=>{
     " - " + i.horasTur
 
   );
-};
+)};
 
 
 });
