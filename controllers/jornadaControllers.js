@@ -44,13 +44,13 @@ const putJornada = (req , res ) => {
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
   let date = new Date();
-  date.setHours(0);
-  date.setMinutes(0);
-//  date = date.setDate(date.getDate()-1);
+//  date.setHours(0);
+//  date.setMinutes(0);
+  date = date.setDate(date.getDate()-1);
 //  let stringDate = date.getFullYear + "-" + (date.getMonth +1) + "-" + date.getDate ;
 //  console.log(stringDate);
 //  date = new Date( stringDate );
-  console.log(date.getHours());
+  console.log(date.getDate());
   Jornada.find( { fecha : { "$gte" : date }  } , (err , list)=>{
     if(err){
       console.log("Error al leer las jornadas.");
