@@ -605,11 +605,11 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 
 });
 
-$("#selectModiJor").on("cahnge" , ()=>{
+$("#selectModiJor").on("cahnge" , (e)=>{
   let seleccionado = listJor.find(u => u._id == e.currentTarget.value);
   let turnos = seleccionado.turnos;
 
-  forEach(i in turnos){
+  turnos.forEach((i)=>{
 
   $("#frameTurnos").append(
     "<input type=\"radio\"> name=\"turnoSel\" value=\""
