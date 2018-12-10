@@ -92,8 +92,8 @@ const getJorHisto = (accion)=>{
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].codigo);
       opcionesJor.append(`<option class="opusu" value="${datos[i]._id}" >
-       ${(new Date(u.fecha)).getDate()} - ${((new Date(u.fecha)).getMonth()+1)}
-      - ${(new Date(u.fecha)).getFullYear()}
+       ${(new Date(datos[i].fecha)).getDate()} - ${((new Date(datos[i].fecha)).getMonth()+1)}
+      - ${(new Date(datos[i].fecha)).getFullYear()}
        : ${datos[i].codigo}</option>`);
       console.log(datos[i].user);
     } ;
