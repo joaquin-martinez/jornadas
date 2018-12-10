@@ -10,29 +10,22 @@
     </select>
 
     <div class="" id="frameTurnos">
-
+      <input type="button" value="Borrar turno" id="modiborraturn" ><input type="button" value="Crear turno" id="modicreaturn" >";
     </div>
+<div class="" id="">
+  <p>Seleccione Trabajador:</p>
+  <label for="selectAltaJorTM">Seleccione el trabajador del turno:</label>
+  <select class="" name="selectAltaJorTM" id="selectAltaJorTM" required >
+    <option value="" id="optionAltaJorTM"></option>
+  </select>
+
+    <label for="horasTurnoM" > Horas de la jornada: </label>
+    <input type="number" name="horasTurnoM" id="horasTurnoM" required value="8" min="0" max="24" >
+    <label for="horaIni" > Hora de la entrada: </label>
+    <input type="time" name="horaIniM" id="horaIniM" required value="18:00" >
 
 
-    <form action="./altajor" method="post" >
-    <fieldset>
-      <legend>Alta usuarios en Jornadas</legend>
-      <label for="fechIni"> Fecha de inicio: </label>
-      <input type="date" name="mfechIni" id="mfechIni" class="text">
-      <label for="horasOpen" > Horas de la jornada: </label>
-      <input type="number" name="mhorasOpen" id="mhorasOpen">
-      <label for="asignarTurnos" > Asignación de los turnos: </label>
-      <input type="button" name="Asignar Turnos" id="masignarTurnos" >
-
-      <p>Seleccione Trabajador:</p>
-      <select class="" name="mtrabajadorTurno" id="mtrabajadorTurno" >
-        <option value="trabajador">Trabajador</option>
-        <option value="administrador">Administrador</option>
-      </select>
-
-      <input type="submit" value="Grabar">
-    </fieldset>
-    </form>
+</div>
 
 
   </div>
