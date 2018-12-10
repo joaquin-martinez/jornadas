@@ -91,7 +91,7 @@ const getJorHisto = (accion)=>{
 
     for (var i = 0; i < datos.length; i++) {
       console.log("Ponemos el dato: " + datos[i].codigo);
-      opcionesUsu.after(`<option class="opusu" value="${datos[i]._id}" >${datos[i].fecha} : ${datos[i].codigo}</option>`);
+      opcionesJor.after(`<option class="opusu" value="${datos[i]._id}" >${datos[i].fecha} : ${datos[i].codigo}</option>`);
       console.log(datos[i].user);
     } ;
 
