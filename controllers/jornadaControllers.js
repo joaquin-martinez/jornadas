@@ -43,7 +43,7 @@ const putJornada = (req , res ) => {
 
 const getJornadas  = (req , res ) => {
   console.log("Se procede a recuperar las jornadas");
-  let date = Date.now();
+  let date = new Date();
   let stringDate = date.getFullYear + "-" + (date.getMonth +1) + "-" + date.getDate ;
   console.log(stringDate);
   date = new Date( stringDate );
