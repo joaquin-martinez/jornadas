@@ -50,8 +50,8 @@ const getJornadas  = (req , res ) => {
 //  let stringDate = date.getFullYear + "-" + (date.getMonth +1) + "-" + date.getDate ;
 //  console.log(stringDate);
 //  date = new Date( stringDate );
-  console.log(date.getDate());
-  Jornada.find( { fecha : { "$gte" : date }  } , (err , list)=>{
+//  console.log(date.getDate());
+  Jornada.find( { fecha : { "$gt" : date }  } , (err , list)=>{
     if(err){
       console.log("Error al leer las jornadas.");
     } else{
