@@ -428,6 +428,7 @@ $("#modiJor").on("click" , (e)=>{
   //              obtenJornadas();
   console.log("Click en modificar jornadas menu.");
   //    setTimeout(()=>{} , 5000);
+      frameTurnos.innerHTML="";
   $("#modiJorModal").show();
   console.log("muestra modal modificar jornadas");
   //    setTimeout(()=>{} , 5000);
@@ -606,6 +607,7 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 });
 
 $("#selectModiJor").on("change" , (e)=>{
+    frameTurnos.innerHTML="";
   let seleccionado = listJor.find(u => u._id == e.currentTarget.value);
   let turnos = seleccionado.turnos;
 
