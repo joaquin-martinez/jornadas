@@ -614,10 +614,10 @@ $("#selectModiJor").on("cahnge" , ()=>{
   $("#frameTurnos").append(
     "<input type=\"radio\"> name=\"turnoSel\" value=\""
     + i._id + "\" >" + i.usuario + " - " + i.horaIni +
-    " - " + i.horasTur 
+    " - " + i.horasTur
 
   );
-  }
+};
 
 
 });
