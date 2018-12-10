@@ -605,7 +605,7 @@ $("#selectModiEmp").on("change" , false , (e)=>{
 
 });
 
-$("#selectModiJor").on("cahnge" , (e)=>{
+$("#selectModiJor").on("change" , (e)=>{
   let seleccionado = listJor.find(u => u._id == e.currentTarget.value);
   let turnos = seleccionado.turnos;
 
