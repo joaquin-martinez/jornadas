@@ -472,8 +472,8 @@ $(()=>{
         $(jordatprop).show();
         formaltajor.reset();
         listJorH = null;
-        $("#htmlmt").hide()
-//        $(bmjt).show()
+        $("#htmlmt").hide();
+        $(bmjt).show();
         window.reload();
       });
 
