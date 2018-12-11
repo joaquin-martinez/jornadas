@@ -151,6 +151,8 @@ main {
 .turnos{
   padding: 3em;
   color: orange;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .itmes{
@@ -158,8 +160,10 @@ main {
 }
 
 .title{
-    padding-left: 2em;
+  padding-left: 2em;
   color : red;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 input[type = submit] , input[type = button] , button {
@@ -188,7 +192,7 @@ input[type = submit]:active , input[type = button]:active , button:active {
 
 .nom {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 @media only screen and (max-width: 600px) {
