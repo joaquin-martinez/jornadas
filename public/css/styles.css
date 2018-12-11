@@ -161,6 +161,30 @@ main {
   color : red;
 }
 
+input[type = submit] , input[type = button] , button {
+  color: #fff;
+  width: 100%;
+  display: block;
+  background-color: #ff8000;
+  border: 1vw solid #fff;
+  margin-top: 1vw;
+  border-radius: 2vw;
+  box-shadow: 1vw 1vw 2vw #999;
+}
+
+input[type = submit]:hover , input[type = button]:hover , button:hover {
+  font-weight: bold;
+  cursor: pointer;
+  color: #f0f;
+  background-color: #ffff80;
+}
+
+input[type = submit]:active , input[type = button]:active , button:active {
+  background-color: #990;
+  border: 3vw solid #099;
+}
+
+
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
