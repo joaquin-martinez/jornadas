@@ -401,6 +401,7 @@ $(()=>{
 
     $("#selectModiJor").on("change" , (e)=>{
       frameTurnos.innerHTML="";
+      $(bmjt).show();
       indice = 0;
       encontrado = false;
       let seleccionado = listJorH.find((u ,i) =>{
