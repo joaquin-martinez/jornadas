@@ -653,7 +653,7 @@ console.log("click en borrar turno de modif");
   console.log(listJorH[indice].turnos);
   let datos = JSON.stringify(listJorH[indice]);
   console.log(datos);
-  $.post( "/altajor" , {datos : datos} , (data)=>{
+  $.post( "/modijor" , {datos : datos} , (data)=>{
     $(modiJorModal).hide();
     $(jordatprop).show();
     formaltajor.reset();
@@ -677,12 +677,12 @@ console.log(untj);
 });
 
 
-$(Bmodicreaturn).on("Click" , (e)=>{
+$(Bmodicreaturn).on("click" , (e)=>{
 nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
   listJorH[indice].turnos.push(nuevoturn);
   let datos = JSON.stringify(listJorH[indice]);
   console.log(datos);
-  $.post( "/altajor" , {datos : datos} , (data)=>{
+  $.post( "/modijor" , {datos : datos} , (data)=>{
     $(modiJorModal).hide();
     $(jordatprop).show();
     formaltajor.reset();
