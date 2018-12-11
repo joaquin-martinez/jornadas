@@ -54,7 +54,7 @@ const deleteJornada = (req , res ) => {
 const putJornada = (req , res ) => {
   console.log("Se procede a actualizar una jornada");
     console.log("id: " + req.body.datos);
-    console.log("id codigo: " + req.body.datos.codigo);
+//    console.log("id codigo: " + req.body.datos.codigo);
 
     objdatos = JSON.parse(req.body.datos);
     console.log("id: " + JSON.parse(req.body.datos)._id);
