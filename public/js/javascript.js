@@ -315,170 +315,168 @@ $(()=>{
 
       }
 
-      const guardaTurno = ()=>{
-        let turno = new Turno( selectAltaJorT.value  ,
-          horasTurno.value , horaIni.value );
-          jornada.turnos.push(turno);
+  const guardaTurno = ()=>{
+    let turno = new Turno( selectAltaJorT.value  ,
+      horasTurno.value , horaIni.value );
+      jornada.turnos.push(turno);
+      formaltajor.reset();
+      console.log(jornada);
+    }
+
+    $("#asignarTurnos").on("click" , false , guardaJornada );
+
+    $("#asignarMasTurnos").on("click" , guardaTurno );
+
+    $("#submitAltaJor").on("click" , (e)=>{
+        e.preventDefault();
+        if (jornada == null){
+          guardaJornada();
+        } else  guardaTurno();
+        console.log(jornada);
+        let datos = JSON.stringify(jornada);
+        console.log(datos);
+        $.post( "/altajor" , {datos : datos} , (data)=>{
+          $(altaJorModal).hide();
+          $(jordatprop).show();
           formaltajor.reset();
-          console.log(jornada);
-        }
-
-        $("#asignarTurnos").on("click" , false , guardaJornada );
-
-        $("#asignarMasTurnos").on("click" , guardaTurno );
-
-        $("#submitAltaJor").on("click" , (e)=>{
-          e.preventDefault();
-          if (jornada == null){
-            guardaJornada();
-          } else  guardaTurno();
-          console.log(jornada);
-          let datos = JSON.stringify(jornada);
-          console.log(datos);
-          $.post( "/altajor" , {datos : datos} , (data)=>{
-            $(altaJorModal).hide();
-            $(jordatprop).show();
-            formaltajor.reset();
-            jornada = null;
-
-          });
-        });
-
-
-        $(".close").on("click" , ()=>{
-          $(".modal").hide();
-        });
-
-        $("#salgo").click(()=>{
-          console.log("Peticion de salir");
-          $("#cierreModal").show();
-          console.log("apertura de modal salir");
-        });
-
-        $("#BSalir , #salgotrab").on("click" , ()=>{
-          $.post("./salir");
-          window.location.assign("index.html");
-        })
-
-        $("#BNSalir").on("click" , ()=>{
-          $(".modal").hide();
-        });
-
-
-
-
-
-        $("#selectModiUsu").on("change" , false , (e)=>{
-          formModiUsu.reset();
-          console.log(e.currentTarget.innerHTML);
-          musuario.value = e.currentTarget.value ;
-          let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
-          console.log(seleccionados);
-
-          musuario.value = seleccionados[0].user;
-          mclave.value = seleccionados[0].password;
-          midusu.value = seleccionados[0]._id;
-          console.log(seleccionados[0].tipo);
-          if (seleccionados[0].tipo == "administrador") {
-            $("#mtipo option[value='administrador']").attr("selected" , true );
-            $("#mtipo option[value='trabajador']").attr("selected" , false );
-          } else {
-            $("#mtipo option[value='trabajador']").attr("selected" , true );
-            $("#mtipo option[value='administrador']").attr("selected" , false );
-
-          }
-
+          jornada = null;
 
         });
-
-
-        $("#selectModiEmp").on("change" , false , (e)=>{
-
-          let seleccionado = listEmp.find(u => u.nif == e.currentTarget.value);
-
-          console.log(seleccionado);
-          mempresa.value = seleccionado.name ;
-          mnif.value = seleccionado.nif;
-          midemp.value = seleccionados._id;
-
-        });
-
-        $("#selectModiJor").on("change" , (e)=>{
-          frameTurnos.innerHTML="";
-          indice = 0;
-          encontrado = false;
-          let seleccionado = listJorH.find((u ,i) =>{
-            if(u._id == e.currentTarget.value){
-              indice = i;
-              encontrado = true;
-            }
-            return encontrado;
-          } );
-          turnosMB = seleccionado.turnos;
-
-          turnosMB.forEach((i , indice)=>{
-
-            let cadena =     "<input type=\"radio\" name=\"turnoSel\" value=\""
-            + i._id + "\" id=\"radio" + indice + "\" >" + i.usuario + " - " + i.horaIni +
-            " - " + i.horasTur + "<br>";
-
-            $("#frameTurnos").append(cadena);
-          });
-        });
-
-        $("#modiborraturn").on("click" , ()=>{
-          console.log("click en borrar turno de modif");
-          let turnosNuevos = turnosMB.filter((t)=>{
-            console.log("id de los turnos: " + t._id);
-            console.log("id seleccionado ; " + $("input[name='turnoSel']").val());
-            console.log("id seleccionado ; " + $("input:checked").val());
-            if(t._id != ($("input:checked").val())) return true;
-            else return false;
-          });
-          console.log(turnosNuevos);
-          console.log(listJorH[indice].turnos);
-          listJorH[indice].turnos = turnosNuevos
-          console.log(listJorH[indice].turnos);
-          let datos = JSON.stringify(listJorH[indice]);
-          console.log(datos);
-          $.post( "/modijor" , {datos : datos} , (data)=>{
-            $(modiJorModal).hide();
-            $(jordatprop).show();
-            formaltajor.reset();
-            listJorH = null;
-          });
-        });
-
-
-        $("#modicreaturn").on("click" , ()=>{
-
-          console.log("click en crear turno de modif");
-          obtenUsuarios("mjt");
-          $("#htmlmt").show()
-          $(bmjt).hide()
-        });
-
-        $("#selectAltaJorTM").on("change" , (e)=>{
-          untj = e.currentTarget.value;
-          console.log(untj);
-
-        });
-
-
-        $("#Bmodicreaturn").on("click" , (e)=>{
-          nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
-          listJorH[indice].turnos.push(nuevoturn);
-          let datos = JSON.stringify(listJorH[indice]);
-          console.log(datos);
-          $.post( "/modijor" , {datos : datos} , (data)=>{
-            $(modiJorModal).hide();
-            $(jordatprop).show();
-            formaltajor.reset();
-            listJorH = null;
-            $("#htmlmt").hide()
-            $(bmjt).show()
-          });
-
-        });
-
       });
+
+
+    $(".close").on("click" , ()=>{
+      $(".modal").hide();
+    });
+
+    $("#salgo").click(()=>{
+      console.log("Peticion de salir");
+      $("#cierreModal").show();
+      console.log("apertura de modal salir");
+    });
+
+    $("#BSalir , #salgotrab").on("click" , ()=>{
+      $.post("./salir");
+      window.location.assign("index.html");
+    })
+
+    $("#BNSalir").on("click" , ()=>{
+      $(".modal").hide();
+    });
+
+    $("#selectModiUsu").on("change" , false , (e)=>{
+      formModiUsu.reset();
+      console.log(e.currentTarget.innerHTML);
+      musuario.value = e.currentTarget.value ;
+      let seleccionados = listUsu.filter(u => u.user == e.currentTarget.value);
+      console.log(seleccionados);
+
+      musuario.value = seleccionados[0].user;
+      mclave.value = seleccionados[0].password;
+      midusu.value = seleccionados[0]._id;
+      console.log(seleccionados[0].tipo);
+      if (seleccionados[0].tipo == "administrador") {
+        $("#mtipo option[value='administrador']").attr("selected" , true );
+        $("#mtipo option[value='trabajador']").attr("selected" , false );
+      } else {
+        $("#mtipo option[value='trabajador']").attr("selected" , true );
+        $("#mtipo option[value='administrador']").attr("selected" , false );
+
+      }
+
+
+    });
+
+
+    $("#selectModiEmp").on("change" , false , (e)=>{
+
+      let seleccionado = listEmp.find(u => u.nif == e.currentTarget.value);
+
+      console.log(seleccionado);
+      mempresa.value = seleccionado.name ;
+      mnif.value = seleccionado.nif;
+      midemp.value = seleccionados._id;
+
+    });
+
+    $("#selectModiJor").on("change" , (e)=>{
+      frameTurnos.innerHTML="";
+      indice = 0;
+      encontrado = false;
+      let seleccionado = listJorH.find((u ,i) =>{
+        if(u._id == e.currentTarget.value){
+          indice = i;
+          encontrado = true;
+        }
+        return encontrado;
+      } );
+      turnosMB = seleccionado.turnos;
+
+      turnosMB.forEach((i , indice)=>{
+
+        let cadena =     "<input type=\"radio\" name=\"turnoSel\" value=\""
+        + i._id + "\" id=\"radio" + indice + "\" >" + i.usuario + " - " + i.horaIni +
+        " - " + i.horasTur + "<br>";
+
+        $("#frameTurnos").append(cadena);
+      });
+    });
+
+    $("#modiborraturn").on("click" , ()=>{
+      console.log("click en borrar turno de modif");
+      let turnosNuevos = turnosMB.filter((t)=>{
+        console.log("id de los turnos: " + t._id);
+        console.log("id seleccionado ; " + $("input[name='turnoSel']").val());
+        console.log("id seleccionado ; " + $("input:checked").val());
+        if(t._id != ($("input:checked").val())) return true;
+        else return false;
+      });
+      console.log(turnosNuevos);
+      console.log(listJorH[indice].turnos);
+      listJorH[indice].turnos = turnosNuevos
+      console.log(listJorH[indice].turnos);
+      let datos = JSON.stringify(listJorH[indice]);
+      console.log(datos);
+      $.post( "/modijor" , {datos : datos} , (data)=>{
+        $(modiJorModal).hide();
+        $(jordatprop).show();
+        formaltajor.reset();
+        listJorH = null;
+        window.reload();
+      });
+    });
+
+
+    $("#modicreaturn").on("click" , ()=>{
+
+      console.log("click en crear turno de modif");
+      obtenUsuarios("mjt");
+      $("#htmlmt").show()
+      $(bmjt).hide()
+    });
+
+    $("#selectAltaJorTM").on("change" , (e)=>{
+      untj = e.currentTarget.value;
+      console.log(untj);
+
+    });
+
+
+    $("#Bmodicreaturn").on("click" , (e)=>{
+      nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
+      listJorH[indice].turnos.push(nuevoturn);
+      let datos = JSON.stringify(listJorH[indice]);
+      console.log(datos);
+      $.post( "/modijor" , {datos : datos} , (data)=>{
+        $(modiJorModal).hide();
+        $(jordatprop).show();
+        formaltajor.reset();
+        listJorH = null;
+        $("#htmlmt").hide()
+        $(bmjt).show()
+        window.reload();
+      });
+
+    });
+
+  });
