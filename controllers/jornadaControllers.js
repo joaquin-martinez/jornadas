@@ -10,7 +10,10 @@ const setJornada = (req , res ) => {
 
   let registro = new Jornada( data );
   registro.save((err , user) => {
-    if (err) console.log(`Error al guardar el usuario: ${error}`);
+    if (err){
+      console.log(`Error al guardar el usuario: `);
+      console.log(err);
+    }
     else {
 
       console.log(user);

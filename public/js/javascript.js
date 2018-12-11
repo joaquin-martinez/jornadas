@@ -642,7 +642,8 @@ console.log("click en borrar turno de modif");
   let turnosNuevos = turnosMB.filter((t)=>{
     console.log("id de los turnos: " + t._id);
     console.log("id seleccionado ; " + $("input[name='turnoSel']").val());
-    if(t._id != ($("input[name='turnoSel']").val())) return true;
+    console.log("id seleccionado ; " + $("input:checked").val());
+    if(t._id != ($("input:checked").val())) return true;
     else return false;
   });
 //  listJorH.turnos = turnosNuevos;
@@ -671,6 +672,8 @@ console.log("click en crear turno de modif");
 $(selectAltaJorTM).on("change" , (e)=>{
 //  let seleccionado = listUsu.find(u => u.user == e.currentTarget.value);
 untj = e.currentTarget.value;
+console.log(untj);
+
 });
 
 
