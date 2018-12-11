@@ -650,7 +650,7 @@ console.log("click en borrar turno de modif");
   console.log(listJorH[indice].turnos);
   listJorH[indice].turnos = turnosNuevos
   console.log(listJorH[indice].turnos);
-  let datos = JSON.stringify(listJorH);
+  let datos = JSON.stringify(listJorH[indice]);
   console.log(datos);
   $.post( "/altajor" , {datos : datos} , (data)=>{
     $(modiJorModal).hide();
@@ -677,7 +677,7 @@ untj = e.currentTarget.value;
 $(selectAltaJorTM).on("Click" , (e)=>{
 nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
   listJorH[indice].turnos.push(nuevoturn);
-  let datos = JSON.stringify(listJorH);
+  let datos = JSON.stringify(listJorH[indice]);
   console.log(datos);
   $.post( "/altajor" , {datos : datos} , (data)=>{
     $(modiJorModal).hide();
