@@ -1,11 +1,13 @@
 <% include head %>
 
-<% if(tipo=="administrador"){ %>
+
 <div class="container">
+<% if(tipo=="administrador"){ %>
 
-
+  <% include headeradmin %>
   <% include adminButtons %>
-  <% include adminMain %>
+
+
   <% include altaUsu %>
   <% include altaEmp %>
   <% include altaJor %>
@@ -16,7 +18,9 @@
   <% include modiUsu %>
   <% include modiEmp %>
   <% include modiJor %>
-<% } %>
+<% } else if(tipo=="trabajador") { %>
+  <% include headertrab %>
+  <% } %>
 
 <h2>Paratodos</h2>
 
@@ -30,6 +34,8 @@
 
   </fieldset>
 </form>
+
+  <% include adminMain %>
 
 <div class="">
   aqui van los turnos del usuario.

@@ -561,7 +561,7 @@ $("#salgo").click(()=>{
   console.log("apertura de modal salir");
 });
 
-$("#BSalir").on("click" , ()=>{
+$("#BSalir , #salgotrab").on("click" , ()=>{
   $.post("./salir");
   window.location.assign("index.html");
 })
@@ -569,6 +569,9 @@ $("#BSalir").on("click" , ()=>{
 $("#BNSalir").on("click" , ()=>{
   $(".modal").hide();
 });
+
+
+
 
 
 $("#selectModiUsu").on("change" , false , (e)=>{
@@ -666,7 +669,8 @@ $("#modicreaturn").on("click" , ()=>{
 
 console.log("click en crear turno de modif");
   obtenUsuarios("mjt");
-
+  $("#htmlmt").show()
+  $(bmjt).hide()
 });
 
 $(selectAltaJorTM).on("change" , (e)=>{
@@ -687,6 +691,8 @@ nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
     $(jordatprop).show();
     formaltajor.reset();
     listJorH = null;
+      $("#htmlmt").hide()
+        $(bmjt).show()
 });
 
 });
