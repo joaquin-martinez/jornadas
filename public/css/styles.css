@@ -129,6 +129,10 @@ main {
   display: none;
 }
 
+#htmlmt {
+  display: none;
+}
+
 .salPrin{
   background-color: beige;
 }
@@ -161,4 +165,17 @@ main {
     body {
         background-color: lightblue;
     }
+    .container {
+      height: 100vh;
+      display: grid;
+      grid-template-areas:
+        "header"
+         "nav"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 5fr 1fr;
+      grid-gap: 2vw 2vh;
+    }
+
 }
