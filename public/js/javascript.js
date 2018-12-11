@@ -471,9 +471,9 @@ const guardaTurno = ()=>{
 
 $("#asignarTurnos").on("click" , false , guardaJornada );
 
-$(asignarMasTurnos).on("click" , guardaTurno );
+$("#asignarMasTurnos").on("click" , guardaTurno );
 
-$(submitAltaJor).on("click" , (e)=>{
+$("#submitAltaJor").on("click" , (e)=>{
   e.preventDefault();
   if (jornada == null){
     guardaJornada();
@@ -673,7 +673,7 @@ console.log("click en crear turno de modif");
   $(bmjt).hide()
 });
 
-$(selectAltaJorTM).on("change" , (e)=>{
+$("#selectAltaJorTM").on("change" , (e)=>{
 //  let seleccionado = listUsu.find(u => u.user == e.currentTarget.value);
 untj = e.currentTarget.value;
 console.log(untj);
@@ -681,7 +681,7 @@ console.log(untj);
 });
 
 
-$(Bmodicreaturn).on("click" , (e)=>{
+$("#Bmodicreaturn").on("click" , (e)=>{
 nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
   listJorH[indice].turnos.push(nuevoturn);
   let datos = JSON.stringify(listJorH[indice]);
