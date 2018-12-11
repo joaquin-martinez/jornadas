@@ -163,13 +163,14 @@ main {
 
 input[type = submit] , input[type = button] , button {
   color: #fff;
-  width: 60%;
+  width: 100%;
   display: inline-block;
   background-color: #ff8000;
   border: 1vw solid #fff;
   margin-top: 1vw;
   border-radius: 2vw;
-  box-shadow: 2vw 2vw 2vw #999;
+  box-shadow: 1vw 1vw 1vw #999;
+  padding: 2vw;
 }
 
 input[type = submit]:hover , input[type = button]:hover , button:hover {
