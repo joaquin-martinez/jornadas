@@ -41,7 +41,7 @@ main {
 .dropbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 2vw;
+  padding: 1vw;
   font-size: 1em;
   margin: 1vw;
   border: none;
@@ -55,6 +55,8 @@ main {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 
