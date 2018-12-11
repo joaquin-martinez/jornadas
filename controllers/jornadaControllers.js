@@ -56,7 +56,7 @@ const putJornada = (req , res ) => {
     console.log("id: " + req.body.datos);
 //    console.log("id codigo: " + req.body.datos.codigo);
 
-    objdatos = JSON.parse(req.body.datos);
+    let objdatos = JSON.parse(req.body.datos);
     console.log("id: " + JSON.parse(req.body.datos)._id);
 
     Jornada.findOneAndUpdate({_id : objdatos._id} ,{ $set : { turnos : objdatos.turnos }} , (err, raw)=>{
