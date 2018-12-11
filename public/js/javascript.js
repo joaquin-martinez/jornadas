@@ -442,7 +442,7 @@ $(()=>{
         $(jordatprop).show();
         formaltajor.reset();
         listJorH = null;
-        location.reload(true);
+        window.location.assign("./recarga");
       });
     });
 
@@ -474,7 +474,7 @@ $(()=>{
         listJorH = null;
         $("#htmlmt").hide();
         $(bmjt).show();
-        location.reload(true);
+        window.location.assign("./recarga");
       });
 
     });
