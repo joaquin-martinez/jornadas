@@ -54,10 +54,12 @@ const deleteJornada = (req , res ) => {
 const putJornada = (req , res ) => {
   console.log("Se procede a actualizar una jornada");
     console.log("id: " + req.body.datos);
+    console.log("id codigo: " + req.body.datos.codigo);
 
+    objdatos = JSON.parse(req.body.datos);
     console.log("id: " + JSON.parse(req.body.datos)._id);
 
-    Jornada.findOneAndUpdate({_id : req.body.datos._id} ,{ $set : { turnos : req.body.datos.turnos }} , (err, raw)=>{
+    Jornada.findOneAndUpdate({_id : objdatos._id} ,{ $set : { turnos : objdatos.turnos }} , (err, raw)=>{
       if (err) return handleError(err);
       console.log('El resultado ha sido: ', raw);
 
