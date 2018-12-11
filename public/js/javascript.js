@@ -686,6 +686,6 @@ nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
     listJorH = null;
 });
 
-
+});
 
 });
