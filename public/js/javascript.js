@@ -658,6 +658,8 @@ console.log("click en borrar turno de modif");
     formaltajor.reset();
     listJorH = null;
 });
+});
+
 
 $("#modicreaturn").on("click" , ()=>{
 
