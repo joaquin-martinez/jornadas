@@ -42,7 +42,7 @@ main {
   background-color: #4CAF50;
   color: white;
   padding: 2vw;
-  font-size: 2vw;
+  font-size: 1em;
   margin: 1vw;
   border: none;
   cursor: pointer;
@@ -104,6 +104,7 @@ main {
    padding: 20px;
    border: 1px solid #888;
    width: 80%; /* Could be more or less, depending on screen size */
+   background-color: beige ;
 }
 
 /* The Close Button */
@@ -164,7 +165,7 @@ main {
 input[type = submit] , input[type = button] , button {
   color: #fff;
   width: 100%;
-  display: inline-block;
+  display: inline;
   background-color: #ff8000;
   border: 1vw solid #fff;
   margin-top: 1vw;
@@ -185,6 +186,10 @@ input[type = submit]:active , input[type = button]:active , button:active {
   border: 2vw solid #099;
 }
 
+.nom {
+  font-weight: bold;
+  font-size: 1.5em;
+}
 
 @media only screen and (max-width: 600px) {
     body {
