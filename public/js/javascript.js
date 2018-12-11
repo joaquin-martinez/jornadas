@@ -674,7 +674,7 @@ untj = e.currentTarget.value;
 });
 
 
-$(selectAltaJorTM).on("Click" , (e)=>{
+$(Bmodicreaturn).on("Click" , (e)=>{
 nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
   listJorH[indice].turnos.push(nuevoturn);
   let datos = JSON.stringify(listJorH[indice]);
