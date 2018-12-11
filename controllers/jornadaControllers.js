@@ -60,6 +60,7 @@ const putJornada = (req , res ) => {
 
   res.status(200).redirect("../recarga")
 
+})
 }
 
 const getJornadas  = (req , res ) => {
