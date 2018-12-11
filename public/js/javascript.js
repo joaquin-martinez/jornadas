@@ -251,6 +251,13 @@ const obtenUsuarios = ( accion )=>{
       //          $(".opemp").remove("option");
       //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
       break;
+      case "mjt":
+      opcionesUsu = $("#optionAltaJorTM");
+
+      $("#optionAltaJorTM~option").remove();
+      //          $(".opemp").remove("option");
+      //        cadena = `<option value="${datos[i].mnif}" >${datos[i].mname}<option>`
+      break;
 
 
       default:
@@ -643,11 +650,40 @@ console.log("click en borrar turno de modif");
   console.log(listJorH[indice].turnos);
   listJorH[indice].turnos = turnosNuevos
   console.log(listJorH[indice].turnos);
-
+  let datos = JSON.stringify(listJorH);
+  console.log(datos);
+  $.post( "/altajor" , {datos : datos} , (data)=>{
+    $(modiJorModal).hide();
+    $(jordatprop).show();
+    formaltajor.reset();
+    listJorH = null;
 });
 
 $("#modicreaturn").on("click" , ()=>{
+
 console.log("click en crear turno de modif");
+  obtenUsuarios("mjt");
+
 });
+
+$(selectAltaJorTM).on("change" , (e)=>{
+//  let seleccionado = listUsu.find(u => u.user == e.currentTarget.value);
+untj = e.currentTarget.value;
+});
+
+
+$(selectAltaJorTM).on("Click" , (e)=>{
+nuevoturn = new Turno(untj , horasTurnoM.value , horaIniM.value);
+  listJorH[indice].turnos.push(nuevoturn);
+  let datos = JSON.stringify(listJorH);
+  console.log(datos);
+  $.post( "/altajor" , {datos : datos} , (data)=>{
+    $(modiJorModal).hide();
+    $(jordatprop).show();
+    formaltajor.reset();
+    listJorH = null;
+});
+
+
 
 });
