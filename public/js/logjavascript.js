@@ -1,7 +1,7 @@
 $(()=>{
 // Validacion.
-// $("#datosValidacion").on( "submit" , (e)=>{
-datosValidacion.submit =  (e)=>{
+ $("#datosValidacion").on( "submit" , (e)=>{
+// datosValidacion.submit =  (e)=>{
   e.preventDefault();
 //  let datos = new FormData(datosValidacion);
 let datos = {
@@ -31,5 +31,5 @@ let datos = {
     }
 
 });
-}
+});
 });
