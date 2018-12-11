@@ -473,7 +473,7 @@ $(()=>{
         formaltajor.reset();
         listJorH = null;
         $("#htmlmt").hide()
-        $(bmjt).show()
+//        $(bmjt).show()
         window.reload();
       });
 
