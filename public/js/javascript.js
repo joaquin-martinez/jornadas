@@ -340,7 +340,7 @@ $(()=>{
           $(jordatprop).show();
           formaltajor.reset();
           jornada = null;
-
+          window.location.assign("./recarga")
         });
       });
 
